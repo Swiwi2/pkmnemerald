@@ -1857,11 +1857,11 @@ LittlerootTown_Text_WearTheseRunningShoes:
 # 929 "data/maps/LittlerootTown/scripts.pory"
 	.string "MOM: {PLAYER}! {PLAYER}! Did you\n"
 # 930 "data/maps/LittlerootTown/scripts.pory"
-	.string "introduce yourself to RED?\p"
+	.string "introduce yourself to PROF. BIRCH?\p"
 # 931 "data/maps/LittlerootTown/scripts.pory"
 	.string "Oh! What an adorable POKéMON!\n"
 # 932 "data/maps/LittlerootTown/scripts.pory"
-	.string "You got it from RED? How nice!\p"
+	.string "You got it from PROF. BIRCH. How nice!\p"
 # 933 "data/maps/LittlerootTown/scripts.pory"
 	.string "You're your father's child, all right.\n"
 # 934 "data/maps/LittlerootTown/scripts.pory"
@@ -2043,14 +2043,14 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 
 LittlerootTown_EventScript_NewSign::
 # 1026 "data/maps/LittlerootTown/scripts.pory"
-	lock
+	lockall
 # 1027 "data/maps/LittlerootTown/scripts.pory"
 	msgbox LittlerootTown_EventScript_NewSign_Text_0
 # 1028 "data/maps/LittlerootTown/scripts.pory"
-	release
+	releaseall
 	return
 
 
 LittlerootTown_EventScript_NewSign_Text_0:
 # 1027 "data/maps/LittlerootTown/scripts.pory"
-	.string "There is a mysterious item\n under the boulder ahead.$"
+	.string "Hello!$"
