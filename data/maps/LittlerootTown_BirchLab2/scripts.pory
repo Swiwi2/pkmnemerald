@@ -1,0 +1,207 @@
+mapscripts LittlerootTown_BirchLab2_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: LittlerootTown_BirchLab2_EventScript_BallDefault
+}
+
+script LittlerootTown_BirchLab2_EventScript_BallDefault{
+    setvar(VAR_UNUSED_0x40F7, 0)
+}
+
+script LittlerootTown_BirchLab2_EventScript_Red{
+    lock
+    faceplayer
+    if(!(flag(FLAG_UNUSED_0x020) || flag(FLAG_UNUSED_0x021) || flag(FLAG_UNUSED_0x022))){
+        msgbox(LittlerootTown_BirchLab2_Text_Red_1, MSGBOX_YESNO)                     // Här är Red's introduktions-text.
+        if(var(VAR_RESULT) == YES){
+            if(var(VAR_UNUSED_0x40F7) != 2){
+                addvar(VAR_UNUSED_0x40F7, 1)
+            }
+            else{
+                setvar(VAR_UNUSED_0x40F7, 0)
+            }
+            msgbox("Choose your Pokemon wisely.")
+        }
+        else{
+            msgbox("Fine, be that way then.")
+        }
+    }
+    else{
+        faceplayer
+        msgbox(LittlerootTown_BirchLab2_Text_Red_2)                     // Här refererar jag till "Hejdå"-texten nedan.
+    }
+    waitmessage
+    release
+    end
+}
+
+text LittlerootTown_BirchLab2_Text_Red_1{                       // Reds intro-text.
+    "Ah! You must be the new trainer\n"
+    "that just moved in! Welcome! \p"
+    "My name is Red. I used to be the\n"
+    "very best trainer in the world. \p"
+    "That was long ago, and I've since\n"
+    "retired from battling Pokémon. \p"
+    "Nowadays, I've set my sights on\n"
+    "a completely different challenge... \p"
+    "To help new trainers get started\n"
+    "on their own Pokémon journey!\p"
+    "{PLAYER}, I want you to choose your very\n"
+    "own Pokémon friend to take with you!\p"
+    "In these Pokéballs I have three \n"
+    "different Pokémon. You may have one.\p"
+    "Are you ready to choose a Pokémon?"
+}
+
+text LittlerootTown_BirchLab2_Text_Red_2{                       // Reds hejdå-text.
+    "Ah, an excellent choice. That\n"
+    "certainly was one of my favorites!\p"
+    "If I were to give a word of advice,\n"
+    "I would suggest battling to make your \p"
+    "new Pokémon stronger. That way, you \n"
+    "can take on the Pokémon gym challenge!"
+}
+
+script LittlerootTown_BirchLab2_EventScript_PokeballLeft{
+
+    lock
+    if(!(flag(FLAG_UNUSED_0x020) || flag(FLAG_UNUSED_0x021) || flag(FLAG_UNUSED_0x022))){
+    showmonpic(SPECIES_SQUIRTLE, 10,3)
+    msgbox("Do you want to choose Squirtle?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_SQUIRTLE, 5,)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Squirtle!")
+            removeobject(1)
+            setflag(FLAG_UNUSED_0x020)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Squirtle!")
+            removeobject(1)
+            setflag(FLAG_UNUSED_0x020)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No more room.")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(LittleRootTown_BirchLab2_NotChosen)
+    }
+
+    }
+        else{
+        msgbox("RED: You already took a Pokémon!")
+     }
+    waitmessage
+    release
+    end
+
+}
+
+script LittlerootTown_BirchLab2_EventScript_PokeballCenter{
+
+    lock
+        if(!(flag(FLAG_UNUSED_0x020) || flag(FLAG_UNUSED_0x021) || flag(FLAG_UNUSED_0x022))){
+    showmonpic(SPECIES_CHARMANDER, 10,3)
+    msgbox("Do you want to choose Charmander?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_CHARMANDER, 5)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Charmander!")
+            removeobject(2)
+            setflag(FLAG_UNUSED_0x021)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Charmander!")
+            removeobject(2)
+            setflag(FLAG_UNUSED_0x021)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No more room.")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(LittleRootTown_BirchLab2_NotChosen)
+    }
+}
+else{
+    msgbox("RED: You already took a Pokémon!")
+    }
+    waitmessage
+    release
+    end
+}
+
+
+script LittlerootTown_BirchLab2_EventScript_PokeballRight{
+
+    lock
+        if(!(flag(FLAG_UNUSED_0x020) || flag(FLAG_UNUSED_0x021) || flag(FLAG_UNUSED_0x022))){
+    showmonpic(SPECIES_BULBASAUR, 10,3)
+    msgbox("Do you want to choose Bulbasaur?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_BULBASAUR, 5)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Bulbasaur!")
+            removeobject(3)
+            setflag(FLAG_UNUSED_0x022)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Bulbasaur!")
+            removeobject(3)
+            setflag(FLAG_UNUSED_0x022)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No more room.")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(LittleRootTown_BirchLab2_NotChosen)
+    }
+}
+else{
+    msgbox("RED: You already took a Pokémon!")
+
+}
+    waitmessage
+    release
+    end
+}
+
+script NicknamePartyMon{
+    msgbox("Give it a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_GetGiftMonPartySlot)
+        call(Common_EventScript_NameReceivedPartyMon)
+    }
+}
+
+script NicknameBoxMon{
+    msgbox("Give a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_NameReceivedBoxMon)
+    }
+    msgbox("Transferred to PC.")
+}
+ 
+text LittleRootTown_BirchLab2_NotChosen{
+    "RED: It's a tough choice. \n Think hard before deciding!"
+}
