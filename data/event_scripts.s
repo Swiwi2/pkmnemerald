@@ -1074,3 +1074,13 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/birch_speech.inc"
 
 	.include "data/maps/LittlerootTown_BirchLab2/scripts.inc"
+
+	.include "data/maps/WoodholmeCity/scripts.inc"
+
+	.include "data/maps/Woodholme_PC/scripts.inc"
+
+	.include "data/maps/Woodholme_Mart/scripts.inc"
+
+	.include "data/maps/Route1/scripts.inc"
+
+	.include "data/maps/IndoorRoute1Cottage/scripts.inc"
