@@ -1,0 +1,13 @@
+mapscripts Route1_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: Route1_EventScript_Transition
+}
+
+script Route1_EventScript_Transition{
+    setvar(VAR_UNUSED_0x40F9, 0)
+}
+
+script Route1_EventScript_SignCottage{
+    lock
+    msgbox("Hello!")
+    release
+}

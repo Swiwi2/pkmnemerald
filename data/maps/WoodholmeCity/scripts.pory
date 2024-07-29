@@ -1,0 +1,43 @@
+mapscripts WoodholmeCity_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: WoodholmeCity_EventScript_Transition
+}
+
+script WoodholmeCity_EventScript_Transition {
+    setvar(VAR_UNUSED_0x40F8, 0)
+}
+
+script WoodholmeCity_EventScript_SignLeavingTown{
+    lock
+    msgbox("HEADING NORTH TO ROUTE 1")
+    release
+}
+
+script WoodholmeCity_EventScript_SignGym{
+    lock
+    msgbox("STELLA'S GYM")
+    release
+}
+
+script WoodholmeCity_EventScript_SignCondoTopRight{
+    lock
+    msgbox("Woodholme Realty Inc.\n Cheap accommodation options available!")
+    release
+}
+
+script WoodholmeCity_EventScript_SignCondoLeft{
+    lock
+    msgbox("Woodholme Realty Inc.\n Luxury condos for your Pokémon friends!")
+    release
+}
+
+script WoodholmeCity_EventScript_SignCondoRight{
+    lock
+    msgbox("Woodholme Realty Inc\n Condos with the best view in Woodholme!")
+    release
+}
+
+script WoodholmeCity_EventScript_SignRedsLab{
+    lock
+    msgbox("RED'S LAB \n New trainers welcome!")
+    release
+}
