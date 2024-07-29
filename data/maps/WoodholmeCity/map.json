@@ -20,7 +20,19 @@
     }
   ],
   "object_events": [
-
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAY_NORMAL",
+      "x": 6,
+      "y": 24,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "WoodholmeCity_EventScript_RivalBattle1",
+      "flag": "FLAG_RIVAL_BATTLE1"
+    }
   ],
   "warp_events": [
     {
@@ -35,6 +47,13 @@
       "y": 23,
       "elevation": 0,
       "dest_map": "MAP_WOODHOLME_MART",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 8,
+      "y": 23,
+      "elevation": 0,
+      "dest_map": "MAP_LITTLEROOT_TOWN_BIRCH_LAB2",
       "dest_warp_id": "0"
     }
   ],

@@ -1,9 +1,33 @@
 mapscripts WoodholmeCity_MapScripts {
-    MAP_SCRIPT_ON_TRANSITION: WoodholmeCity_EventScript_Transition
+    MAP_SCRIPT_ON_TRANSITION: WoodholmeCity_EventScript_SetupRivalBattle
 }
 
-script WoodholmeCity_EventScript_Transition {
-    setvar(VAR_UNUSED_0x40F8, 0)
+script WoodholmeCity_EventScript_SetupRivalBattle{
+    if (!(flag(FLAG_STARTER_BULBASAUR) || flag(FLAG_STARTER_CHARMANDER) || flag(FLAG_STARTER_SQUIRTLE))){
+        setflag(FLAG_RIVAL_BATTLE1)
+    }
+    else{
+        clearflag(FLAG_RIVAL_BATTLE1)
+    }
+}
+
+script WoodholmeCity_EventScript_RivalBattle1{
+    trainerbattle_single(TRAINER_MAY_ROUTE_103_TORCHIC, May_Intro, May_Outro) //Replace TRAINER_MAY etc with a trainer.
+    msgbox(May_PostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text May_Intro{
+    "You'll never win!"
+}
+
+text May_Outro{
+    "Wtf lol"
+}
+
+text May_PostBattle{
+    "I'll get you next time"
 }
 
 script WoodholmeCity_EventScript_SignLeavingTown{

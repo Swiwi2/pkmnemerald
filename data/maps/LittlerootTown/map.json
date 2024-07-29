@@ -282,7 +282,7 @@
       "x": 33,
       "y": 10,
       "elevation": 0,
-      "item": "ITEM_AMULET_COIN",
+      "item": "ITEM_EXP_SHARE",
       "flag": "FLAG_TEMP_1"
     }
   ]

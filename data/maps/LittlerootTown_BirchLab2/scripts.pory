@@ -9,7 +9,7 @@ script LittlerootTown_BirchLab2_EventScript_BallDefault{
 script LittlerootTown_BirchLab2_EventScript_Red{
     lock
     faceplayer
-    if(!(flag(FLAG_UNUSED_0x020) || flag(FLAG_UNUSED_0x021) || flag(FLAG_UNUSED_0x022))){
+    if(!(flag(FLAG_STARTER_SQUIRTLE) || flag(FLAG_STARTER_CHARMANDER) || flag(FLAG_STARTER_BULBASAUR))){
         msgbox(LittlerootTown_BirchLab2_Text_Red_1, MSGBOX_YESNO)                     // Här är Red's introduktions-text.
         if(var(VAR_RESULT) == YES){
             if(var(VAR_UNUSED_0x40F7) != 2){
@@ -63,7 +63,7 @@ text LittlerootTown_BirchLab2_Text_Red_2{                       // Reds hejdå-t
 script LittlerootTown_BirchLab2_EventScript_PokeballLeft{
 
     lock
-    if(!(flag(FLAG_UNUSED_0x020) || flag(FLAG_UNUSED_0x021) || flag(FLAG_UNUSED_0x022))){
+    if(!(flag(FLAG_STARTER_SQUIRTLE) || flag(FLAG_STARTER_CHARMANDER) || flag(FLAG_STARTER_BULBASAUR))){
     showmonpic(SPECIES_SQUIRTLE, 10,3)
     msgbox("Do you want to choose Squirtle?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
@@ -72,14 +72,14 @@ script LittlerootTown_BirchLab2_EventScript_PokeballLeft{
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Received Squirtle!")
             removeobject(1)
-            setflag(FLAG_UNUSED_0x020)
+            setflag(FLAG_STARTER_SQUIRTLE)
             call(NicknamePartyMon)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Received Squirtle!")
             removeobject(1)
-            setflag(FLAG_UNUSED_0x020)
+            setflag(FLAG_STARTER_SQUIRTLE)
             call(NicknameBoxMon)
         }
         else{
@@ -105,7 +105,7 @@ script LittlerootTown_BirchLab2_EventScript_PokeballLeft{
 script LittlerootTown_BirchLab2_EventScript_PokeballCenter{
 
     lock
-        if(!(flag(FLAG_UNUSED_0x020) || flag(FLAG_UNUSED_0x021) || flag(FLAG_UNUSED_0x022))){
+        if(!(flag(FLAG_STARTER_SQUIRTLE) || flag(FLAG_STARTER_CHARMANDER) || flag(FLAG_STARTER_BULBASAUR))){
     showmonpic(SPECIES_CHARMANDER, 10,3)
     msgbox("Do you want to choose Charmander?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
@@ -114,14 +114,14 @@ script LittlerootTown_BirchLab2_EventScript_PokeballCenter{
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Received Charmander!")
             removeobject(2)
-            setflag(FLAG_UNUSED_0x021)
+            setflag(FLAG_STARTER_CHARMANDER)
             call(NicknamePartyMon)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Received Charmander!")
             removeobject(2)
-            setflag(FLAG_UNUSED_0x021)
+            setflag(FLAG_STARTER_CHARMANDER)
             call(NicknameBoxMon)
         }
         else{
@@ -146,7 +146,7 @@ else{
 script LittlerootTown_BirchLab2_EventScript_PokeballRight{
 
     lock
-        if(!(flag(FLAG_UNUSED_0x020) || flag(FLAG_UNUSED_0x021) || flag(FLAG_UNUSED_0x022))){
+        if(!(flag(FLAG_STARTER_SQUIRTLE) || flag(FLAG_STARTER_CHARMANDER) || flag(FLAG_STARTER_BULBASAUR))){
     showmonpic(SPECIES_BULBASAUR, 10,3)
     msgbox("Do you want to choose Bulbasaur?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
@@ -155,14 +155,14 @@ script LittlerootTown_BirchLab2_EventScript_PokeballRight{
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Received Bulbasaur!")
             removeobject(3)
-            setflag(FLAG_UNUSED_0x022)
+            setflag(FLAG_STARTER_BULBASAUR)
             call(NicknamePartyMon)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Received Bulbasaur!")
             removeobject(3)
-            setflag(FLAG_UNUSED_0x022)
+            setflag(FLAG_STARTER_BULBASAUR)
             call(NicknameBoxMon)
         }
         else{
