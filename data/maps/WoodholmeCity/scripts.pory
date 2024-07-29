@@ -23,11 +23,11 @@ text May_Intro{
 }
 
 text May_Outro{
-    "Wtf lol"
+    "Wtf lol."
 }
 
 text May_PostBattle{
-    "I'll get you next time"
+    "I'll get you next time."
 }
 
 script WoodholmeCity_EventScript_SignLeavingTown{
