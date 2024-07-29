@@ -42,11 +42,11 @@
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 #define NUM_TEMP_FLAGS   (TEMP_FLAGS_END - TEMP_FLAGS_START + 1)
 
-#define FLAG_UNUSED_0x020    0x20 // Used for Squirtle in script LittlerootTown_BirchLab2_EventScript_PokeballLeft
-#define FLAG_UNUSED_0x021    0x21 // Used for Charmander in script LittlerootTown_BirchLab2_EventScript_PokeballCenter
-#define FLAG_UNUSED_0x022    0x22 // Used for Bulbasaur in script LittlerootTown_BirchLab2_EventScript_PokeballRight
-#define FLAG_UNUSED_0x023    0x23 // Unused Flag
-#define FLAG_UNUSED_0x024    0x24 // Unused Flag
+#define FLAG_STARTER_SQUIRTLE    0x20 // Used for Squirtle in script LittlerootTown_BirchLab2_EventScript_PokeballLeft
+#define FLAG_STARTER_CHARMANDER    0x21 // Used for Charmander in script LittlerootTown_BirchLab2_EventScript_PokeballCenter
+#define FLAG_STARTER_BULBASAUR    0x22 // Used for Bulbasaur in script LittlerootTown_BirchLab2_EventScript_PokeballRight
+#define FLAG_ITEM_EXPSHARE    0x23 // Used for EXP SHARE GEN 6.
+#define FLAG_RIVAL_BATTLE1    0x24 // Used for the first rival battle outside Red's Lab.
 #define FLAG_UNUSED_0x025    0x25 // Unused Flag
 #define FLAG_UNUSED_0x026    0x26 // Unused Flag
 #define FLAG_UNUSED_0x027    0x27 // Unused Flag

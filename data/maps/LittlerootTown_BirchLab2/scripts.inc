@@ -16,7 +16,7 @@ LittlerootTown_BirchLab2_EventScript_Red::
 # 11 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
 	faceplayer
 # 12 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x020, LittlerootTown_BirchLab2_EventScript_Red_4
+	goto_if_unset FLAG_STARTER_SQUIRTLE, LittlerootTown_BirchLab2_EventScript_Red_4
 LittlerootTown_BirchLab2_EventScript_Red_3:
 # 28 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
 	faceplayer
@@ -41,12 +41,12 @@ LittlerootTown_BirchLab2_EventScript_Red_2:
 
 LittlerootTown_BirchLab2_EventScript_Red_4:
 # 12 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x021, LittlerootTown_BirchLab2_EventScript_Red_6
+	goto_if_unset FLAG_STARTER_CHARMANDER, LittlerootTown_BirchLab2_EventScript_Red_6
 	goto LittlerootTown_BirchLab2_EventScript_Red_3
 
 LittlerootTown_BirchLab2_EventScript_Red_6:
 # 12 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x022, LittlerootTown_BirchLab2_EventScript_Red_2
+	goto_if_unset FLAG_STARTER_BULBASAUR, LittlerootTown_BirchLab2_EventScript_Red_2
 	goto LittlerootTown_BirchLab2_EventScript_Red_3
 
 LittlerootTown_BirchLab2_EventScript_Red_9:
@@ -70,7 +70,7 @@ LittlerootTown_BirchLab2_EventScript_PokeballLeft::
 # 65 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
 	lock
 # 66 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x020, LittlerootTown_BirchLab2_EventScript_PokeballLeft_4
+	goto_if_unset FLAG_STARTER_SQUIRTLE, LittlerootTown_BirchLab2_EventScript_PokeballLeft_4
 LittlerootTown_BirchLab2_EventScript_PokeballLeft_3:
 # 97 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
 	msgbox LittlerootTown_BirchLab2_EventScript_PokeballLeft_Text_3
@@ -97,12 +97,12 @@ LittlerootTown_BirchLab2_EventScript_PokeballLeft_2:
 
 LittlerootTown_BirchLab2_EventScript_PokeballLeft_4:
 # 66 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x021, LittlerootTown_BirchLab2_EventScript_PokeballLeft_6
+	goto_if_unset FLAG_STARTER_CHARMANDER, LittlerootTown_BirchLab2_EventScript_PokeballLeft_6
 	goto LittlerootTown_BirchLab2_EventScript_PokeballLeft_3
 
 LittlerootTown_BirchLab2_EventScript_PokeballLeft_6:
 # 66 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x022, LittlerootTown_BirchLab2_EventScript_PokeballLeft_2
+	goto_if_unset FLAG_STARTER_BULBASAUR, LittlerootTown_BirchLab2_EventScript_PokeballLeft_2
 	goto LittlerootTown_BirchLab2_EventScript_PokeballLeft_3
 
 LittlerootTown_BirchLab2_EventScript_PokeballLeft_9:
@@ -128,7 +128,7 @@ LittlerootTown_BirchLab2_EventScript_PokeballLeft_12:
 # 74 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
 	removeobject 1
 # 75 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
-	setflag FLAG_UNUSED_0x020
+	setflag FLAG_STARTER_SQUIRTLE
 # 76 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
 	call NicknamePartyMon
 	goto LittlerootTown_BirchLab2_EventScript_PokeballLeft_1
@@ -141,7 +141,7 @@ LittlerootTown_BirchLab2_EventScript_PokeballLeft_13:
 # 81 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
 	removeobject 1
 # 82 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
-	setflag FLAG_UNUSED_0x020
+	setflag FLAG_STARTER_SQUIRTLE
 # 83 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
 	call NicknameBoxMon
 	goto LittlerootTown_BirchLab2_EventScript_PokeballLeft_1
@@ -151,7 +151,7 @@ LittlerootTown_BirchLab2_EventScript_PokeballCenter::
 # 107 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
 	lock
 # 108 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x020, LittlerootTown_BirchLab2_EventScript_PokeballCenter_4
+	goto_if_unset FLAG_STARTER_SQUIRTLE, LittlerootTown_BirchLab2_EventScript_PokeballCenter_4
 LittlerootTown_BirchLab2_EventScript_PokeballCenter_3:
 # 138 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
 	msgbox LittlerootTown_BirchLab2_EventScript_PokeballLeft_Text_3
@@ -178,12 +178,12 @@ LittlerootTown_BirchLab2_EventScript_PokeballCenter_2:
 
 LittlerootTown_BirchLab2_EventScript_PokeballCenter_4:
 # 108 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x021, LittlerootTown_BirchLab2_EventScript_PokeballCenter_6
+	goto_if_unset FLAG_STARTER_CHARMANDER, LittlerootTown_BirchLab2_EventScript_PokeballCenter_6
 	goto LittlerootTown_BirchLab2_EventScript_PokeballCenter_3
 
 LittlerootTown_BirchLab2_EventScript_PokeballCenter_6:
 # 108 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x022, LittlerootTown_BirchLab2_EventScript_PokeballCenter_2
+	goto_if_unset FLAG_STARTER_BULBASAUR, LittlerootTown_BirchLab2_EventScript_PokeballCenter_2
 	goto LittlerootTown_BirchLab2_EventScript_PokeballCenter_3
 
 LittlerootTown_BirchLab2_EventScript_PokeballCenter_9:
@@ -209,7 +209,7 @@ LittlerootTown_BirchLab2_EventScript_PokeballCenter_12:
 # 116 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
 	removeobject 2
 # 117 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
-	setflag FLAG_UNUSED_0x021
+	setflag FLAG_STARTER_CHARMANDER
 # 118 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
 	call NicknamePartyMon
 	goto LittlerootTown_BirchLab2_EventScript_PokeballCenter_1
@@ -222,7 +222,7 @@ LittlerootTown_BirchLab2_EventScript_PokeballCenter_13:
 # 123 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
 	removeobject 2
 # 124 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
-	setflag FLAG_UNUSED_0x021
+	setflag FLAG_STARTER_CHARMANDER
 # 125 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
 	call NicknameBoxMon
 	goto LittlerootTown_BirchLab2_EventScript_PokeballCenter_1
@@ -232,7 +232,7 @@ LittlerootTown_BirchLab2_EventScript_PokeballRight::
 # 148 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
 	lock
 # 149 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x020, LittlerootTown_BirchLab2_EventScript_PokeballRight_4
+	goto_if_unset FLAG_STARTER_SQUIRTLE, LittlerootTown_BirchLab2_EventScript_PokeballRight_4
 LittlerootTown_BirchLab2_EventScript_PokeballRight_3:
 # 179 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
 	msgbox LittlerootTown_BirchLab2_EventScript_PokeballLeft_Text_3
@@ -259,12 +259,12 @@ LittlerootTown_BirchLab2_EventScript_PokeballRight_2:
 
 LittlerootTown_BirchLab2_EventScript_PokeballRight_4:
 # 149 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x021, LittlerootTown_BirchLab2_EventScript_PokeballRight_6
+	goto_if_unset FLAG_STARTER_CHARMANDER, LittlerootTown_BirchLab2_EventScript_PokeballRight_6
 	goto LittlerootTown_BirchLab2_EventScript_PokeballRight_3
 
 LittlerootTown_BirchLab2_EventScript_PokeballRight_6:
 # 149 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x022, LittlerootTown_BirchLab2_EventScript_PokeballRight_2
+	goto_if_unset FLAG_STARTER_BULBASAUR, LittlerootTown_BirchLab2_EventScript_PokeballRight_2
 	goto LittlerootTown_BirchLab2_EventScript_PokeballRight_3
 
 LittlerootTown_BirchLab2_EventScript_PokeballRight_9:
@@ -290,7 +290,7 @@ LittlerootTown_BirchLab2_EventScript_PokeballRight_12:
 # 157 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
 	removeobject 3
 # 158 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
-	setflag FLAG_UNUSED_0x022
+	setflag FLAG_STARTER_BULBASAUR
 # 159 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
 	call NicknamePartyMon
 	goto LittlerootTown_BirchLab2_EventScript_PokeballRight_1
@@ -303,7 +303,7 @@ LittlerootTown_BirchLab2_EventScript_PokeballRight_13:
 # 164 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
 	removeobject 3
 # 165 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
-	setflag FLAG_UNUSED_0x022
+	setflag FLAG_STARTER_BULBASAUR
 # 166 "data/maps/LittlerootTown_BirchLab2/scripts.pory"
 	call NicknameBoxMon
 	goto LittlerootTown_BirchLab2_EventScript_PokeballRight_1
