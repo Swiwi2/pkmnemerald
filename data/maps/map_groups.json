@@ -1,7 +1,7 @@
 {
   "group_order": [
-    "gMapGroup_IndoorWoodholme",
-    "gMapGroup_IndoorRoute1",
+    "gMapGroup_WoodholmeCity",
+    "gMapGroup_Route1",
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorOldale",
@@ -37,19 +37,23 @@
     "gMapGroup_IndoorRoute119",
     "gMapGroup_IndoorRoute124"
   ],
-  "gMapGroup_IndoorWoodholme": [
+  "gMapGroup_WoodholmeCity": [
+    "WoodholmeCity",
     "Woodholme_PC",
     "Woodholme_Mart",
     "Woodholme_Gym",
     "Woodholme_Lab",
-    "Woodholme_CondoLeft_Corr"
+    "Woodholme_CondoLeft_Corr",
+    "Woodholme_CondoLeft_Apt1",
+    "Woodholme_CondoLeft_Apt2",
+    "Woodholme_CondoLeft_Apt3",
+    "Woodholme_CondoLeft_PlayerHouse"
   ],
-  "gMapGroup_IndoorRoute1": [
+  "gMapGroup_Route1": [
+    "Route1",
     "IndoorRoute1Cottage"
   ],
   "gMapGroup_TownsAndRoutes": [
-    "WoodholmeCity",
-    "Route1",
     "PetalburgCity",
     "SlateportCity",
     "MauvilleCity",

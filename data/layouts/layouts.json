@@ -4485,11 +4485,51 @@
       "id": "LAYOUT_WOODHOLME_CONDO_LEFT_CORR",
       "name": "Woodholme_CondoLeft_Corr_Layout",
       "width": 30,
-      "height": 10,
+      "height": 6,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_BattleDome",
+      "secondary_tileset": "gTileset_PokemonDayCare",
       "border_filepath": "data/layouts/Woodholme_CondoLeft_Corr/border.bin",
       "blockdata_filepath": "data/layouts/Woodholme_CondoLeft_Corr/map.bin"
+    },
+    {
+      "id": "LAYOUT_WOODHOLME_CONDO_LEFT_APT1",
+      "name": "Woodholme_CondoLeft_Apt1_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/Woodholme_CondoLeft_Apt1/border.bin",
+      "blockdata_filepath": "data/layouts/Woodholme_CondoLeft_Apt1/map.bin"
+    },
+    {
+      "id": "LAYOUT_WOODHOLME_CONDO_LEFT_APT2",
+      "name": "Woodholme_CondoLeft_Apt2_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/Woodholme_CondoLeft_Apt2/border.bin",
+      "blockdata_filepath": "data/layouts/Woodholme_CondoLeft_Apt2/map.bin"
+    },
+    {
+      "id": "LAYOUT_WOODHOLME_CONDO_LEFT_APT3",
+      "name": "Woodholme_CondoLeft_Apt3_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/Woodholme_CondoLeft_Apt3/border.bin",
+      "blockdata_filepath": "data/layouts/Woodholme_CondoLeft_Apt3/map.bin"
+    },
+    {
+      "id": "LAYOUT_WOODHOLME_CONDO_LEFT_PLAYER_HOUSE",
+      "name": "Woodholme_CondoLeft_PlayerHouse_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/Woodholme_CondoLeft_PlayerHouse/border.bin",
+      "blockdata_filepath": "data/layouts/Woodholme_CondoLeft_PlayerHouse/map.bin"
     }
   ]
 }

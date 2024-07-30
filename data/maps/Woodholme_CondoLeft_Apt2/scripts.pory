@@ -1,0 +1,15 @@
+mapscripts Woodholme_CondoLeft_Apt2_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION: Woodholme_CondoLeft_Apt2_OnTransition
+}
+
+script Woodholme_CondoLeft_Apt2_OnTransition{
+    end
+}
+
+// Placeholder dialogue option for the NPC in apartment 2.
+script Woodholme_CondoLeft_Apt2_EventScript_Woman{
+    lock
+    faceplayer
+    msgbox(format("Placeholder text"))
+    release
+}
