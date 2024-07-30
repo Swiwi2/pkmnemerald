@@ -8,6 +8,7 @@
 // gMapGroup_IndoorWoodholme
 #define MAP_WOODHOLME_PC   (0 | (0 << 8))
 #define MAP_WOODHOLME_MART (1 | (0 << 8))
+#define MAP_WOODHOLME_GYM  (2 | (0 << 8))
 
 // gMapGroup_IndoorRoute1
 #define MAP_INDOOR_ROUTE1COTTAGE (0 | (1 << 8))

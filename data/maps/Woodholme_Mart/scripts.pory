@@ -1,0 +1,35 @@
+mapscripts Woodholme_Mart_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION: Woodholme_Mart_OnTransition
+}
+
+script Woodholme_Mart_OnTransition{
+    end
+}
+
+script Woodholme_Mart_EventScript_MartEmployee{
+    lock
+    faceplayer
+    message(format("How may I help you?"))
+    waitmessage
+    if(var(VAR_WOODHOLME_STATE) == 0){
+        pokemart(Woodholme_MartItems1)
+    }
+    else{
+        pokemart(Woodholme_MartItems2)
+    }
+    msgbox(format("A pleasure doing business with you."))
+    release
+}
+
+mart Woodholme_MartItems1 {
+    ITEM_POTION
+    ITEM_ANTIDOTE
+}
+
+mart Woodholme_MartItems2 {
+    ITEM_POKE_BALL
+    ITEM_POTION
+    ITEM_ANTIDOTE
+    ITEM_REPEL
+    ITEM_ESCAPE_ROPE
+}

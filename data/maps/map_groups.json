@@ -39,7 +39,8 @@
   ],
   "gMapGroup_IndoorWoodholme": [
     "Woodholme_PC",
-    "Woodholme_Mart"
+    "Woodholme_Mart",
+    "Woodholme_Gym"
   ],
   "gMapGroup_IndoorRoute1": [
     "IndoorRoute1Cottage"

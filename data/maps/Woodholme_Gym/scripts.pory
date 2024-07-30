@@ -1,0 +1,15 @@
+mapscripts Woodholme_Gym_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION: Woodholme_Gym_OnTransition
+}
+
+script Woodholme_Gym_OnTransition{
+    end
+}
+
+// Defines what the Man says if we haven't got 7 badges.
+script Woodholme_Gym_EventScript_Man1{
+    lock
+    faceplayer
+    msgbox(format("Yo. STELLA isn't here right now. Her gym is the final Gym in the Gym Challenge Series. You should complete the other Gyms first and come back when your team is more powerful. Good luck!"))
+    release
+}
