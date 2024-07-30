@@ -61,9 +61,16 @@ script WoodholmeCity_Trigger_BlockPath{
     release
 }
 
+script WoodholmeCity_EventScript_BlockCondo{
+    lock
+    msgbox(format("Hmm, it appears to be locked from the inside."))
+    release
+}
+
 movement StopPlayer {
     walk_down    
 }
+
 
 script WoodholmeCity_EventScript_SignLeavingTown{
     lock

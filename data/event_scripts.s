@@ -1088,3 +1088,11 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Woodholme_Lab/scripts.inc"
 
 	.include "data/maps/Woodholme_CondoLeft_Corr/scripts.inc"
+
+	.include "data/maps/Woodholme_CondoLeft_Apt1/scripts.inc"
+
+	.include "data/maps/Woodholme_CondoLeft_Apt2/scripts.inc"
+
+	.include "data/maps/Woodholme_CondoLeft_Apt3/scripts.inc"
+
+	.include "data/maps/Woodholme_CondoLeft_PlayerHouse/scripts.inc"

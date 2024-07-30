@@ -14,7 +14,7 @@ script Woodholme_Gym_EventScript_Man1{
     release
 }
 
-
+// Placeholder for the Gym Leader.
 script Woodholme_Gym_EventScript_Leader{
     lock
     faceplayer
