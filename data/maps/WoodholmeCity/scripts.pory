@@ -1,67 +1,101 @@
 mapscripts WoodholmeCity_MapScripts {
-    MAP_SCRIPT_ON_TRANSITION: WoodholmeCity_EventScript_SetupRivalBattle
+    MAP_SCRIPT_ON_TRANSITION: WoodholmeCity_OnTransition
 }
 
+script WoodholmeCity_OnTransition{
+    setflag(FLAG_VISITED_WOODHOLMECITY)
+    goto(WoodholmeCity_EventScript_SetupRivalBattle)
+}
+
+// Woodholme State används för att se om vi får lämna staden norrut. Sätts efter RivalBattleOver.
 script WoodholmeCity_EventScript_SetupRivalBattle{
     if (!(flag(FLAG_STARTER_BULBASAUR) || flag(FLAG_STARTER_CHARMANDER) || flag(FLAG_STARTER_SQUIRTLE))){
         setflag(FLAG_RIVAL_BATTLE1)
+        setvar(VAR_WOODHOLME_STATE,0)
     }
     else{
+        if(var(VAR_WOODHOLME_STATE) == 0){
         clearflag(FLAG_RIVAL_BATTLE1)
+        }
     }
 }
 
 script WoodholmeCity_EventScript_RivalBattle1{
-    trainerbattle_single(TRAINER_MAY_ROUTE_103_TORCHIC, May_Intro, May_Outro) //Replace TRAINER_MAY etc with a trainer.
-    msgbox(May_PostBattle, MSGBOX_AUTOCLOSE)
-    waitmessage
+
+        trainerbattle_single(TRAINER_MAY_ROUTE_103_TORCHIC, May_Intro, May_Outro, RivalBattleOver) //Replace TRAINER_MAY etc with a trainer.
+    
     end
 }
 
+script RivalBattleOver{
+    lock
+    applymovement(1, MayLeave)
+    waitmovement(0)
+    removeobject(1)
+    setflag(FLAG_RIVAL_BATTLE1)
+    setvar(VAR_WOODHOLME_STATE, 1)
+    waitmessage
+    release
+}
+
+movement MayLeave{
+    face_down
+    walk_down
+    walk_right * 8
+}
+
 text May_Intro{
-    "You'll never win!"
+    format("Okay, let's see if we can figure this battle thing out...")
 }
 
 text May_Outro{
-    "Wtf lol."
+    format("Oh wow, that was really fun. I'm going to train my Pokémon by battling other trainers to prepare for the gym challenge!")
 }
 
-text May_PostBattle{
-    "I'll get you next time."
+script WoodholmeCity_Trigger_BlockPath{
+    lock
+    msgbox(format("Hmm. I'd better visit RED before I venture out into the grass."))
+    applymovement(OBJ_EVENT_ID_PLAYER, StopPlayer)
+    waitmovement(0)
+    release
+}
+
+movement StopPlayer {
+    walk_down    
 }
 
 script WoodholmeCity_EventScript_SignLeavingTown{
     lock
-    msgbox("HEADING NORTH TO ROUTE 1")
+    msgbox(format("BEWARE: WILD POKÉMON LIVE IN TALL GRASS."))
     release
 }
 
 script WoodholmeCity_EventScript_SignGym{
     lock
-    msgbox("STELLA'S GYM")
+    msgbox(format("STELLA'S POKÉMON GYM"))
     release
 }
 
 script WoodholmeCity_EventScript_SignCondoTopRight{
     lock
-    msgbox("Woodholme Realty Inc.\n Cheap accommodation options available!")
+    msgbox(format("Woodholme Realty Inc: Cheap accommodation options available!"))
     release
 }
 
 script WoodholmeCity_EventScript_SignCondoLeft{
     lock
-    msgbox("Woodholme Realty Inc.\n Luxury condos for your Pokémon friends!")
+    msgbox(format("Woodholme Realty Inc: Luxury condos for your Pokémon friends!"))
     release
 }
 
 script WoodholmeCity_EventScript_SignCondoRight{
     lock
-    msgbox("Woodholme Realty Inc\n Condos with the best view in Woodholme!")
+    msgbox(format("Woodholme Realty Inc: Condos with the best view in Woodholme!"))
     release
 }
 
 script WoodholmeCity_EventScript_SignRedsLab{
     lock
-    msgbox("RED'S LAB \n New trainers welcome!")
+    msgbox(formt("RED'S LAB: New trainers welcome!"))
     release
 }

@@ -4470,6 +4470,16 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/IndoorRoute1Cottage/border.bin",
       "blockdata_filepath": "data/layouts/IndoorRoute1Cottage/map.bin"
+    },
+    {
+      "id": "LAYOUT_WOODHOLME_GYM",
+      "name": "Woodholme_Gym_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_RustboroGym",
+      "border_filepath": "data/layouts/Woodholme_Gym/border.bin",
+      "blockdata_filepath": "data/layouts/Woodholme_Gym/map.bin"
     }
   ]
 }

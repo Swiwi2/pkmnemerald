@@ -1084,3 +1084,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Route1/scripts.inc"
 
 	.include "data/maps/IndoorRoute1Cottage/scripts.inc"
+
+	.include "data/maps/Woodholme_Gym/scripts.inc"
