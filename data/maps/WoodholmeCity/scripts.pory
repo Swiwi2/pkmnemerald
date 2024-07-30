@@ -7,7 +7,7 @@ script WoodholmeCity_OnTransition{
     goto(WoodholmeCity_EventScript_SetupRivalBattle)
 }
 
-// Woodholme State används för att se om vi får lämna staden norrut. Sätts efter RivalBattleOver.
+// Woodholme State being used to determine if we can leave the city to Route 1. State set to 1 after first Rival Battle.
 script WoodholmeCity_EventScript_SetupRivalBattle{
     if (!(flag(FLAG_STARTER_BULBASAUR) || flag(FLAG_STARTER_CHARMANDER) || flag(FLAG_STARTER_SQUIRTLE))){
         setflag(FLAG_RIVAL_BATTLE1)
@@ -21,8 +21,8 @@ script WoodholmeCity_EventScript_SetupRivalBattle{
 }
 
 script WoodholmeCity_EventScript_RivalBattle1{
-
-        trainerbattle_single(TRAINER_MAY_ROUTE_103_TORCHIC, May_Intro, May_Outro, RivalBattleOver) //Replace TRAINER_MAY etc with a trainer.
+        // May is currently only using Mudkip - Todo: change this to depend on your starter choice.
+        trainerbattle_single(TRAINER_MAY_ROUTE_103_TORCHIC, May_Intro, May_Outro, RivalBattleOver)
     
     end
 }
@@ -41,15 +41,16 @@ script RivalBattleOver{
 movement MayLeave{
     face_down
     walk_down
-    walk_right * 8
+    face_right
+    walk_right * 10
 }
 
 text May_Intro{
-    format("Okay, let's see if we can figure this battle thing out...")
+    format("Okay, RED said that in order to make our Pokémon stronger we need to battle them. Let's see if we can figure out how to battle... I'll take you on!")
 }
 
 text May_Outro{
-    format("Oh wow, that was really fun. I'm going to train my Pokémon by battling other trainers to prepare for the gym challenge!")
+    format("Oh wow, that was really fun! Except for the losing part... That wasn't very fun. I'm going to go train my Pokémon by battling other trainers! Next time we meet I'll be a lot stronger!")
 }
 
 script WoodholmeCity_Trigger_BlockPath{
@@ -66,7 +67,7 @@ movement StopPlayer {
 
 script WoodholmeCity_EventScript_SignLeavingTown{
     lock
-    msgbox(format("BEWARE: WILD POKÉMON LIVE IN TALL GRASS."))
+    msgbox(format("BEWARE: WILD POKÉMON AHEAD. DO NOT PROCEED WITHOUT POKÉMON FOR PROTECTION."))
     release
 }
 
@@ -96,6 +97,6 @@ script WoodholmeCity_EventScript_SignCondoRight{
 
 script WoodholmeCity_EventScript_SignRedsLab{
     lock
-    msgbox(formt("RED'S LAB: New trainers welcome!"))
+    msgbox(format("RED'S LAB: Helping new trainers learn about Pokémon."))
     release
 }

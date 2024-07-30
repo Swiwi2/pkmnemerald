@@ -6,6 +6,7 @@ script Woodholme_Mart_OnTransition{
     end
 }
 
+// Script to interact with Mart Employee.
 script Woodholme_Mart_EventScript_MartEmployee{
     lock
     faceplayer
@@ -21,15 +22,25 @@ script Woodholme_Mart_EventScript_MartEmployee{
     release
 }
 
+// Before Rival Battle and claiming a Pokémon, the Mart doesn't have much to sell.
 mart Woodholme_MartItems1 {
     ITEM_POTION
     ITEM_ANTIDOTE
 }
 
+// Updated Mart items after starter Pokémon is claimed and first Rival Battle is complete.
 mart Woodholme_MartItems2 {
     ITEM_POKE_BALL
     ITEM_POTION
     ITEM_ANTIDOTE
     ITEM_REPEL
     ITEM_ESCAPE_ROPE
+}
+
+// Interaction with random NPC standing in the Mart.
+script Woodholme_Mart_EventScript_Man{
+    lock
+    faceplayer
+    msgbox(format("The PokéMart really has a lot of useful items!"))
+    release
 }
