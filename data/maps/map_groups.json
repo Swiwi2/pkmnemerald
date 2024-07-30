@@ -40,7 +40,9 @@
   "gMapGroup_IndoorWoodholme": [
     "Woodholme_PC",
     "Woodholme_Mart",
-    "Woodholme_Gym"
+    "Woodholme_Gym",
+    "Woodholme_Lab",
+    "Woodholme_CondoLeft_Corr"
   ],
   "gMapGroup_IndoorRoute1": [
     "IndoorRoute1Cottage"
@@ -111,8 +113,7 @@
     "LittlerootTown_BrendansHouse_2F",
     "LittlerootTown_MaysHouse_1F",
     "LittlerootTown_MaysHouse_2F",
-    "LittlerootTown_ProfessorBirchsLab",
-    "LittlerootTown_BirchLab2"
+    "LittlerootTown_ProfessorBirchsLab"
   ],
   "gMapGroup_IndoorOldale": [
     "OldaleTown_House1",

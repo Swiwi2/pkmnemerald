@@ -6,9 +6,11 @@
 //
 
 // gMapGroup_IndoorWoodholme
-#define MAP_WOODHOLME_PC   (0 | (0 << 8))
-#define MAP_WOODHOLME_MART (1 | (0 << 8))
-#define MAP_WOODHOLME_GYM  (2 | (0 << 8))
+#define MAP_WOODHOLME_PC              (0 | (0 << 8))
+#define MAP_WOODHOLME_MART            (1 | (0 << 8))
+#define MAP_WOODHOLME_GYM             (2 | (0 << 8))
+#define MAP_WOODHOLME_LAB             (3 | (0 << 8))
+#define MAP_WOODHOLME_CONDO_LEFT_CORR (4 | (0 << 8))
 
 // gMapGroup_IndoorRoute1
 #define MAP_INDOOR_ROUTE1COTTAGE (0 | (1 << 8))
@@ -80,7 +82,6 @@
 #define MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F        (2 | (3 << 8))
 #define MAP_LITTLEROOT_TOWN_MAYS_HOUSE_2F        (3 | (3 << 8))
 #define MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB (4 | (3 << 8))
-#define MAP_LITTLEROOT_TOWN_BIRCH_LAB2           (5 | (3 << 8))
 
 // gMapGroup_IndoorOldale
 #define MAP_OLDALE_TOWN_HOUSE1            (0 | (4 << 8))

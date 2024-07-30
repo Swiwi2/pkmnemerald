@@ -1,0 +1,201 @@
+mapscripts Woodholme_Lab_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION: Woodholme_Lab_OnTransition
+}
+
+script Woodholme_Lab_OnTransition{
+    setvar(VAR_STARTER_SELECTION, 0)
+}
+
+const Red = 1
+const PokeballLeft = 2
+const PokeballCenter = 3
+const PokeballRight = 4
+
+script Woodholme_Lab_EventScript_Red{
+    lock
+    faceplayer
+    if(!(flag(FLAG_STARTER_SQUIRTLE) || flag(FLAG_STARTER_CHARMANDER) || flag(FLAG_STARTER_BULBASAUR))){
+        // If we interact with Red before choosing a starter, this is what he says:
+        msgbox(Woodholme_Lab_Text_Red1, MSGBOX_YESNO)       
+        if(var(VAR_RESULT) == YES){
+            if(var(VAR_STARTER_SELECTION) != 2){
+                addvar(VAR_STARTER_SELECTION, 1)
+            }
+            else{
+                setvar(VAR_STARTER_SELECTION, 0)
+            }
+            msgbox(format("Choose your Pokémon wisely."))
+        }
+        else{
+            msgbox(format("You won't be able to start your Pokémon adventure without a Pokémon!"))
+        }
+    }
+    else{
+        faceplayer
+        // After we've chosen a starter, if we interact with Red again he says the following:
+        msgbox(Woodholme_Lab_Text_Red2)                 
+    }
+    waitmessage
+    release
+    end
+}
+
+// If we interact with Red before selecting a starter Pokémon:
+text Woodholme_Lab_Text_Red1{
+       format("Ah! You must be the new trainerthat just moved in! Welcome! My name is Red. I used to be the very best trainer in the world. That was long ago, and I've since retired from battling Pokémon. Nowadays, I've set my sights on a completely different challenge... To help new trainers get started on their own Pokémon journey! {PLAYER}, I want you to choose your very own Pokémon friend to take with you! In these Pokéballs I have three different Pokémon. You may have one. Are you ready to choose a Pokémon?")
+}
+
+// If we interact with Red again after selecting a starter Pokémon:
+text Woodholme_Lab_Text_Red2{
+    format("Ah, an excellent choice. That certainly was one of my favorites! If I were to give a word of advice,I would suggest battling to make your new Pokémon stronger. That way, you can take on the Pokémon gym challenge!")
+}
+
+
+
+script Woodholme_Lab_EventScript_PokeballLeft{
+    lock
+    // If we haven't claimed any Pokémon from the table:
+    if(!(flag(FLAG_STARTER_SQUIRTLE) || flag(FLAG_STARTER_CHARMANDER) || flag(FLAG_STARTER_BULBASAUR))){
+    showmonpic(SPECIES_SQUIRTLE, 10,3)
+    msgbox("Do you want to choose Squirtle?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_SQUIRTLE, 5,)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox(format("{PLAYER} received the Squirtle!"))
+            removeobject(PokeballLeft)
+            setflag(FLAG_STARTER_SQUIRTLE)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox(format("{PLAYER} received the Squirtle!"))
+            removeobject(PokeballLeft)
+            setflag(FLAG_STARTER_SQUIRTLE)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox(format("You don't have room for that."))
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(Woodholme_Lab_Text_NotChosen)
+    }
+
+    }
+        else{
+        msgbox("RED: You already took a Pokémon!")
+     }
+    waitmessage
+    release
+    end
+
+}
+
+script Woodholme_Lab_EventScript_PokeballCenter{
+    lock
+    // If we haven't claimed any Pokémon from the table:
+    if(!(flag(FLAG_STARTER_SQUIRTLE) || flag(FLAG_STARTER_CHARMANDER) || flag(FLAG_STARTER_BULBASAUR))){
+    showmonpic(SPECIES_CHARMANDER, 10,3)
+    msgbox("Do you want to choose Charmander?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_CHARMANDER, 5)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox(format("{PLAYER} received the Charmander!"))
+            removeobject(PokeballCenter)
+            setflag(FLAG_STARTER_CHARMANDER)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox(format("{PLAYER} received the Charmander!"))
+            removeobject(PokeballCenter)
+            setflag(FLAG_STARTER_CHARMANDER)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox(format("You don't have room for that."))
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(Woodholme_Lab_Text_NotChosen)
+    }
+}
+else{
+    msgbox("RED: You already took a Pokémon!")
+    }
+    waitmessage
+    release
+    end
+}
+
+script Woodholme_Lab_EventScript_PokeballRight{
+    lock
+    // If we haven't claimed any Pokémon from the table:
+    if(!(flag(FLAG_STARTER_SQUIRTLE) || flag(FLAG_STARTER_CHARMANDER) || flag(FLAG_STARTER_BULBASAUR))){
+    showmonpic(SPECIES_BULBASAUR, 10,3)
+    msgbox("Do you want to choose Bulbasaur?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_BULBASAUR, 5)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox(format("{PLAYER} received the Bulbasaur!"))
+            removeobject(PokeballRight)
+            setflag(FLAG_STARTER_BULBASAUR)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox(format("{PLAYER} received the Bulbasaur!"))
+            removeobject(PokeballRight)
+            setflag(FLAG_STARTER_BULBASAUR)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox(format("You don't have room for that."))
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(Woodholme_Lab_Text_NotChosen)
+    }
+}
+else{
+    msgbox(format("RED: You already took a Pokémon!"))
+
+}
+    waitmessage
+    release
+    end
+}
+
+// Asking if we want to give our new Pokémon a nickname.
+script NicknamePartyMon{
+    msgbox("Give it a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_GetGiftMonPartySlot)
+        call(Common_EventScript_NameReceivedPartyMon)
+    }
+}
+
+// Asking if we want to give it a nickname when sending it to a Box.
+script NicknameBoxMon{
+    msgbox("Give a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_NameReceivedBoxMon)
+    }
+    msgbox(format("Transferred to PC."))
+}
+
+// Text to display if we click "NO" on the starter choice.
+text Woodholme_Lab_Text_NotChosen{
+    format("RED: It's a tough choice. Think hard before deciding!")
+}

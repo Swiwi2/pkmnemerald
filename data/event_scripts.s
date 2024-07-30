@@ -1075,8 +1075,6 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
 
-	.include "data/maps/LittlerootTown_BirchLab2/scripts.inc"
-
 	.include "data/maps/WoodholmeCity/scripts.inc"
 
 	.include "data/maps/Woodholme_PC/scripts.inc"
@@ -1088,3 +1086,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/IndoorRoute1Cottage/scripts.inc"
 
 	.include "data/maps/Woodholme_Gym/scripts.inc"
+
+	.include "data/maps/Woodholme_Lab/scripts.inc"
+
+	.include "data/maps/Woodholme_CondoLeft_Corr/scripts.inc"

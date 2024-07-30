@@ -9,60 +9,77 @@ Woodholme_Mart_OnTransition::
 
 
 Woodholme_Mart_EventScript_MartEmployee::
-# 10 "data/maps/Woodholme_Mart/scripts.pory"
-	lock
 # 11 "data/maps/Woodholme_Mart/scripts.pory"
-	faceplayer
+	lock
 # 12 "data/maps/Woodholme_Mart/scripts.pory"
-	message Woodholme_Mart_EventScript_MartEmployee_Text_0
+	faceplayer
 # 13 "data/maps/Woodholme_Mart/scripts.pory"
-	waitmessage
+	message Woodholme_Mart_EventScript_MartEmployee_Text_0
 # 14 "data/maps/Woodholme_Mart/scripts.pory"
+	waitmessage
+# 15 "data/maps/Woodholme_Mart/scripts.pory"
 	compare VAR_WOODHOLME_STATE, 0
 	goto_if_eq Woodholme_Mart_EventScript_MartEmployee_2
-# 18 "data/maps/Woodholme_Mart/scripts.pory"
+# 19 "data/maps/Woodholme_Mart/scripts.pory"
 	pokemart Woodholme_MartItems2
 Woodholme_Mart_EventScript_MartEmployee_1:
-# 20 "data/maps/Woodholme_Mart/scripts.pory"
-	msgbox Woodholme_Mart_EventScript_MartEmployee_Text_1
 # 21 "data/maps/Woodholme_Mart/scripts.pory"
+	msgbox Woodholme_Mart_EventScript_MartEmployee_Text_1
+# 22 "data/maps/Woodholme_Mart/scripts.pory"
 	release
 	return
 
 Woodholme_Mart_EventScript_MartEmployee_2:
-# 15 "data/maps/Woodholme_Mart/scripts.pory"
+# 16 "data/maps/Woodholme_Mart/scripts.pory"
 	pokemart Woodholme_MartItems1
 	goto Woodholme_Mart_EventScript_MartEmployee_1
 
 
 	.align 2
-# 24 "data/maps/Woodholme_Mart/scripts.pory"
-Woodholme_MartItems1:
-# 25 "data/maps/Woodholme_Mart/scripts.pory"
-	.2byte ITEM_POTION
 # 26 "data/maps/Woodholme_Mart/scripts.pory"
+Woodholme_MartItems1:
+# 27 "data/maps/Woodholme_Mart/scripts.pory"
+	.2byte ITEM_POTION
+# 28 "data/maps/Woodholme_Mart/scripts.pory"
 	.2byte ITEM_ANTIDOTE
 	.2byte ITEM_NONE
 
 	.align 2
-# 29 "data/maps/Woodholme_Mart/scripts.pory"
-Woodholme_MartItems2:
-# 30 "data/maps/Woodholme_Mart/scripts.pory"
-	.2byte ITEM_POKE_BALL
-# 31 "data/maps/Woodholme_Mart/scripts.pory"
-	.2byte ITEM_POTION
 # 32 "data/maps/Woodholme_Mart/scripts.pory"
-	.2byte ITEM_ANTIDOTE
+Woodholme_MartItems2:
 # 33 "data/maps/Woodholme_Mart/scripts.pory"
-	.2byte ITEM_REPEL
+	.2byte ITEM_POKE_BALL
 # 34 "data/maps/Woodholme_Mart/scripts.pory"
+	.2byte ITEM_POTION
+# 35 "data/maps/Woodholme_Mart/scripts.pory"
+	.2byte ITEM_ANTIDOTE
+# 36 "data/maps/Woodholme_Mart/scripts.pory"
+	.2byte ITEM_REPEL
+# 37 "data/maps/Woodholme_Mart/scripts.pory"
 	.2byte ITEM_ESCAPE_ROPE
 	.2byte ITEM_NONE
 
+Woodholme_Mart_EventScript_Man::
+# 42 "data/maps/Woodholme_Mart/scripts.pory"
+	lock
+# 43 "data/maps/Woodholme_Mart/scripts.pory"
+	faceplayer
+# 44 "data/maps/Woodholme_Mart/scripts.pory"
+	msgbox Woodholme_Mart_EventScript_Man_Text_0
+# 45 "data/maps/Woodholme_Mart/scripts.pory"
+	release
+	return
+
+
 Woodholme_Mart_EventScript_MartEmployee_Text_0:
-# 12 "data/maps/Woodholme_Mart/scripts.pory"
+# 13 "data/maps/Woodholme_Mart/scripts.pory"
 	.string "How may I help you?$"
 
 Woodholme_Mart_EventScript_MartEmployee_Text_1:
-# 20 "data/maps/Woodholme_Mart/scripts.pory"
+# 21 "data/maps/Woodholme_Mart/scripts.pory"
 	.string "A pleasure doing business with you.$"
+
+Woodholme_Mart_EventScript_Man_Text_0:
+# 44 "data/maps/Woodholme_Mart/scripts.pory"
+	.string "The PokéMart really has a lot of useful\n"
+	.string "items!$"

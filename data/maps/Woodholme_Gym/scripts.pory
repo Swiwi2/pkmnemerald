@@ -13,3 +13,11 @@ script Woodholme_Gym_EventScript_Man1{
     msgbox(format("Yo. STELLA isn't here right now. Her gym is the final Gym in the Gym Challenge Series. You should complete the other Gyms first and come back when your team is more powerful. Good luck!"))
     release
 }
+
+
+script Woodholme_Gym_EventScript_Leader{
+    lock
+    faceplayer
+    msgbox(format("I'm a placeholder."))
+    release
+}
