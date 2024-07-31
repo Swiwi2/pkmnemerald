@@ -48,7 +48,7 @@
 #define FLAG_ITEM_EXPSHARE    0x23 // Used for EXP SHARE GEN 6.
 #define FLAG_RIVAL_BATTLE1    0x24 // Used for the first rival battle outside Red's Lab.
 #define FLAG_VISITED_WOODHOLMECITY    0x25 // Used for keeping track of wether we have visited Woodholme.
-#define FLAG_UNUSED_0x026    0x26 // Unused Flag
+#define FLAG_RIVAL_DISAPPEAR    0x26 // Used for making May disappear from the Lab after the first visit.
 #define FLAG_UNUSED_0x027    0x27 // Unused Flag
 #define FLAG_UNUSED_0x028    0x28 // Unused Flag
 #define FLAG_UNUSED_0x029    0x29 // Unused Flag

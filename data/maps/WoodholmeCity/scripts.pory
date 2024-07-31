@@ -4,7 +4,7 @@ mapscripts WoodholmeCity_MapScripts {
 
 script WoodholmeCity_OnTransition{
     setflag(FLAG_VISITED_WOODHOLMECITY)
-    goto(WoodholmeCity_EventScript_SetupRivalBattle)
+    call(WoodholmeCity_EventScript_SetupRivalBattle)
 }
 
 // Woodholme State being used to determine if we can leave the city to Route 1. State set to 1 after first Rival Battle.
@@ -14,10 +14,11 @@ script WoodholmeCity_EventScript_SetupRivalBattle{
         setvar(VAR_WOODHOLME_STATE,0)
     }
     else{
-        if(var(VAR_WOODHOLME_STATE) == 0){
+        if(var(VAR_WOODHOLME_STATE) == 1){
         clearflag(FLAG_RIVAL_BATTLE1)
         }
     }
+    return
 }
 
 script WoodholmeCity_EventScript_RivalBattle1{
@@ -30,10 +31,10 @@ script WoodholmeCity_EventScript_RivalBattle1{
 script RivalBattleOver{
     lock
     applymovement(1, MayLeave)
-    waitmovement(0)
+    waitmovement(1)
     removeobject(1)
     setflag(FLAG_RIVAL_BATTLE1)
-    setvar(VAR_WOODHOLME_STATE, 1)
+    setvar(VAR_WOODHOLME_STATE, 2)
     waitmessage
     release
 }
@@ -42,15 +43,21 @@ movement MayLeave{
     face_down
     walk_down
     face_right
-    walk_right * 10
+    walk_right * 2
+    face_up
+    walk_up
+    face_right
+    walk_right *6
+    face_up
+    walk_up * 8
 }
 
 text May_Intro{
-    format("Okay, RED said that in order to make our Pokémon stronger we need to battle them. Let's see if we can figure out how to battle... I'll take you on!")
+    format("Hello! My name is May and I just got a really cute Pokémon from RED! He said that apparently you and I are going to be RIVALS! Whatever that means... But okay, RED said that in order to make our Pokémon stronger we need to battle them. Let's see if we can figure out how to do this battle thing... I'll take you on!")
 }
 
 text May_Outro{
-    format("Oh wow, that was really fun! Except for the losing part... That wasn't very fun. I'm going to go train my Pokémon by battling other trainers! Next time we meet I'll be a lot stronger!")
+    format("Oh wow, cool! That was really fun! Except for the losing part... That wasn't very fun. That's it. That was the last time I lose a Pokémon battle! I'm going to go train my Pokémon by battling other trainers! RED said that the next step for us is to take on the Gym Challenge. I'm going to go buy some PokéBalls at the PokéMart and then head up to Route 1 to try and find some more Pokémon for my team. Next time we meet I'll be a lot stronger, I promise! See you later!")
 }
 
 script WoodholmeCity_Trigger_BlockPath{
@@ -63,7 +70,7 @@ script WoodholmeCity_Trigger_BlockPath{
 
 script WoodholmeCity_EventScript_BlockCondo{
     lock
-    msgbox(format("Hmm, it appears to be locked from the inside."))
+    msgbox(format("Hmm. It appears to be locked from the inside."))
     release
 }
 
@@ -74,7 +81,7 @@ movement StopPlayer {
 
 script WoodholmeCity_EventScript_SignLeavingTown{
     lock
-    msgbox(format("BEWARE: WILD POKÉMON AHEAD. DO NOT PROCEED WITHOUT POKÉMON FOR PROTECTION."))
+    msgbox(format("ROUTE 1 TO SERENLEAF CITY. BEWARE: WILD POKÉMON AHEAD."))
     release
 }
 
@@ -86,24 +93,24 @@ script WoodholmeCity_EventScript_SignGym{
 
 script WoodholmeCity_EventScript_SignCondoTopRight{
     lock
-    msgbox(format("Woodholme Realty Inc: Cheap accommodation options available!"))
+    msgbox(format("WOODHOLME REALTY INC. CHEAP ACCOMMODATION OPTIONS AVAILABLE!"))
     release
 }
 
 script WoodholmeCity_EventScript_SignCondoLeft{
     lock
-    msgbox(format("Woodholme Realty Inc: Luxury condos for your Pokémon friends!"))
+    msgbox(format("WOODHOLME REALTY INC. LUXURY CONDOS FOR YOU AND YOUR POKÉMON!"))
     release
 }
 
 script WoodholmeCity_EventScript_SignCondoRight{
     lock
-    msgbox(format("Woodholme Realty Inc: Condos with the best view in Woodholme!"))
+    msgbox(format("WOODHOLME REALTY INC. CONDOS WITH THE BEST VIEW IN WOODHOLME!"))
     release
 }
 
 script WoodholmeCity_EventScript_SignRedsLab{
     lock
-    msgbox(format("RED'S LAB: Helping new trainers learn about Pokémon."))
+    msgbox(format("RED'S LAB: HELPING NEW TRAINERS LEARN ABOUT POKÉMON."))
     release
 }

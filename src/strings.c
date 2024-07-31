@@ -1849,3 +1849,7 @@ const u8 gText_ExpShareOff[] = _("The Exp. Share has been turned off.{PAUSE_UNTI
 const u8 gText_BasePointsResetToZero[] = _("{STR_VAR_1}'s base points\nwere all reset to zero!{PAUSE_UNTIL_PRESS}");
 const u8 gText_Fertilize[] = _("FERTILIZE");
 const u8 gText_PlantBerry[] = _("PLANT BERRY");
+
+const u8 gText_MomChoice1[] = _("Woodholme"); // The three options that Moms dialogue in PlayerHouse offers.
+const u8 gText_MomChoice2[] = _("Gym Challenge");
+const u8 gText_MomChoice3[] = _("My Rival");
