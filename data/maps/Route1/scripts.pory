@@ -3,7 +3,7 @@ mapscripts Route1_MapScripts {
 }
 
 script Route1_EventScript_Transition{
-    setvar(VAR_UNUSED_0x40F9, 0)
+
 }
 
 script Route1_EventScript_SignCottage{

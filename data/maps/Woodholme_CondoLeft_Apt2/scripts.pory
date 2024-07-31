@@ -10,6 +10,6 @@ script Woodholme_CondoLeft_Apt2_OnTransition{
 script Woodholme_CondoLeft_Apt2_EventScript_Woman{
     lock
     faceplayer
-    msgbox(format("Placeholder text"))
+    msgbox(format("Hiya neighbor! Excuse the mess, we just moved in! My daughter is taking the Pokémon Gym Challenge! I think she's already set off to meet with RED."))
     release
 }

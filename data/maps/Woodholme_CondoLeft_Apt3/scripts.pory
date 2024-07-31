@@ -10,6 +10,6 @@ script Woodholme_CondoLeft_Apt3_OnTransition{
 script Woodholme_CondoLeft_Apt3_EventScript_Woman{
     lock
     faceplayer
-    msgbox(format("Placeholder text"))
+    msgbox(format("Hello. Are you a Pokémon trainer? I wish I had a Pokémon of my own to cuddle and snuggle with...."))
     release
 }

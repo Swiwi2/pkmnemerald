@@ -6,36 +6,66 @@ script Woodholme_CondoLeft_PlayerHouse_OnTransition{
     end
 }
 
-// Placeholder dialogue option for the MOM.
+const Mom = 1
+
+// Dialogue options for MOM. To do: Expand on these further!
 script Woodholme_CondoLeft_PlayerHouse_EventScript_Mom{
     lock
     faceplayer
-    message("What would you like to ask?")
-    multichoice(25, 5, MULTI_CHOICE_MOM, 0)
-    closemessage
-    if(var(VAR_RESULT) == 0){
-        msgbox(MomDialogueOption1)
+    // Mom dialogue if we haven't yet been to visit Red and gotten a starter Pokémon.
+    if(var(VAR_WOODHOLME_STATE) == 0){
+        msgbox(format("You should go and visit RED in his lab!"))
     }
-    elif(var(VAR_RESULT) == 1){
-        msgbox(MomDialogueOption2)
-    }
-    elif(var(VAR_RESULT) == 2){
-        msgbox(MomDialogueOption3)
+    // Mom multi-choice dialogue if Woodholme State is no longer 0.
+    else{
+        message("What would you like to talk about?")
+        multichoice(25, 5, MULTI_CHOICE_MOM, 0)
+        closemessage
+        if(var(VAR_RESULT) == 0){
+            msgbox(MomDialogueOption1)
+        }
+        elif(var(VAR_RESULT) == 1){
+            msgbox(MomDialogueOption2)
+        }
+        elif(var(VAR_RESULT) == 2){
+            msgbox(MomDialogueOption3)
+        }
     }
     release
 }
 
+// Intro trigger when starting a new game.
+script Woodholme_CondoLeft_PlayerHouse_Trigger_Intro{
+    lock
+    applymovement(Mom, Woodholme_CondoLeft_PlayerHouse_Movement_MomIntro)
+    waitmovement(0)
+    msgbox(Woodholme_CondoLeft_PlayerHouse_MomIntro)
+    setvar(VAR_GAMEINTRO_STATE, 1)
+    release
+}
+
+movement Woodholme_CondoLeft_PlayerHouse_Movement_MomIntro{
+    face_up
+    walk_up
+    face_left
+    walk_left
+}
+
+text Woodholme_CondoLeft_PlayerHouse_MomIntro{
+    format("MOM: Hello honey! We've finally arrived in Woodholme City. Can you believe it? Your very own Pokémon journey is about to begin! Now that you're old enough, you too can become a Pokémon trainer! That's part of the reason why we moved to Woodholme City, after all. Your first order of business should be to visit RED in his lab next door. He will explain the basics of Pokémon training and get you sorted with your very own Pokémon! Go on, I believe in you!")
+}
+
 // Woodholme City
 text MomDialogueOption1{
-    format("Option 1")
+    format("Yes, it's a wonderful city isn't it? I'm excited to start my new job soon. Good luck on your Pokémon adventure, and remember: if you ever need to rest for a bit you're always welcome back home.")
 }
 
 // Gym Challenge
 text MomDialogueOption2{
-    format("Option 2")
+    format("The Pokémon Gym Challenge? Yes, in order to prove that a trainer has the skills needed to challenge the CHAMPION, they must first beat all the Gym Leaders. I believe you have what it takes to do just that. Good luck!")
 }
 
 // Rival
 text MomDialogueOption3{
-    format("Option 3")
+    format("Hmm. May? Oh that lovely young girl from next door? Yes, isn't she sweet? Oh, you two are rivals? That's great. I'm sure you'll be good motivators for each other during your respective Pokémon journeys!")
 }

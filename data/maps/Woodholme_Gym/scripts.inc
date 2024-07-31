@@ -9,31 +9,31 @@ Woodholme_Gym_OnTransition::
 
 
 Woodholme_Gym_EventScript_Man1::
-# 11 "data/maps/Woodholme_Gym/scripts.pory"
-	lock
-# 12 "data/maps/Woodholme_Gym/scripts.pory"
-	faceplayer
 # 13 "data/maps/Woodholme_Gym/scripts.pory"
-	msgbox Woodholme_Gym_EventScript_Man1_Text_0
+	lock
 # 14 "data/maps/Woodholme_Gym/scripts.pory"
+	faceplayer
+# 15 "data/maps/Woodholme_Gym/scripts.pory"
+	msgbox Woodholme_Gym_EventScript_Man1_Text_0
+# 16 "data/maps/Woodholme_Gym/scripts.pory"
 	release
 	return
 
 
 Woodholme_Gym_EventScript_Leader::
-# 19 "data/maps/Woodholme_Gym/scripts.pory"
-	lock
-# 20 "data/maps/Woodholme_Gym/scripts.pory"
-	faceplayer
 # 21 "data/maps/Woodholme_Gym/scripts.pory"
-	msgbox Woodholme_Gym_EventScript_Leader_Text_0
+	lock
 # 22 "data/maps/Woodholme_Gym/scripts.pory"
+	faceplayer
+# 23 "data/maps/Woodholme_Gym/scripts.pory"
+	msgbox Woodholme_Gym_EventScript_Leader_Text_0
+# 24 "data/maps/Woodholme_Gym/scripts.pory"
 	release
 	return
 
 
 Woodholme_Gym_EventScript_Man1_Text_0:
-# 13 "data/maps/Woodholme_Gym/scripts.pory"
+# 15 "data/maps/Woodholme_Gym/scripts.pory"
 	.string "Yo. STELLA isn't here right now. Her gym\n"
 	.string "is the final Gym in the Gym Challenge\l"
 	.string "Series. You should complete the other\l"
@@ -41,5 +41,5 @@ Woodholme_Gym_EventScript_Man1_Text_0:
 	.string "team is more powerful. Good luck!$"
 
 Woodholme_Gym_EventScript_Leader_Text_0:
-# 21 "data/maps/Woodholme_Gym/scripts.pory"
+# 23 "data/maps/Woodholme_Gym/scripts.pory"
 	.string "I'm a placeholder.$"

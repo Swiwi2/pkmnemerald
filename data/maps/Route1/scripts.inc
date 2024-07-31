@@ -5,8 +5,6 @@ Route1_MapScripts::
 
 
 Route1_EventScript_Transition::
-# 6 "data/maps/Route1/scripts.pory"
-	setvar VAR_UNUSED_0x40F9, 0
 	return
 
 

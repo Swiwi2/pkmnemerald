@@ -6,7 +6,9 @@ script Woodholme_Gym_OnTransition{
     end
 }
 
-// Defines what the Man says if we haven't got 7 badges.
+// The "Man" used for "Yo champ in the making" dialogue has model "Man_2".
+
+// Defines what the Man says. To do: edit this to change once we have 7 badges!
 script Woodholme_Gym_EventScript_Man1{
     lock
     faceplayer

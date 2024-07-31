@@ -1,0 +1,14 @@
+mapscripts Woodholme_CondoLeft_Corr_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION: Woodholme_CondoLeft_Corr_OnTransition
+}
+
+script Woodholme_CondoLeft_Corr_OnTransition{
+
+}
+
+script Woodholme_CondoLeft_Corr_EventScript_TestNPC{
+    lock
+    faceplayer
+    msgbox("Hello.")
+    release
+}
