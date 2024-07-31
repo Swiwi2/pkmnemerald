@@ -10,6 +10,32 @@ script Woodholme_CondoLeft_PlayerHouse_OnTransition{
 script Woodholme_CondoLeft_PlayerHouse_EventScript_Mom{
     lock
     faceplayer
-    msgbox(format("Hi honey."))
+    message("What would you like to ask?")
+    multichoice(25, 5, MULTI_CHOICE_MOM, 0)
+    closemessage
+    if(var(VAR_RESULT) == 0){
+        msgbox(MomDialogueOption1)
+    }
+    elif(var(VAR_RESULT) == 1){
+        msgbox(MomDialogueOption2)
+    }
+    elif(var(VAR_RESULT) == 2){
+        msgbox(MomDialogueOption3)
+    }
     release
+}
+
+// Woodholme City
+text MomDialogueOption1{
+    format("Option 1")
+}
+
+// Gym Challenge
+text MomDialogueOption2{
+    format("Option 2")
+}
+
+// Rival
+text MomDialogueOption3{
+    format("Option 3")
 }
