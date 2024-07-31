@@ -22,4 +22,7 @@ Woodholme_CondoLeft_Apt2_EventScript_Woman::
 
 Woodholme_CondoLeft_Apt2_EventScript_Woman_Text_0:
 # 13 "data/maps/Woodholme_CondoLeft_Apt2/scripts.pory"
-	.string "Placeholder text$"
+	.string "Hiya neighbor! Excuse the mess, we just\n"
+	.string "moved in! My daughter is taking the\l"
+	.string "Pokémon Gym Challenge! I think she's\l"
+	.string "already set off to meet with RED.$"

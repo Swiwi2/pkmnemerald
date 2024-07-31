@@ -1,0 +1,14 @@
+mapscripts IndoorRoute1Cottage_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION: IndoorRoute1Cottage_OnTransition
+}
+
+script IndoorRoute1Cottage_OnTransition{
+
+}
+
+// Dialogue script for the NPC standing in the cottage.
+script IndoorRoute1Cottage_EventScript_Man{
+    lock
+    msgbox("Hello young trainer.", MSGBOX_NPC)
+    release
+}

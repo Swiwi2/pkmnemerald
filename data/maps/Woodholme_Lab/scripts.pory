@@ -19,11 +19,12 @@ script Woodholme_Lab_EventScript_Red{
     if(!(flag(FLAG_STARTER_SQUIRTLE) || flag(FLAG_STARTER_CHARMANDER) || flag(FLAG_STARTER_BULBASAUR))){
         msgbox(Woodholme_Lab_Text_Red1)
     }
-    // If we HAVE chosen a Pokémon already, this is what he says:
+    // If we HAVE chosen a Pokémon AND progressed past the first Rival Battle, this is what he says:
     elif(!(var(VAR_WOODHOLME_STATE) == 0)){
         faceplayer
         msgbox(format("Remember, battle your Pokémon to make it stronger and take on the Gym Challenge!"))
     }
+    // If we HAVE chosen a Pokémon already he says this:
     else{
         faceplayer
         msgbox(Woodholme_Lab_Text_Red2)                 
@@ -33,7 +34,7 @@ script Woodholme_Lab_EventScript_Red{
     end
 }
 
-// If we interact with Red before selecting a starter Pokémon:
+// If we interact with Red again before selecting a starter Pokémon:
 text Woodholme_Lab_Text_Red1{
        format("Please choose a Pokémon to go with you on your adventure.")
 }
@@ -47,7 +48,9 @@ text Woodholme_Lab_Text_Red2{
 script Woodholme_Lab_Trigger_GetPokedexLeft{
     lock
     applymovement(1, RedMove1)
-    waitmovement(1)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Woodholme_Lab_Movement_PlayerTurnAround)
+    waitmovement(0)
     msgbox(Woodholme_Lab_Text_GivePokedex)
     setvar(VAR_WOODHOLME_LAB_STATE, 2)
     waitmessage
@@ -62,7 +65,9 @@ script Woodholme_Lab_Trigger_GetPokedexLeft{
 script Woodholme_Lab_Trigger_GetPokedexCenter{
     lock
     applymovement(1, RedMove2)
-    waitmovement(1)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Woodholme_Lab_Movement_PlayerTurnAround)
+    waitmovement(0)
     msgbox(Woodholme_Lab_Text_GivePokedex)
     setvar(VAR_WOODHOLME_LAB_STATE, 2)
     waitmessage
@@ -73,11 +78,17 @@ script Woodholme_Lab_Trigger_GetPokedexCenter{
     release
 }
 
+movement Woodholme_Lab_Movement_PlayerTurnAround{
+    face_up
+}
+
 // Trigger to make RED talk to us after starter selection, to give Dex and Exp Share.
 script Woodholme_Lab_Trigger_GetPokedexRight{
     lock
     applymovement(1, RedMove3)
-    waitmovement(1)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Woodholme_Lab_Movement_PlayerTurnAround)
+    waitmovement(0)
     msgbox(Woodholme_Lab_Text_GivePokedex)
     setvar(VAR_WOODHOLME_LAB_STATE, 2)
     waitmessage
@@ -95,12 +106,12 @@ text Woodholme_Lab_Text_GivePokedex{
 
 // Dialogue after getting PokéDex:
 text Woodholme_Lab_Text_GivePokedex2{
-    format("Not only does the PokéDex help us understand more about different species of Pokémon, but it is also useful to helping us understand how Pokémon TYPES work. That is where the Gym Challenge comes in. There are several different types of Pokémon and in order to prove that you fully grasp how Pokémon types work, you can challenge the various Gyms. Each gym will only use Pokémon of a certain type. That way, you can show that you master that specific type by beating the corresponding gym leader. You should head up past Route 1 to Serenleaf City, where the first Gym Leader in the Gym Challenge is waiting.")
+    format("Not only does that PokéDex help us understand more about different species of Pokémon, but it is also useful to helping us understand how Pokémon TYPES work. That is where the Gym Challenge comes in. There are several different types of Pokémon and in order to prove that you fully grasp how Pokémon types work, you can challenge the various Gyms. Each Gym will only use Pokémon of a certain type. That way, you can show that you master that specific type by beating the corresponding gym leader. You should head up past Route 1 to Serenleaf City, where the first Gym Leader in the Gym Challenge is waiting.")
 }
 
 // Dialogue after getting Exp. Share:
 text Woodholme_Lab_Text_GiveExpShare{
-    format("The final thing I wanted to mention is that I don't expect you to complete the Gym Challenge all on your own. That girl you saw leaving before is May. She will be your RIVAL! She also received her first Pokémon just now, and she will also be attempting the Gym Challenge alongside you. A bit of friendly rivalry to keep you motivated eh? Hehe. Good luck! ")
+    format("The final thing I wanted to mention is that I don't expect you to complete the Gym Challenge all on your own. That girl you saw leaving before is called May. She will be your RIVAL! She also received her first Pokémon just now, and she will also be attempting the Gym Challenge alongside you. I told her to wait for you outside so that you can get acquainted. A bit of friendly rivalry to keep you two motivated eh? Hehe. Good luck!")
 }
 
 movement RedMove1{
@@ -116,10 +127,11 @@ movement RedMove2{
 }
 
 movement RedMove3{
-    face_down
-    walk_down * 3
     face_right
-    walk_right
+    walk_right * 2
+    face_down
+    walk_down * 2
+
 }
 
 // Our script for giving Pokédex
@@ -148,7 +160,7 @@ script Woodholme_Lab_EventScript_GivePokedex{
 // Script to have RED give us an Exp Share
 script Woodholme_Lab_EventScript_GiveExpShare{
     lock
-    msgbox(format("I also want you to have this. This is an Exp. Share which lets you train your whole party at once. The Exp. Share can be toggled on or off in your Key Items pocket of you bag. When toggled on, your party Pokémon will receive a share of the Experience Points from the battle, even if they didn't join the battle itself! Don't forget to turn it on if you want your Pokémon to gain experience more evenly!"))
+    msgbox(format("I also want you to have this. This is an Exp. Share which lets you train your whole party at once. The Exp. Share can be toggled on or off in your Key Items pocket of your bag. When toggled on, your party Pokémon will receive a share of the Experience Points from the battle, even if they didn't join the battle! Don't forget to turn it on if you want all your Pokémon to gain experience together!"))
     playfanfare(MUS_OBTAIN_ITEM)
     giveitem(ITEM_EXP_SHARE, 1)
     waitfanfare
@@ -297,15 +309,15 @@ movement Woodholme_Lab_Movement_PlayerMoveToStarter4{
 }
 
 text Woodholm_Lab_Text_Red_Intro{
-    format("Ah! You must be the new trainer that just moved in! Welcome! My name is Red. I used to be the very best trainer in the world. That was long ago, and I've since retired from battling Pokémon. Nowadays, I've set my sights on a completely different challenge... To help new trainers get started on their own Pokémon journey! {PLAYER}, I want you to choose your very own Pokémon friend to take with you! In these Pokéballs I have three different Pokémon. You may have one. Are you ready to choose a Pokémon?")
+    format("RED: Ah! You must be the new trainer that just moved in! {PLAYER} is it? Welcome! My name is Red. I used to be the very best trainer in the world. That was long ago, and I've since retired from battling Pokémon. Nowadays, I've set my sights on a completely different challenge... To help new trainers get started on their own Pokémon journey! {PLAYER}, I want you to choose your very own Pokémon friend to take with you on your adventure! Inside those Pokéballs on the table I have three different Pokémon. You may have one of them. Are you ready to choose a Pokémon for yourself?")
 }
 
 text Woodholme_Lab_Text_RedDialogueYes{
-    format("Excellent. Make your choice wisely.")
+    format("Excellent. Go over to the table and take the Pokémon you wish to accompany you on your journey.")
 }
 
 text Woodholme_Lab_Text_RedDialogueNo{
-    format("You won't be able to start your Pokémon adventure without a Pokémon! Please, choose a Pokémon.")
+    format("You won't be able to start your Pokémon adventure without a Pokémon! Please, choose one of the Pokémon.")
 }
 
 
@@ -346,7 +358,7 @@ script Woodholme_Lab_EventScript_PokeballLeft{
 
     }
         else{
-        msgbox("RED: You already took a Pokémon!")
+        msgbox(format("RED: You already have a Pokémon. One is enough."))
      }
     waitmessage
     release
@@ -390,7 +402,7 @@ script Woodholme_Lab_EventScript_PokeballCenter{
     }
 }
 else{
-    msgbox("RED: You already took a Pokémon!")
+    msgbox(format("RED: You already have a Pokémon. One is enough."))
     }
     waitmessage
     release
@@ -433,7 +445,7 @@ script Woodholme_Lab_EventScript_PokeballRight{
     }
 }
 else{
-    msgbox(format("RED: You already took a Pokémon!"))
+    msgbox(format("RED: You already have a Pokémon. One is enough."))
 
 }
     waitmessage
@@ -443,7 +455,7 @@ else{
 
 // Asking if we want to give our new Pokémon a nickname.
 script NicknamePartyMon{
-    msgbox("Give it a nickname?", MSGBOX_YESNO)
+    msgbox("Do you want to give it a nickname?", MSGBOX_YESNO)
     hidemonpic
     if(var(VAR_RESULT) == YES){
         call(Common_EventScript_GetGiftMonPartySlot)
@@ -453,15 +465,15 @@ script NicknamePartyMon{
 
 // Asking if we want to give it a nickname when sending it to a Box.
 script NicknameBoxMon{
-    msgbox("Give a nickname?", MSGBOX_YESNO)
+    msgbox("Do you want to give it a nickname?", MSGBOX_YESNO)
     hidemonpic
     if(var(VAR_RESULT) == YES){
         call(Common_EventScript_NameReceivedBoxMon)
     }
-    msgbox(format("Transferred to PC."))
+    msgbox(format("The Pokémon was transferred to the PC."))
 }
 
 // Text to display if we click "NO" on the starter choice.
 text Woodholme_Lab_Text_NotChosen{
-    format("RED: It's a tough choice. Think hard before deciding!")
+    format("RED: It's a tough choice. Think hard before making your decision!")
 }

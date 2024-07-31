@@ -10,6 +10,6 @@ script Woodholme_CondoLeft_Apt1_OnTransition{
 script Woodholme_CondoLeft_Apt1_EventScript_Woman{
     lock
     faceplayer
-    msgbox(format("Placeholder text"))
+    msgbox(format("You must be our new neighbors! Welcome to the vibrant city of Woodholme. My husband and I have lived here all our lives. In fact, I've never even been outside of Woodholme...."))
     release
 }

@@ -19,7 +19,7 @@
       "x": 7,
       "y": 6,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -45,7 +45,15 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_GAMEINTRO_STATE",
+      "var_value": "0",
+      "script": "Woodholme_CondoLeft_PlayerHouse_Trigger_Intro"
+    }
   ],
   "bg_events": [
 

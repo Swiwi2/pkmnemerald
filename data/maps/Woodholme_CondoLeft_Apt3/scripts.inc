@@ -22,4 +22,6 @@ Woodholme_CondoLeft_Apt3_EventScript_Woman::
 
 Woodholme_CondoLeft_Apt3_EventScript_Woman_Text_0:
 # 13 "data/maps/Woodholme_CondoLeft_Apt3/scripts.pory"
-	.string "Placeholder text$"
+	.string "Hello. Are you a Pokémon trainer? I wish\n"
+	.string "I had a Pokémon of my own to cuddle and\l"
+	.string "snuggle with....$"
