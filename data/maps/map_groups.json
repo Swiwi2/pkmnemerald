@@ -1,7 +1,28 @@
 {
   "group_order": [
     "gMapGroup_WoodholmeCity",
+    "gMapGroup_SerenleafCity",
+    "gMapGroup_AmbervilleCity",
+    "gMapGroup_EmbervilleCity",
+    "gMapGroup_EnimerosCity",
+    "gMapGroup_pakkasjarvenCity",
+    "gMapGroup_AtomIsland",
+    "gMapGroup_FarmvilleCity",
+    "gMapGroup_PokemonLeague",
     "gMapGroup_Route1",
+    "gMapGroup_Route2",
+    "gMapGroup_Route3",
+    "gMapGroup_Route4",
+    "gMapGroup_Route5",
+    "gMapGroup_Route6",
+    "gMapGroup_Route7",
+    "gMapGroup_Route8",
+    "gMapGroup_Route9",
+    "gMapGroup_Route10",
+    "gMapGroup_Route11",
+    "gMapGroup_Route12",
+    "gMapGroup_Route13",
+    "gMapGroup_Route14",
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorOldale",
@@ -49,9 +70,72 @@
     "Woodholme_CondoLeft_Apt3",
     "Woodholme_CondoLeft_PlayerHouse"
   ],
+  "gMapGroup_SerenleafCity": [
+    "SerenleafCity"
+  ],
+  "gMapGroup_AmbervilleCity": [
+
+  ],
+  "gMapGroup_EmbervilleCity": [
+
+  ],
+  "gMapGroup_EnimerosCity": [
+
+  ],
+  "gMapGroup_pakkasjarvenCity": [
+
+  ],
+  "gMapGroup_AtomIsland": [
+
+  ],
+  "gMapGroup_FarmvilleCity": [
+
+  ],
+  "gMapGroup_PokemonLeague": [
+
+  ],
   "gMapGroup_Route1": [
     "Route1",
     "IndoorRoute1Cottage"
+  ],
+  "gMapGroup_Route2": [
+    "Route2"
+  ],
+  "gMapGroup_Route3": [
+
+  ],
+  "gMapGroup_Route4": [
+
+  ],
+  "gMapGroup_Route5": [
+
+  ],
+  "gMapGroup_Route6": [
+
+  ],
+  "gMapGroup_Route7": [
+
+  ],
+  "gMapGroup_Route8": [
+
+  ],
+  "gMapGroup_Route9": [
+
+  ],
+  "gMapGroup_Route10": [
+
+  ],
+  "gMapGroup_Route11": [
+
+  ],
+  "gMapGroup_Route12": [
+
+  ],
+  "gMapGroup_Route13": [
+
+  ],
+  "gMapGroup_Route14": [
+
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",

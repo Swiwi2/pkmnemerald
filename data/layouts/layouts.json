@@ -4530,6 +4530,26 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/Woodholme_CondoLeft_PlayerHouse/border.bin",
       "blockdata_filepath": "data/layouts/Woodholme_CondoLeft_PlayerHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_SERENLEAF_CITY",
+      "name": "SerenleafCity_Layout",
+      "width": 40,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mauville",
+      "border_filepath": "data/layouts/SerenleafCity/border.bin",
+      "blockdata_filepath": "data/layouts/SerenleafCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE2",
+      "name": "Route2_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mauville",
+      "border_filepath": "data/layouts/Route2/border.bin",
+      "blockdata_filepath": "data/layouts/Route2/map.bin"
     }
   ]
 }
