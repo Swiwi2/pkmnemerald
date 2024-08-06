@@ -1096,3 +1096,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Woodholme_CondoLeft_Apt3/scripts.inc"
 
 	.include "data/maps/Woodholme_CondoLeft_PlayerHouse/scripts.inc"
+
+	.include "data/maps/SerenleafCity/scripts.inc"
+
+	.include "data/maps/Route2/scripts.inc"
