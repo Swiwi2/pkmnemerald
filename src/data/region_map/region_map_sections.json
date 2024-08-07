@@ -65,56 +65,56 @@
       "height": 1
     },
     {
-      "map_section": "MAPSEC_SLATEPORT_CITY",
-      "name": "SLATEPORT CITY",
+      "map_section": "MAPSEC_ATOM_ISLAND",
+      "name": "ATOM ISLAND",
       "x": 8,
       "y": 10,
       "width": 1,
       "height": 2
     },
     {
-      "map_section": "MAPSEC_MAUVILLE_CITY",
-      "name": "MAUVILLE CITY",
+      "map_section": "MAPSEC_SERENLEAF_CITY",
+      "name": "SERENLEAF CITY",
       "x": 8,
       "y": 6,
       "width": 2,
       "height": 1
     },
     {
-      "map_section": "MAPSEC_RUSTBORO_CITY",
-      "name": "RUSTBORO CITY",
+      "map_section": "MAPSEC_AMBERVILLE_CITY",
+      "name": "AMBERVILLE CITY",
       "x": 0,
       "y": 5,
       "width": 1,
       "height": 2
     },
     {
-      "map_section": "MAPSEC_FORTREE_CITY",
-      "name": "FORTREE CITY",
+      "map_section": "MAPSEC_FARMVILLE_CITY",
+      "name": "FARMVILLE CITY",
       "x": 12,
       "y": 0,
       "width": 1,
       "height": 1
     },
     {
-      "map_section": "MAPSEC_LILYCOVE_CITY",
-      "name": "LILYCOVE CITY",
+      "map_section": "MAPSEC_PAKKASJARVEN_CITY",
+      "name": "PAKKASJARVEN CITY",
       "x": 18,
       "y": 3,
       "width": 2,
       "height": 1
     },
     {
-      "map_section": "MAPSEC_MOSSDEEP_CITY",
-      "name": "MOSSDEEP CITY",
+      "map_section": "MAPSEC_EMBERVILLE_CITY",
+      "name": "EMBERVILLE CITY",
       "x": 24,
       "y": 5,
       "width": 2,
       "height": 1
     },
     {
-      "map_section": "MAPSEC_SOOTOPOLIS_CITY",
-      "name": "SOOTOPOLIS CITY",
+      "map_section": "MAPSEC_ENIMEROS_CITY",
+      "name": "ENIMEROS CITY",
       "x": 21,
       "y": 7,
       "width": 1,

@@ -71,7 +71,10 @@
     "Woodholme_CondoLeft_PlayerHouse"
   ],
   "gMapGroup_SerenleafCity": [
-    "SerenleafCity"
+    "SerenleafCity",
+    "Serenleaf_PC",
+    "Serenleaf_Mart",
+    "Serenleaf_Gym"
   ],
   "gMapGroup_AmbervilleCity": [
 

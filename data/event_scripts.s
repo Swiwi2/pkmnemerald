@@ -1100,3 +1100,9 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/SerenleafCity/scripts.inc"
 
 	.include "data/maps/Route2/scripts.inc"
+
+	.include "data/maps/Serenleaf_PC/scripts.inc"
+
+	.include "data/maps/Serenleaf_Mart/scripts.inc"
+
+	.include "data/maps/Serenleaf_Gym/scripts.inc"
