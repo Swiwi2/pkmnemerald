@@ -4550,6 +4550,36 @@
       "secondary_tileset": "gTileset_Mauville",
       "border_filepath": "data/layouts/Route2/border.bin",
       "blockdata_filepath": "data/layouts/Route2/map.bin"
+    },
+    {
+      "id": "LAYOUT_SERENLEAF_PC",
+      "name": "Serenleaf_PC_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/Serenleaf_PC/border.bin",
+      "blockdata_filepath": "data/layouts/Serenleaf_PC/map.bin"
+    },
+    {
+      "id": "LAYOUT_SERENLEAF_MART",
+      "name": "Serenleaf_Mart_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/Serenleaf_Mart/border.bin",
+      "blockdata_filepath": "data/layouts/Serenleaf_Mart/map.bin"
+    },
+    {
+      "id": "LAYOUT_SERENLEAF_GYM",
+      "name": "Serenleaf_Gym_Layout",
+      "width": 13,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleFactory",
+      "border_filepath": "data/layouts/Serenleaf_Gym/border.bin",
+      "blockdata_filepath": "data/layouts/Serenleaf_Gym/map.bin"
     }
   ]
 }

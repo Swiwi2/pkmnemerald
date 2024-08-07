@@ -177,7 +177,7 @@ static const match_call_text_data_t sMrStoneTextScripts[] = {
 static const struct MatchCallStructNPC sMrStoneMatchCallHeader =
 {
     .type = MC_TYPE_NPC,
-    .mapSec = MAPSEC_RUSTBORO_CITY,
+    .mapSec = MAPSEC_AMBERVILLE_CITY,
     .flag = 0xFFFF,
     .desc = gText_MrStoneMatchCallDesc,
     .name = gText_MrStoneMatchCallName,
@@ -375,7 +375,7 @@ static const match_call_text_data_t sRoxanneTextScripts[] = {
 static const struct MatchCallStructTrainer sRoxanneMatchCallHeader =
 {
     .type = MC_TYPE_LEADER,
-    .mapSec = MAPSEC_RUSTBORO_CITY,
+    .mapSec = MAPSEC_AMBERVILLE_CITY,
     .flag = FLAG_ENABLE_ROXANNE_MATCH_CALL,
     .rematchTableIdx = REMATCH_ROXANNE,
     .desc = gText_RoxanneMatchCallDesc,
@@ -413,7 +413,7 @@ static const match_call_text_data_t sWattsonTextScripts[] = {
 static const struct MatchCallStructTrainer sWattsonMatchCallHeader =
 {
     .type = MC_TYPE_LEADER,
-    .mapSec = MAPSEC_MAUVILLE_CITY,
+    .mapSec = MAPSEC_SERENLEAF_CITY,
     .flag = FLAG_ENABLE_WATTSON_MATCH_CALL,
     .rematchTableIdx = REMATCH_WATTSON,
     .desc = gText_WattsonMatchCallDesc,
@@ -451,7 +451,7 @@ static const match_call_text_data_t sWinonaTextScripts[] = {
 static const struct MatchCallStructTrainer sWinonaMatchCallHeader =
 {
     .type = MC_TYPE_LEADER,
-    .mapSec = MAPSEC_FORTREE_CITY,
+    .mapSec = MAPSEC_FARMVILLE_CITY,
     .flag = FLAG_ENABLE_WINONA_MATCH_CALL,
     .rematchTableIdx = REMATCH_WINONA,
     .desc = gText_WinonaMatchCallDesc,
@@ -470,7 +470,7 @@ static const match_call_text_data_t sTateLizaTextScripts[] = {
 static const struct MatchCallStructTrainer sTateLizaMatchCallHeader =
 {
     .type = MC_TYPE_LEADER,
-    .mapSec = MAPSEC_MOSSDEEP_CITY,
+    .mapSec = MAPSEC_EMBERVILLE_CITY,
     .flag = FLAG_ENABLE_TATE_AND_LIZA_MATCH_CALL,
     .rematchTableIdx = REMATCH_TATE_AND_LIZA,
     .desc = gText_TateLizaMatchCallDesc,
@@ -489,7 +489,7 @@ static const match_call_text_data_t sJuanTextScripts[] = {
 static const struct MatchCallStructTrainer sJuanMatchCallHeader =
 {
     .type = MC_TYPE_LEADER,
-    .mapSec = MAPSEC_SOOTOPOLIS_CITY,
+    .mapSec = MAPSEC_ENIMEROS_CITY,
     .flag = FLAG_ENABLE_JUAN_MATCH_CALL,
     .rematchTableIdx = REMATCH_JUAN,
     .desc = gText_JuanMatchCallDesc,

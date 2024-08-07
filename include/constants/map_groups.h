@@ -19,6 +19,9 @@
 
 // gMapGroup_SerenleafCity
 #define MAP_SERENLEAF_CITY (0 | (1 << 8))
+#define MAP_SERENLEAF_PC   (1 | (1 << 8))
+#define MAP_SERENLEAF_MART (2 | (1 << 8))
+#define MAP_SERENLEAF_GYM  (3 | (1 << 8))
 
 // gMapGroup_AmbervilleCity
 

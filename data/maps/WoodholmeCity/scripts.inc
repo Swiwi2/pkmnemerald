@@ -121,146 +121,156 @@ MayLeave:
 	walk_up
 	step_end
 
-Woodholme_City_EventScript_Man::
+WoodholmeCity_EventScript_NPC_Fat_Man::
 # 68 "data/maps/WoodholmeCity/scripts.pory"
 	lock
 # 69 "data/maps/WoodholmeCity/scripts.pory"
-	msgbox Woodholme_City_EventScript_Man_Text_0, MSGBOX_NPC
+	msgbox WoodholmeCity_EventScript_NPC_Fat_Man_Text_0, MSGBOX_NPC
 # 70 "data/maps/WoodholmeCity/scripts.pory"
 	release
 	return
 
 
-WoodholmeCity_Trigger_BlockPath::
+WoodholmeCity_EventScript_NPC_Girl3::
 # 74 "data/maps/WoodholmeCity/scripts.pory"
 	lock
 # 75 "data/maps/WoodholmeCity/scripts.pory"
-	msgbox WoodholmeCity_Trigger_BlockPath_Text_0
+	msgbox WoodholmeCity_EventScript_NPC_Fat_Man_Text_0, MSGBOX_NPC
 # 76 "data/maps/WoodholmeCity/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, StopPlayer
-# 77 "data/maps/WoodholmeCity/scripts.pory"
-	waitmovement 0
-# 78 "data/maps/WoodholmeCity/scripts.pory"
 	release
 	return
 
 
-WoodholmeCity_EventScript_BlockCondo::
-# 82 "data/maps/WoodholmeCity/scripts.pory"
+WoodholmeCity_Trigger_BlockPath::
+# 80 "data/maps/WoodholmeCity/scripts.pory"
 	lock
+# 81 "data/maps/WoodholmeCity/scripts.pory"
+	msgbox WoodholmeCity_Trigger_BlockPath_Text_0
+# 82 "data/maps/WoodholmeCity/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, StopPlayer
 # 83 "data/maps/WoodholmeCity/scripts.pory"
-	msgbox WoodholmeCity_EventScript_BlockCondo_Text_0
+	waitmovement 0
 # 84 "data/maps/WoodholmeCity/scripts.pory"
 	release
 	return
 
 
-# 87 "data/maps/WoodholmeCity/scripts.pory"
-StopPlayer:
+WoodholmeCity_EventScript_BlockCondo::
 # 88 "data/maps/WoodholmeCity/scripts.pory"
-	walk_down
-	step_end
-
-WoodholmeCity_EventScript_SignLeavingTown::
-# 93 "data/maps/WoodholmeCity/scripts.pory"
 	lock
-# 94 "data/maps/WoodholmeCity/scripts.pory"
-	msgbox WoodholmeCity_EventScript_SignLeavingTown_Text_0
-# 95 "data/maps/WoodholmeCity/scripts.pory"
+# 89 "data/maps/WoodholmeCity/scripts.pory"
+	msgbox WoodholmeCity_EventScript_BlockCondo_Text_0
+# 90 "data/maps/WoodholmeCity/scripts.pory"
 	release
 	return
 
 
-WoodholmeCity_EventScript_SignGym::
+# 93 "data/maps/WoodholmeCity/scripts.pory"
+StopPlayer:
+# 94 "data/maps/WoodholmeCity/scripts.pory"
+	walk_down
+	step_end
+
+WoodholmeCity_EventScript_SignLeavingTown::
 # 99 "data/maps/WoodholmeCity/scripts.pory"
 	lock
 # 100 "data/maps/WoodholmeCity/scripts.pory"
-	msgbox WoodholmeCity_EventScript_SignGym_Text_0
+	msgbox WoodholmeCity_EventScript_SignLeavingTown_Text_0
 # 101 "data/maps/WoodholmeCity/scripts.pory"
 	release
 	return
 
 
-WoodholmeCity_EventScript_SignCondoTopRight::
+WoodholmeCity_EventScript_SignGym::
 # 105 "data/maps/WoodholmeCity/scripts.pory"
 	lock
 # 106 "data/maps/WoodholmeCity/scripts.pory"
-	msgbox WoodholmeCity_EventScript_SignCondoTopRight_Text_0
+	msgbox WoodholmeCity_EventScript_SignGym_Text_0
 # 107 "data/maps/WoodholmeCity/scripts.pory"
 	release
 	return
 
 
-WoodholmeCity_EventScript_SignCondoLeft::
+WoodholmeCity_EventScript_SignCondoTopRight::
 # 111 "data/maps/WoodholmeCity/scripts.pory"
 	lock
 # 112 "data/maps/WoodholmeCity/scripts.pory"
-	msgbox WoodholmeCity_EventScript_SignCondoLeft_Text_0
+	msgbox WoodholmeCity_EventScript_SignCondoTopRight_Text_0
 # 113 "data/maps/WoodholmeCity/scripts.pory"
 	release
 	return
 
 
-WoodholmeCity_EventScript_SignCondoRight::
+WoodholmeCity_EventScript_SignCondoLeft::
 # 117 "data/maps/WoodholmeCity/scripts.pory"
 	lock
 # 118 "data/maps/WoodholmeCity/scripts.pory"
-	msgbox WoodholmeCity_EventScript_SignCondoRight_Text_0
+	msgbox WoodholmeCity_EventScript_SignCondoLeft_Text_0
 # 119 "data/maps/WoodholmeCity/scripts.pory"
 	release
 	return
 
 
-WoodholmeCity_EventScript_SignRedsLab::
+WoodholmeCity_EventScript_SignCondoRight::
 # 123 "data/maps/WoodholmeCity/scripts.pory"
 	lock
 # 124 "data/maps/WoodholmeCity/scripts.pory"
-	msgbox WoodholmeCity_EventScript_SignRedsLab_Text_0
+	msgbox WoodholmeCity_EventScript_SignCondoRight_Text_0
 # 125 "data/maps/WoodholmeCity/scripts.pory"
 	release
 	return
 
 
-Woodholme_City_EventScript_Man_Text_0:
+WoodholmeCity_EventScript_SignRedsLab::
+# 129 "data/maps/WoodholmeCity/scripts.pory"
+	lock
+# 130 "data/maps/WoodholmeCity/scripts.pory"
+	msgbox WoodholmeCity_EventScript_SignRedsLab_Text_0
+# 131 "data/maps/WoodholmeCity/scripts.pory"
+	release
+	return
+
+
+WoodholmeCity_EventScript_NPC_Fat_Man_Text_0:
 # 69 "data/maps/WoodholmeCity/scripts.pory"
 	.string "Hello.$"
 
 WoodholmeCity_Trigger_BlockPath_Text_0:
-# 75 "data/maps/WoodholmeCity/scripts.pory"
+# 81 "data/maps/WoodholmeCity/scripts.pory"
 	.string "Hmm. I'd better visit RED before I\n"
 	.string "venture out into the grass.$"
 
 WoodholmeCity_EventScript_BlockCondo_Text_0:
-# 83 "data/maps/WoodholmeCity/scripts.pory"
+# 89 "data/maps/WoodholmeCity/scripts.pory"
 	.string "Hmm. It appears to be locked from the\n"
 	.string "inside.$"
 
 WoodholmeCity_EventScript_SignLeavingTown_Text_0:
-# 94 "data/maps/WoodholmeCity/scripts.pory"
+# 100 "data/maps/WoodholmeCity/scripts.pory"
 	.string "ROUTE 1 TO SERENLEAF CITY. BEWARE:\n"
 	.string "WILD POKÉMON AHEAD.$"
 
 WoodholmeCity_EventScript_SignGym_Text_0:
-# 100 "data/maps/WoodholmeCity/scripts.pory"
+# 106 "data/maps/WoodholmeCity/scripts.pory"
 	.string "STELLA'S POKÉMON GYM$"
 
 WoodholmeCity_EventScript_SignCondoTopRight_Text_0:
-# 106 "data/maps/WoodholmeCity/scripts.pory"
+# 112 "data/maps/WoodholmeCity/scripts.pory"
 	.string "WOODHOLME REALTY INC. CHEAP\n"
 	.string "ACCOMMODATION OPTIONS AVAILABLE!$"
 
 WoodholmeCity_EventScript_SignCondoLeft_Text_0:
-# 112 "data/maps/WoodholmeCity/scripts.pory"
+# 118 "data/maps/WoodholmeCity/scripts.pory"
 	.string "WOODHOLME REALTY INC. LUXURY CONDOS\n"
 	.string "FOR YOU AND YOUR POKÉMON!$"
 
 WoodholmeCity_EventScript_SignCondoRight_Text_0:
-# 118 "data/maps/WoodholmeCity/scripts.pory"
+# 124 "data/maps/WoodholmeCity/scripts.pory"
 	.string "WOODHOLME REALTY INC. CONDOS WITH THE\n"
 	.string "BEST VIEW IN WOODHOLME!$"
 
 WoodholmeCity_EventScript_SignRedsLab_Text_0:
-# 124 "data/maps/WoodholmeCity/scripts.pory"
+# 130 "data/maps/WoodholmeCity/scripts.pory"
 	.string "RED'S LAB: HELPING NEW TRAINERS LEARN\n"
 	.string "ABOUT POKÉMON.$"
 

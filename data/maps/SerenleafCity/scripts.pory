@@ -1,0 +1,79 @@
+mapscripts SerenleafCity_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION: SerenleafCity_OnTransition
+}
+
+script SerenleafCity_OnTransition{
+    setflag(FLAG_VISITED_SERENLEAFCITY)
+}
+
+script SerenleafCity_EventScript_Sign_South{
+    lock
+    msgbox(format("NORTH: SERENLEAF CITY, SOUTH: ROUTE 2"))
+    release
+}
+
+script SerenleafCity_EventScript_Sign_West{
+    lock
+    msgbox(format("EAST: SERENLEAF CITY, WEST: ROUTE XX"))
+    release
+}
+
+script SerenleafCity_EventScript_Sign_East{
+    lock
+    msgbox(format("WEST: SERENLEAF CITY, EAST: ROUTE 3"))
+    release
+}
+
+script SerenleafCity_EventScript_Sign_Gym{
+    lock
+    msgbox(format("XX'S GYM!"))
+    release
+}
+
+script SerenleafCity_EventScript_Sign_PokeCorner{
+    lock
+    msgbox(format("POKÉMON TRADING CLUB: TRADE YOUR FAVORITE POKÉMON HERE!"))
+    release
+}
+
+script SerenleafCity_EventScript_Sign_BikeShop{
+    lock
+    msgbox(format("SERENLEAF BIKE SHOP"))
+    release
+}
+
+script SerenleafCity_EventScript_Sign_LockedHome1{
+    lock
+    msgbox(format("It's locked from the inside. This is someone's home!"))
+    release
+}
+
+script SerenleafCity_EventScript_Sign_LockedHome2{
+    lock
+    msgbox(format("It's locked from the inside. This is someone's home!"))
+    release
+}
+
+script SerenleafCity_EventScript_Sign_Bike1{
+    lock
+    msgbox(format("It's a bicycle!"))
+    release
+}
+
+script SerenleafCity_EventScript_Sign_Bike2{
+    lock
+    msgbox(format("It's a bicycle!"))
+    release
+}
+
+script SerenleafCity_EventScript_NPC_Man{
+    lock
+    msgbox("Hello.", MSGBOX_NPC)
+    release
+}
+
+script SerenleafCity_EventScript_NPC_Girl{
+    lock
+    msgbox("Hello.", MSGBOX_NPC)
+    release
+}

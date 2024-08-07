@@ -27,12 +27,12 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_TEALA",
-      "x": 16,
-      "y": 18,
+      "x": 15,
+      "y": 23,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 2,
+      "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "4",
       "script": "NULL",
@@ -40,8 +40,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_4",
-      "x": 14,
-      "y": 3,
+      "x": 17,
+      "y": 6,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -69,13 +69,39 @@
       "x": 23,
       "y": 19,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "EventScript_CutTree",
+      "flag": "FLAG_TEMP_1"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 28,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_POTION",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_ROUTE_1_POTION"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 33,
+      "y": 22,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_POKE_BALL",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_ROUTE_1_POKE_BALL"
     }
   ],
   "warp_events": [
@@ -105,7 +131,7 @@
       "y": 28,
       "elevation": 0,
       "item": "ITEM_POKE_BALL",
-      "flag": "FLAG_TEMP_1"
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_1_POKE_BALL"
     },
     {
       "type": "hidden_item",
@@ -113,15 +139,15 @@
       "y": 12,
       "elevation": 0,
       "item": "ITEM_POTION",
-      "flag": "FLAG_TEMP_2"
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_1_POTION"
     },
     {
       "type": "hidden_item",
       "x": 32,
       "y": 2,
       "elevation": 0,
-      "item": "ITEM_POKE_BALL",
-      "flag": "FLAG_TEMP_3"
+      "item": "ITEM_PARLYZ_HEAL",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_1_PARLYZ_HEAL"
     }
   ]
 }

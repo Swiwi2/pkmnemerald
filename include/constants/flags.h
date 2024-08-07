@@ -652,12 +652,12 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_123_RARE_CANDY                (FLAG_HIDDEN_ITEMS_START + 0x6E)
 #define FLAG_HIDDEN_ITEM_ROUTE_105_BIG_PEARL                 (FLAG_HIDDEN_ITEMS_START + 0x6F)
 
-#define FLAG_UNUSED_0x264  0x264 // Unused Flag
-#define FLAG_UNUSED_0x265  0x265 // Unused Flag
-#define FLAG_UNUSED_0x266  0x266 // Unused Flag
-#define FLAG_UNUSED_0x267  0x267 // Unused Flag
-#define FLAG_UNUSED_0x268  0x268 // Unused Flag
-#define FLAG_UNUSED_0x269  0x269 // Unused Flag
+#define FLAG_HIDDEN_ITEM_ROUTE_1_POKE_BALL          0x264 // Flag used for hidden item in Route 1.
+#define FLAG_HIDDEN_ITEM_ROUTE_1_POTION             0x265 // Flag used for hidden item in Route 1.
+#define FLAG_HIDDEN_ITEM_ROUTE_1_PARLYZ_HEAL        0x266 // Flag used for hidden item in Route 1.
+#define FLAG_ITEM_ROUTE_1_POKE_BALL                 0x267 // Flag used for ground item in Route 1.
+#define FLAG_ITEM_ROUTE_1_POTION                    0x268 // Flag used for ground item in Route 1.
+#define FLAG_VISITED_SERENLEAFCITY                  0x269 // Flag used for making sure we can fly to Serenleaf?
 #define FLAG_UNUSED_0x26A  0x26A // Unused Flag
 #define FLAG_UNUSED_0x26B  0x26B // Unused Flag
 #define FLAG_UNUSED_0x26C  0x26C // Unused Flag

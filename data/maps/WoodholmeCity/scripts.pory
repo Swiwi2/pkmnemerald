@@ -64,7 +64,13 @@ text May_Outro{
     format("Oh wow, cool! That was really fun! Except for the losing part... That wasn't very fun. That's it. That was the last time I lose a Pokémon battle! I'm going to go train my Pokémon by battling other trainers! RED said that the next step for us is to take on the Gym Challenge. I'm going to go buy some PokéBalls at the PokéMart and then head up to Route 1 to try and find some more Pokémon for my team. Next time we meet I'll be a lot stronger, I promise! See you later!")
 }
 
-script Woodholme_City_EventScript_Man{
+script WoodholmeCity_EventScript_NPC_Fat_Man{
+    lock
+    msgbox("Hello.", MSGBOX_NPC)
+    release
+}
+
+script WoodholmeCity_EventScript_NPC_Girl3{
     lock
     msgbox("Hello.", MSGBOX_NPC)
     release
