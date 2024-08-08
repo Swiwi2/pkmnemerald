@@ -43,4 +43,6 @@ Woodholme_PC_Nurse_2:
 
 Woodholme_PC_Nurse_Text_0:
 # 15 "data/maps/Woodholme_PC/scripts.pory"
-	.string "Hello.$"
+	.string "Welcome to Woodholme City PokéCenter.\n"
+	.string "Please come back when you have a\l"
+	.string "Pokémon you.$"
