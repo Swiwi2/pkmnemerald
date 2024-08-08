@@ -58,10 +58,10 @@ struct WonderCardData
     /*0176*/ u16 windowIds[CARD_WIN_COUNT];
     /*017C*/ u8 monIconSpriteId;
     /*017D*/ u8 stampSpriteIds[MAX_STAMP_CARD_STAMPS][2]; // 2 sprites each, 1 for the shadow and 1 for the Pokémon
-    /*018B*/ u8 titleText[WONDER_CARD_TEXT_LENGTH + 1];
+    /*018B*/ u8 unk_04[WONDER_CARD_TEXT_LENGTH + 1];
     /*01B4*/ u8 subtitleText[WONDER_CARD_TEXT_LENGTH + 1];
     /*01DD*/ u8 idNumberText[7];
-    /*01E4*/ u8 bodyText[WONDER_CARD_BODY_TEXT_LINES][WONDER_CARD_TEXT_LENGTH + 1];
+    /*01E4*/ u8 unk_2C[WONDER_CARD_BODY_TEXT_LINES][WONDER_CARD_TEXT_LENGTH + 1];
     /*0288*/ u8 footerLine1Text[WONDER_CARD_TEXT_LENGTH + 1];
     /*02B1*/ u8 giftText[WONDER_CARD_TEXT_LENGTH + 1];
     /*02DC*/ struct CardStatTextData statTextData[8];
@@ -193,13 +193,13 @@ bool32 WonderCard_Init(struct WonderCard * card, struct WonderCardMetadata * met
         return FALSE;
     sWonderCardData->card = *card;
     sWonderCardData->cardMetadata = *metadata;
-    if (sWonderCardData->card.bgType >= NUM_WONDER_BGS)
-        sWonderCardData->card.bgType = 0;
+    if (sWonderCardData->card.unk_03 >= NUM_WONDER_BGS)
+        sWonderCardData->card.unk_03 = 0;
     if (sWonderCardData->card.type >= CARD_TYPE_COUNT)
         sWonderCardData->card.type = 0;
     if (sWonderCardData->card.maxStamps > MAX_STAMP_CARD_STAMPS)
         sWonderCardData->card.maxStamps = 0;
-    sWonderCardData->gfx = &sCardGraphics[sWonderCardData->card.bgType];
+    sWonderCardData->gfx = &sCardGraphics[sWonderCardData->card.unk_03];
     return TRUE;
 }
 
@@ -331,12 +331,12 @@ static void BufferCardText(void)
     u16 stats[3] = {0, 0, 0};
 
     // Copy title/subtitle text
-    memcpy(sWonderCardData->titleText, sWonderCardData->card.titleText, WONDER_CARD_TEXT_LENGTH);
-    sWonderCardData->titleText[WONDER_CARD_TEXT_LENGTH] = EOS;
+    memcpy(sWonderCardData->unk_04, sWonderCardData->card.unk_04, WONDER_CARD_TEXT_LENGTH);
+    sWonderCardData->unk_04[WONDER_CARD_TEXT_LENGTH] = EOS;
     memcpy(sWonderCardData->subtitleText, sWonderCardData->card.subtitleText, WONDER_CARD_TEXT_LENGTH);
     sWonderCardData->subtitleText[WONDER_CARD_TEXT_LENGTH] = EOS;
 
-    // Copy card id number
+    // Copy card unk_00 number
     if (sWonderCardData->card.idNumber > 999999)
         sWonderCardData->card.idNumber = 999999;
     ConvertIntToDecimalStringN(sWonderCardData->idNumberText, sWonderCardData->card.idNumber, STR_CONV_MODE_LEFT_ALIGN, 6);
@@ -344,8 +344,8 @@ static void BufferCardText(void)
     // Copy body text
     for (i = 0; i < WONDER_CARD_BODY_TEXT_LINES; i++)
     {
-        memcpy(sWonderCardData->bodyText[i], sWonderCardData->card.bodyText[i], WONDER_CARD_TEXT_LENGTH);
-        sWonderCardData->bodyText[i][WONDER_CARD_TEXT_LENGTH] = EOS;
+        memcpy(sWonderCardData->unk_2C[i], sWonderCardData->card.unk_2C[i], WONDER_CARD_TEXT_LENGTH);
+        sWonderCardData->unk_2C[i][WONDER_CARD_TEXT_LENGTH] = EOS;
     }
 
     // Copy footer line 1
@@ -389,17 +389,17 @@ static void BufferCardText(void)
             else
             {
                 // Dynamic char encountered
-                // These are used to give the id of which stat to print
-                u8 id = sWonderCardData->card.footerLine2Text[i + 1];
-                if (id >= ARRAY_COUNT(stats))
+                // These are used to give the unk_00 of which stat to print
+                u8 unk_00 = sWonderCardData->card.footerLine2Text[i + 1];
+                if (unk_00 >= ARRAY_COUNT(stats))
                 {
-                    // Invalid stat id, skip ahead
+                    // Invalid stat unk_00, skip ahead
                     i += 2;
                 }
                 else
                 {
                     // Copy stat number
-                    ConvertIntToDecimalStringN(sWonderCardData->statTextData[sWonderCardData->statFooterWidth].statNumberText, stats[id], STR_CONV_MODE_LEADING_ZEROS, 3);
+                    ConvertIntToDecimalStringN(sWonderCardData->statTextData[sWonderCardData->statFooterWidth].statNumberText, stats[unk_00], STR_CONV_MODE_LEADING_ZEROS, 3);
                     sWonderCardData->statTextData[sWonderCardData->statFooterWidth].width = sWonderCardData->card.footerLine2Text[i + 2];
                     sWonderCardData->statFooterWidth++;
                     if (sWonderCardData->statFooterWidth >= ARRAY_COUNT(sWonderCardData->statTextData))
@@ -424,13 +424,13 @@ static void DrawCardWindow(u8 whichWindow)
     {
         // Print card title/subtitle
         s32 x;
-        AddTextPrinterParameterized3(windowId, FONT_SHORT_COPY_1, 0, 1, sCard_TextColorTable[sWonderCardData->gfx->titleTextPal], 0, sWonderCardData->titleText);
+        AddTextPrinterParameterized3(windowId, FONT_SHORT_COPY_1, 0, 1, sCard_TextColorTable[sWonderCardData->gfx->titleTextPal], 0, sWonderCardData->unk_04);
         x = 160 - GetStringWidth(FONT_SHORT_COPY_1, sWonderCardData->subtitleText, GetFontAttribute(FONT_SHORT_COPY_1, FONTATTR_LETTER_SPACING));
         if (x < 0)
             x = 0;
         AddTextPrinterParameterized3(windowId, FONT_SHORT_COPY_1, x, 17, sCard_TextColorTable[sWonderCardData->gfx->titleTextPal], 0, sWonderCardData->subtitleText);
 
-        // Print id number
+        // Print unk_00 number
         if (sWonderCardData->card.idNumber != 0)
             AddTextPrinterParameterized3(windowId, FONT_NORMAL, 166, 17, sCard_TextColorTable[sWonderCardData->gfx->titleTextPal], 0, sWonderCardData->idNumberText);
         break;
@@ -438,7 +438,7 @@ static void DrawCardWindow(u8 whichWindow)
     case CARD_WIN_BODY:
         // Print body text
         for (; i < WONDER_CARD_BODY_TEXT_LINES; i++)
-            AddTextPrinterParameterized3(windowId, FONT_SHORT_COPY_1, 0, 16 * i + 2, sCard_TextColorTable[sWonderCardData->gfx->bodyTextPal], 0, sWonderCardData->bodyText[i]);
+            AddTextPrinterParameterized3(windowId, FONT_SHORT_COPY_1, 0, 16 * i + 2, sCard_TextColorTable[sWonderCardData->gfx->bodyTextPal], 0, sWonderCardData->unk_2C[i]);
         break;
     case CARD_WIN_FOOTER:
         // Print footer line 1
@@ -563,8 +563,8 @@ struct WonderNewsData
     /*01c6*/ u16 scrollOffset;
     /*01c8*/ u16 windowIds[NEWS_WIN_COUNT];
     /*01cc*/ u8 unused[2];
-    /*01ce*/ u8 titleText[WONDER_NEWS_TEXT_LENGTH + 1];
-    /*01f7*/ u8 bodyText[WONDER_NEWS_BODY_TEXT_LINES][WONDER_NEWS_TEXT_LENGTH + 1];
+    /*01ce*/ u8 unk_04[WONDER_NEWS_TEXT_LENGTH + 1];
+    /*01f7*/ u8 unk_2C[WONDER_NEWS_BODY_TEXT_LINES][WONDER_NEWS_TEXT_LENGTH + 1];
     /*0394*/ struct ScrollArrowsTemplate arrowsTemplate;
     /*03a4*/ u8 bgTilemapBuffer[0x1000];
 };
@@ -648,9 +648,9 @@ bool32 WonderNews_Init(const struct WonderNews * news)
     if (sWonderNewsData == NULL)
         return FALSE;
     sWonderNewsData->news = *news;
-    if (sWonderNewsData->news.bgType >= NUM_WONDER_BGS)
-        sWonderNewsData->news.bgType = 0;
-    sWonderNewsData->gfx = &sNewsGraphics[sWonderNewsData->news.bgType];
+    if (sWonderNewsData->news.unk_03 >= NUM_WONDER_BGS)
+        sWonderNewsData->news.unk_03 = 0;
+    sWonderNewsData->gfx = &sNewsGraphics[sWonderNewsData->news.unk_03];
     sWonderNewsData->arrowTaskId = TASK_NONE;
     return TRUE;
 }
@@ -867,15 +867,15 @@ static void BufferNewsText(void)
     u8 i = 0;
 
     // Copy title text
-    memcpy(sWonderNewsData->titleText, sWonderNewsData->news.titleText, WONDER_NEWS_TEXT_LENGTH);
-    sWonderNewsData->titleText[WONDER_NEWS_TEXT_LENGTH] = EOS;
+    memcpy(sWonderNewsData->unk_04, sWonderNewsData->news.unk_04, WONDER_NEWS_TEXT_LENGTH);
+    sWonderNewsData->unk_04[WONDER_NEWS_TEXT_LENGTH] = EOS;
 
     // Copy body text
     for (; i < WONDER_NEWS_BODY_TEXT_LINES; i++)
     {
-        memcpy(sWonderNewsData->bodyText[i], sWonderNewsData->news.bodyText[i], WONDER_NEWS_TEXT_LENGTH);
-        sWonderNewsData->bodyText[i][WONDER_NEWS_TEXT_LENGTH] = EOS;
-        if (i > 7 && sWonderNewsData->bodyText[i][0] != EOS)
+        memcpy(sWonderNewsData->unk_2C[i], sWonderNewsData->news.unk_2C[i], WONDER_NEWS_TEXT_LENGTH);
+        sWonderNewsData->unk_2C[i][WONDER_NEWS_TEXT_LENGTH] = EOS;
+        if (i > 7 && sWonderNewsData->unk_2C[i][0] != EOS)
             sWonderNewsData->scrollEnd++;
     }
     sWonderNewsData->arrowsTemplate = sNews_ArrowsTemplate;
@@ -892,17 +892,17 @@ static void DrawNewsWindows(void)
     FillWindowPixelBuffer(sWonderNewsData->windowIds[NEWS_WIN_BODY], 0);
 
     // Print title text
-    x = (224 - GetStringWidth(FONT_SHORT_COPY_1, sWonderNewsData->titleText, GetFontAttribute(FONT_SHORT_COPY_1, FONTATTR_LETTER_SPACING))) / 2;
+    x = (224 - GetStringWidth(FONT_SHORT_COPY_1, sWonderNewsData->unk_04, GetFontAttribute(FONT_SHORT_COPY_1, FONTATTR_LETTER_SPACING))) / 2;
     if (x < 0)
         x = 0;
-    AddTextPrinterParameterized3(sWonderNewsData->windowIds[NEWS_WIN_TITLE], FONT_SHORT_COPY_1, x, 6, sNews_TextColorTable[sWonderNewsData->gfx->titleTextPal], 0, sWonderNewsData->titleText);
+    AddTextPrinterParameterized3(sWonderNewsData->windowIds[NEWS_WIN_TITLE], FONT_SHORT_COPY_1, x, 6, sNews_TextColorTable[sWonderNewsData->gfx->titleTextPal], 0, sWonderNewsData->unk_04);
 
     // Print body text
     for (; i < WONDER_NEWS_BODY_TEXT_LINES; i++)
         AddTextPrinterParameterized3(sWonderNewsData->windowIds[NEWS_WIN_BODY], FONT_SHORT_COPY_1, 0,
                                      16 * i + 2,
                                      sNews_TextColorTable[sWonderNewsData->gfx->bodyTextPal],
-                                     0, sWonderNewsData->bodyText[i]);
+                                     0, sWonderNewsData->unk_2C[i]);
 
     CopyWindowToVram(sWonderNewsData->windowIds[NEWS_WIN_TITLE], COPYWIN_FULL);
     CopyWindowToVram(sWonderNewsData->windowIds[NEWS_WIN_BODY], COPYWIN_FULL);
