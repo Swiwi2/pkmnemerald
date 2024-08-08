@@ -69,12 +69,12 @@ static const union AnimCmd *const sAnims_SwapLine[] =
     sAnim_SwapLine_LeftArrow
 };
 
-const struct CompressedSpriteSheet gBagSwapSpriteSheet =
+static const struct CompressedSpriteSheet sSpriteSheet_SwapLine =
 {
     gSwapLineGfx, 0x100, TAG_SWAP_LINE
 };
 
-const struct CompressedSpritePalette gBagSwapSpritePalette =
+static const struct CompressedSpritePalette sSpritePalette_SwapLine =
 {
     gSwapLinePal, TAG_SWAP_LINE
 };
@@ -91,23 +91,6 @@ static const struct SpriteTemplate sSpriteTemplate_SwapLine =
 };
 
 // code
-void ResetAllBgsCoordinatesAndBgCntRegs(void)
-{
-    SetGpuReg(REG_OFFSET_DISPCNT, 0);
-    SetGpuReg(REG_OFFSET_BG3CNT, 0);
-    SetGpuReg(REG_OFFSET_BG2CNT, 0);
-    SetGpuReg(REG_OFFSET_BG1CNT, 0);
-    SetGpuReg(REG_OFFSET_BG0CNT, 0);
-    ChangeBgX(0, 0, 0);
-    ChangeBgY(0, 0, 0);
-    ChangeBgX(1, 0, 0);
-    ChangeBgY(1, 0, 0);
-    ChangeBgX(2, 0, 0);
-    ChangeBgY(2, 0, 0);
-    ChangeBgX(3, 0, 0);
-    ChangeBgY(3, 0, 0);
-}
-
 void ResetVramOamAndBgCntRegs(void)
 {
     SetGpuReg(REG_OFFSET_DISPCNT, 0);
@@ -115,21 +98,21 @@ void ResetVramOamAndBgCntRegs(void)
     SetGpuReg(REG_OFFSET_BG2CNT, 0);
     SetGpuReg(REG_OFFSET_BG1CNT, 0);
     SetGpuReg(REG_OFFSET_BG0CNT, 0);
-    CpuFill16(0, (void*) VRAM, VRAM_SIZE);
-    CpuFill32(0, (void*) OAM, OAM_SIZE);
-    CpuFill16(0, (void*) PLTT, PLTT_SIZE);
+    CpuFill16(0, (void *) VRAM, VRAM_SIZE);
+    CpuFill32(0, (void *) OAM, OAM_SIZE);
+    CpuFill16(0, (void *) PLTT, PLTT_SIZE);
 }
 
 void ResetAllBgsCoordinates(void)
 {
-    ChangeBgX(0, 0, 0);
-    ChangeBgY(0, 0, 0);
-    ChangeBgX(1, 0, 0);
-    ChangeBgY(1, 0, 0);
-    ChangeBgX(2, 0, 0);
-    ChangeBgY(2, 0, 0);
-    ChangeBgX(3, 0, 0);
-    ChangeBgY(3, 0, 0);
+    ChangeBgX(0, 0, BG_COORD_SET);
+    ChangeBgY(0, 0, BG_COORD_SET);
+    ChangeBgX(1, 0, BG_COORD_SET);
+    ChangeBgY(1, 0, BG_COORD_SET);
+    ChangeBgX(2, 0, BG_COORD_SET);
+    ChangeBgY(2, 0, BG_COORD_SET);
+    ChangeBgX(3, 0, BG_COORD_SET);
+    ChangeBgY(3, 0, BG_COORD_SET);
 }
 
 void SetVBlankHBlankCallbacksToNull(void)
@@ -409,8 +392,8 @@ void SetCursorScrollWithinListBounds(u16 *scrollOffset, u16 *cursorPos, u8 shown
 
 void LoadListMenuSwapLineGfx(void)
 {
-    LoadCompressedSpriteSheet(&gBagSwapSpriteSheet);
-    LoadCompressedSpritePalette(&gBagSwapSpritePalette);
+    LoadCompressedSpriteSheet(&sSpriteSheet_SwapLine);
+    LoadCompressedSpritePalette(&sSpritePalette_SwapLine);
 }
 
 void CreateSwapLineSprites(u8 *spriteIds, u8 count)

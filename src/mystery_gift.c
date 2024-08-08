@@ -120,7 +120,7 @@ bool32 ValidateSavedWonderNews(void)
 #if FREE_MYSTERY_GIFT == FALSE
 static bool32 ValidateWonderNews(const struct WonderNews *news)
 {
-    if (news->unk_00 == 0)
+    if (news->id == 0)
         return FALSE;
 
     return TRUE;
@@ -131,7 +131,7 @@ bool32 IsSendingSavedWonderNewsAllowed(void)
 {
 #if FREE_MYSTERY_GIFT == FALSE
     const struct WonderNews *news = &gSaveBlock1Ptr->mysteryGift.news;
-    if (news->unk_02 == SEND_TYPE_DISALLOWED)
+    if (news->sendType == SEND_TYPE_DISALLOWED)
         return FALSE;
 
     return TRUE;
