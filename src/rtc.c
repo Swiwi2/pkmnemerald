@@ -389,7 +389,7 @@ u32 RtcGetLocalDayCount(void)
     return RtcGetDayCount(&sRtc);
 }
 
-/* void FormatDecimalTimeWithoutSeconds(u8 *txtPtr, s8 hour, s8 minute, bool32 is24Hour)
+void FormatDecimalTimeWithoutSeconds(u8 *txtPtr, s8 hour, s8 minute, bool32 is24Hour)
 {
     if (is24Hour)
     {
@@ -417,4 +417,4 @@ u32 RtcGetLocalDayCount(void)
 
     *txtPtr++ = EOS;
     *txtPtr = EOS;
-} */
+}

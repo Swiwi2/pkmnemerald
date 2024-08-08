@@ -9,10 +9,19 @@ script Woodholme_PC_OnTransition{
 }
 
 script Woodholme_PC_Nurse{
+    lock
+    // If we don't have a Pokémon in the party she just says hi.
+    if(var(VAR_WOODHOLME_STATE) == 0){
+        msgbox(format("Welcome to Woodholme City PokéCenter. Please come back when you have a Pokémon you."))
+    }
+    // If we have progressed past WOODHOLME STATE = 0, then normal PC script.
+    else{
     setvar(VAR_0x800B, 1)
         call(Common_EventScript_PkmnCenterNurse)
         waitmessage
         waitbuttonpress
         release
         end
+    }
+    release    
 }

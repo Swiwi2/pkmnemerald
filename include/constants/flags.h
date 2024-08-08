@@ -42,14 +42,14 @@
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 #define NUM_TEMP_FLAGS   (TEMP_FLAGS_END - TEMP_FLAGS_START + 1)
 
-#define FLAG_STARTER_SQUIRTLE    0x20 // Used for Squirtle in script LittlerootTown_BirchLab2_EventScript_PokeballLeft
-#define FLAG_STARTER_CHARMANDER    0x21 // Used for Charmander in script LittlerootTown_BirchLab2_EventScript_PokeballCenter
-#define FLAG_STARTER_BULBASAUR    0x22 // Used for Bulbasaur in script LittlerootTown_BirchLab2_EventScript_PokeballRight
-#define FLAG_ITEM_EXPSHARE    0x23 // Used for EXP SHARE GEN 6.
-#define FLAG_RIVAL_BATTLE1    0x24 // Used for the first rival battle outside Red's Lab.
-#define FLAG_VISITED_WOODHOLMECITY    0x25 // Used for keeping track of wether we have visited Woodholme.
-#define FLAG_RIVAL_DISAPPEAR    0x26 // Used for making May disappear from the Lab after the first visit.
-#define FLAG_UNUSED_0x027    0x27 // Unused Flag
+#define FLAG_STARTER_SQUIRTLE           0x20 // Used for Squirtle in script LittlerootTown_BirchLab2_EventScript_PokeballLeft
+#define FLAG_STARTER_CHARMANDER         0x21 // Used for Charmander in script LittlerootTown_BirchLab2_EventScript_PokeballCenter
+#define FLAG_STARTER_BULBASAUR          0x22 // Used for Bulbasaur in script LittlerootTown_BirchLab2_EventScript_PokeballRight
+#define FLAG_ITEM_EXPSHARE              0x23 // Used for EXP SHARE GEN 6.
+#define FLAG_RIVAL_BATTLE1              0x24 // Used for the first rival battle outside Red's Lab.
+#define FLAG_VISITED_WOODHOLMECITY      0x25 // Used for keeping track of wether we have visited Woodholme.
+#define FLAG_RIVAL_DISAPPEAR            0x26 // Used for making May disappear from the Lab after the first visit.
+#define FLAG_QUEST_MENU_ACTIVE          0x27 // Used for QUESTS in the menu.
 #define FLAG_UNUSED_0x028    0x28 // Unused Flag
 #define FLAG_UNUSED_0x029    0x29 // Unused Flag
 #define FLAG_UNUSED_0x02A    0x2A // Unused Flag
@@ -1346,7 +1346,7 @@
 #define FLAG_SYS_POKEMON_GET                         (SYSTEM_FLAGS + 0x0) // FLAG_0x860
 #define FLAG_SYS_POKEDEX_GET                         (SYSTEM_FLAGS + 0x1)
 #define FLAG_SYS_POKENAV_GET                         (SYSTEM_FLAGS + 0x2)
-#define FLAG_UNUSED_0x863                            (SYSTEM_FLAGS + 0x3) // Unused Flag
+#define FLAG_SYS_QUEST_MENU_GET                      (SYSTEM_FLAGS + 0x3) // adding QUESTS to start menu
 #define FLAG_SYS_GAME_CLEAR                          (SYSTEM_FLAGS + 0x4)
 #define FLAG_SYS_CHAT_USED                           (SYSTEM_FLAGS + 0x5)
 #define FLAG_UNLOCKED_TRENDY_SAYINGS                 (SYSTEM_FLAGS + 0x6)

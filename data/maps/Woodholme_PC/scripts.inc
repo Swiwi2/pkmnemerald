@@ -14,14 +14,33 @@ Woodholme_PC_OnTransition::
 
 Woodholme_PC_Nurse::
 # 12 "data/maps/Woodholme_PC/scripts.pory"
-	setvar VAR_0x800B, 1
-# 13 "data/maps/Woodholme_PC/scripts.pory"
-	call Common_EventScript_PkmnCenterNurse
+	lock
 # 14 "data/maps/Woodholme_PC/scripts.pory"
+	compare VAR_WOODHOLME_STATE, 0
+	goto_if_eq Woodholme_PC_Nurse_2
+# 19 "data/maps/Woodholme_PC/scripts.pory"
+	setvar VAR_0x800B, 1
+# 20 "data/maps/Woodholme_PC/scripts.pory"
+	call Common_EventScript_PkmnCenterNurse
+# 21 "data/maps/Woodholme_PC/scripts.pory"
 	waitmessage
-# 15 "data/maps/Woodholme_PC/scripts.pory"
+# 22 "data/maps/Woodholme_PC/scripts.pory"
 	waitbuttonpress
-# 16 "data/maps/Woodholme_PC/scripts.pory"
+# 23 "data/maps/Woodholme_PC/scripts.pory"
 	release
 	end
 
+Woodholme_PC_Nurse_1:
+# 26 "data/maps/Woodholme_PC/scripts.pory"
+	release
+	return
+
+Woodholme_PC_Nurse_2:
+# 15 "data/maps/Woodholme_PC/scripts.pory"
+	msgbox Woodholme_PC_Nurse_Text_0
+	goto Woodholme_PC_Nurse_1
+
+
+Woodholme_PC_Nurse_Text_0:
+# 15 "data/maps/Woodholme_PC/scripts.pory"
+	.string "Hello.$"
