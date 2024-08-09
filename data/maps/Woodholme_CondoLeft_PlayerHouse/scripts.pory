@@ -43,7 +43,6 @@ script Woodholme_CondoLeft_PlayerHouse_Trigger_Intro{
     setvar(VAR_GAMEINTRO_STATE, 1)
     setrespawn(HEAL_LOCATION_WOODHOLME_CITY)
     setflag(FLAG_SYS_B_DASH)
-    setflag(FLAG_SYS_QUEST_MENU_GET)
     release
 }
 

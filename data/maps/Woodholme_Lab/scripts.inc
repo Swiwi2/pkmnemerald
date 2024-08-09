@@ -211,614 +211,616 @@ Woodholme_Lab_EventScript_GivePokedex::
 # 148 "data/maps/Woodholme_Lab/scripts.pory"
 	setflag FLAG_ADVENTURE_STARTED
 # 149 "data/maps/Woodholme_Lab/scripts.pory"
-	special SetUnlockedPokedexFlags
+	questmenu QUEST_MENU_UNLOCK_QUEST, 0
 # 150 "data/maps/Woodholme_Lab/scripts.pory"
-	special EnableNationalPokedex
+	special SetUnlockedPokedexFlags
 # 151 "data/maps/Woodholme_Lab/scripts.pory"
-	setflag FLAG_RECEIVED_POKEDEX_FROM_BIRCH
+	special EnableNationalPokedex
 # 152 "data/maps/Woodholme_Lab/scripts.pory"
-	setvar VAR_CABLE_CLUB_TUTORIAL_STATE, 1
+	setflag FLAG_RECEIVED_POKEDEX_FROM_BIRCH
 # 153 "data/maps/Woodholme_Lab/scripts.pory"
-	setvar VAR_WOODHOLME_STATE, 1
+	setvar VAR_CABLE_CLUB_TUTORIAL_STATE, 1
 # 154 "data/maps/Woodholme_Lab/scripts.pory"
-	msgbox Woodholme_Lab_EventScript_GivePokedex_Text_2
+	setvar VAR_WOODHOLME_STATE, 1
 # 155 "data/maps/Woodholme_Lab/scripts.pory"
-	waitmessage
+	msgbox Woodholme_Lab_EventScript_GivePokedex_Text_2
 # 156 "data/maps/Woodholme_Lab/scripts.pory"
+	waitmessage
+# 157 "data/maps/Woodholme_Lab/scripts.pory"
 	release
 	return
 
 
 Woodholme_Lab_EventScript_GiveExpShare::
-# 162 "data/maps/Woodholme_Lab/scripts.pory"
-	lock
 # 163 "data/maps/Woodholme_Lab/scripts.pory"
-	msgbox Woodholme_Lab_EventScript_GiveExpShare_Text_0
+	lock
 # 164 "data/maps/Woodholme_Lab/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
+	msgbox Woodholme_Lab_EventScript_GiveExpShare_Text_0
 # 165 "data/maps/Woodholme_Lab/scripts.pory"
-	giveitem ITEM_EXP_SHARE, 1
+	playfanfare MUS_OBTAIN_ITEM
 # 166 "data/maps/Woodholme_Lab/scripts.pory"
-	waitfanfare
+	giveitem ITEM_EXP_SHARE, 1
 # 167 "data/maps/Woodholme_Lab/scripts.pory"
-	closemessage
+	waitfanfare
 # 168 "data/maps/Woodholme_Lab/scripts.pory"
+	closemessage
+# 169 "data/maps/Woodholme_Lab/scripts.pory"
 	release
 	return
 
 
 Woodholme_Lab_Trigger_RedIntro1::
-# 173 "data/maps/Woodholme_Lab/scripts.pory"
-	lock
 # 174 "data/maps/Woodholme_Lab/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Woodholme_Lab_Movement_PlayerMoveToStarter1
+	lock
 # 175 "data/maps/Woodholme_Lab/scripts.pory"
-	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Woodholme_Lab_Movement_PlayerMoveToStarter1
 # 176 "data/maps/Woodholme_Lab/scripts.pory"
-	applymovement 1, Woodholme_Lab_Movement_RedFaceRight
+	waitmovement 0
 # 177 "data/maps/Woodholme_Lab/scripts.pory"
-	waitmovement 0
+	applymovement 1, Woodholme_Lab_Movement_RedFaceRight
 # 178 "data/maps/Woodholme_Lab/scripts.pory"
-	applymovement 5, Woodholme_Lab_Movement_MayLeave
-# 179 "data/maps/Woodholme_Lab/scripts.pory"
 	waitmovement 0
+# 179 "data/maps/Woodholme_Lab/scripts.pory"
+	applymovement 5, Woodholme_Lab_Movement_MayLeave
 # 180 "data/maps/Woodholme_Lab/scripts.pory"
-	removeobject 5
+	waitmovement 0
 # 181 "data/maps/Woodholme_Lab/scripts.pory"
-	setflag FLAG_RIVAL_DISAPPEAR
+	removeobject 5
 # 182 "data/maps/Woodholme_Lab/scripts.pory"
-	msgbox Woodholm_Lab_Text_Red_Intro, MSGBOX_YESNO
+	setflag FLAG_RIVAL_DISAPPEAR
 # 183 "data/maps/Woodholme_Lab/scripts.pory"
+	msgbox Woodholm_Lab_Text_Red_Intro, MSGBOX_YESNO
+# 184 "data/maps/Woodholme_Lab/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq Woodholme_Lab_Trigger_RedIntro1_2
-# 189 "data/maps/Woodholme_Lab/scripts.pory"
+# 190 "data/maps/Woodholme_Lab/scripts.pory"
 	msgbox Woodholme_Lab_Text_RedDialogueNo
 Woodholme_Lab_Trigger_RedIntro1_1:
-# 191 "data/maps/Woodholme_Lab/scripts.pory"
-	waitmessage
 # 192 "data/maps/Woodholme_Lab/scripts.pory"
+	waitmessage
+# 193 "data/maps/Woodholme_Lab/scripts.pory"
 	release
 	return
 
 Woodholme_Lab_Trigger_RedIntro1_2:
-# 185 "data/maps/Woodholme_Lab/scripts.pory"
+# 186 "data/maps/Woodholme_Lab/scripts.pory"
 	msgbox Woodholme_Lab_Text_RedDialogueYes
 	goto Woodholme_Lab_Trigger_RedIntro1_1
 
 
 Woodholme_Lab_Trigger_RedIntro2::
-# 196 "data/maps/Woodholme_Lab/scripts.pory"
-	lock
 # 197 "data/maps/Woodholme_Lab/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Woodholme_Lab_Movement_PlayerMoveToStarter2
+	lock
 # 198 "data/maps/Woodholme_Lab/scripts.pory"
-	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Woodholme_Lab_Movement_PlayerMoveToStarter2
 # 199 "data/maps/Woodholme_Lab/scripts.pory"
-	applymovement 1, Woodholme_Lab_Movement_RedFaceRight
+	waitmovement 0
 # 200 "data/maps/Woodholme_Lab/scripts.pory"
-	waitmovement 0
+	applymovement 1, Woodholme_Lab_Movement_RedFaceRight
 # 201 "data/maps/Woodholme_Lab/scripts.pory"
-	applymovement 5, Woodholme_Lab_Movement_MayLeave
-# 202 "data/maps/Woodholme_Lab/scripts.pory"
 	waitmovement 0
+# 202 "data/maps/Woodholme_Lab/scripts.pory"
+	applymovement 5, Woodholme_Lab_Movement_MayLeave
 # 203 "data/maps/Woodholme_Lab/scripts.pory"
-	removeobject 5
+	waitmovement 0
 # 204 "data/maps/Woodholme_Lab/scripts.pory"
-	setflag FLAG_RIVAL_DISAPPEAR
+	removeobject 5
 # 205 "data/maps/Woodholme_Lab/scripts.pory"
-	msgbox Woodholm_Lab_Text_Red_Intro, MSGBOX_YESNO
+	setflag FLAG_RIVAL_DISAPPEAR
 # 206 "data/maps/Woodholme_Lab/scripts.pory"
+	msgbox Woodholm_Lab_Text_Red_Intro, MSGBOX_YESNO
+# 207 "data/maps/Woodholme_Lab/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq Woodholme_Lab_Trigger_RedIntro2_2
-# 212 "data/maps/Woodholme_Lab/scripts.pory"
+# 213 "data/maps/Woodholme_Lab/scripts.pory"
 	msgbox Woodholme_Lab_Text_RedDialogueNo
 Woodholme_Lab_Trigger_RedIntro2_1:
-# 214 "data/maps/Woodholme_Lab/scripts.pory"
-	waitmessage
 # 215 "data/maps/Woodholme_Lab/scripts.pory"
+	waitmessage
+# 216 "data/maps/Woodholme_Lab/scripts.pory"
 	release
 	return
 
 Woodholme_Lab_Trigger_RedIntro2_2:
-# 208 "data/maps/Woodholme_Lab/scripts.pory"
+# 209 "data/maps/Woodholme_Lab/scripts.pory"
 	msgbox Woodholme_Lab_Text_RedDialogueYes
 	goto Woodholme_Lab_Trigger_RedIntro2_1
 
 
 Woodholme_Lab_Trigger_RedIntro3::
-# 219 "data/maps/Woodholme_Lab/scripts.pory"
-	lock
 # 220 "data/maps/Woodholme_Lab/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Woodholme_Lab_Movement_PlayerMoveToStarter3
+	lock
 # 221 "data/maps/Woodholme_Lab/scripts.pory"
-	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Woodholme_Lab_Movement_PlayerMoveToStarter3
 # 222 "data/maps/Woodholme_Lab/scripts.pory"
-	applymovement 1, Woodholme_Lab_Movement_RedFaceRight
+	waitmovement 0
 # 223 "data/maps/Woodholme_Lab/scripts.pory"
-	waitmovement 0
+	applymovement 1, Woodholme_Lab_Movement_RedFaceRight
 # 224 "data/maps/Woodholme_Lab/scripts.pory"
-	applymovement 5, Woodholme_Lab_Movement_MayLeave
-# 225 "data/maps/Woodholme_Lab/scripts.pory"
 	waitmovement 0
+# 225 "data/maps/Woodholme_Lab/scripts.pory"
+	applymovement 5, Woodholme_Lab_Movement_MayLeave
 # 226 "data/maps/Woodholme_Lab/scripts.pory"
-	removeobject 5
+	waitmovement 0
 # 227 "data/maps/Woodholme_Lab/scripts.pory"
-	setflag FLAG_RIVAL_DISAPPEAR
+	removeobject 5
 # 228 "data/maps/Woodholme_Lab/scripts.pory"
-	msgbox Woodholm_Lab_Text_Red_Intro, MSGBOX_YESNO
+	setflag FLAG_RIVAL_DISAPPEAR
 # 229 "data/maps/Woodholme_Lab/scripts.pory"
+	msgbox Woodholm_Lab_Text_Red_Intro, MSGBOX_YESNO
+# 230 "data/maps/Woodholme_Lab/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq Woodholme_Lab_Trigger_RedIntro3_2
-# 235 "data/maps/Woodholme_Lab/scripts.pory"
+# 236 "data/maps/Woodholme_Lab/scripts.pory"
 	msgbox Woodholme_Lab_Text_RedDialogueNo
 Woodholme_Lab_Trigger_RedIntro3_1:
-# 237 "data/maps/Woodholme_Lab/scripts.pory"
-	waitmessage
 # 238 "data/maps/Woodholme_Lab/scripts.pory"
+	waitmessage
+# 239 "data/maps/Woodholme_Lab/scripts.pory"
 	release
 	return
 
 Woodholme_Lab_Trigger_RedIntro3_2:
-# 231 "data/maps/Woodholme_Lab/scripts.pory"
+# 232 "data/maps/Woodholme_Lab/scripts.pory"
 	msgbox Woodholme_Lab_Text_RedDialogueYes
 	goto Woodholme_Lab_Trigger_RedIntro3_1
 
 
 Woodholme_Lab_Trigger_RedIntro4::
-# 242 "data/maps/Woodholme_Lab/scripts.pory"
-	lock
 # 243 "data/maps/Woodholme_Lab/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Woodholme_Lab_Movement_PlayerMoveToStarter4
+	lock
 # 244 "data/maps/Woodholme_Lab/scripts.pory"
-	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Woodholme_Lab_Movement_PlayerMoveToStarter4
 # 245 "data/maps/Woodholme_Lab/scripts.pory"
-	applymovement 1, Woodholme_Lab_Movement_RedFaceRight
+	waitmovement 0
 # 246 "data/maps/Woodholme_Lab/scripts.pory"
-	waitmovement 0
+	applymovement 1, Woodholme_Lab_Movement_RedFaceRight
 # 247 "data/maps/Woodholme_Lab/scripts.pory"
-	applymovement 5, Woodholme_Lab_Movement_MayLeave
-# 248 "data/maps/Woodholme_Lab/scripts.pory"
 	waitmovement 0
+# 248 "data/maps/Woodholme_Lab/scripts.pory"
+	applymovement 5, Woodholme_Lab_Movement_MayLeave
 # 249 "data/maps/Woodholme_Lab/scripts.pory"
-	removeobject 5
+	waitmovement 0
 # 250 "data/maps/Woodholme_Lab/scripts.pory"
-	setflag FLAG_RIVAL_DISAPPEAR
+	removeobject 5
 # 251 "data/maps/Woodholme_Lab/scripts.pory"
-	msgbox Woodholm_Lab_Text_Red_Intro, MSGBOX_YESNO
+	setflag FLAG_RIVAL_DISAPPEAR
 # 252 "data/maps/Woodholme_Lab/scripts.pory"
+	msgbox Woodholm_Lab_Text_Red_Intro, MSGBOX_YESNO
+# 253 "data/maps/Woodholme_Lab/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq Woodholme_Lab_Trigger_RedIntro4_2
-# 258 "data/maps/Woodholme_Lab/scripts.pory"
+# 259 "data/maps/Woodholme_Lab/scripts.pory"
 	msgbox Woodholme_Lab_Text_RedDialogueNo
 Woodholme_Lab_Trigger_RedIntro4_1:
-# 260 "data/maps/Woodholme_Lab/scripts.pory"
-	waitmessage
 # 261 "data/maps/Woodholme_Lab/scripts.pory"
+	waitmessage
+# 262 "data/maps/Woodholme_Lab/scripts.pory"
 	release
 	return
 
 Woodholme_Lab_Trigger_RedIntro4_2:
-# 254 "data/maps/Woodholme_Lab/scripts.pory"
+# 255 "data/maps/Woodholme_Lab/scripts.pory"
 	msgbox Woodholme_Lab_Text_RedDialogueYes
 	goto Woodholme_Lab_Trigger_RedIntro4_1
 
 
-# 264 "data/maps/Woodholme_Lab/scripts.pory"
-Woodholme_Lab_Movement_MayLeave:
 # 265 "data/maps/Woodholme_Lab/scripts.pory"
+Woodholme_Lab_Movement_MayLeave:
+# 266 "data/maps/Woodholme_Lab/scripts.pory"
 	face_down
-# 266 "data/maps/Woodholme_Lab/scripts.pory"
-	walk_down
-# 266 "data/maps/Woodholme_Lab/scripts.pory"
-	walk_down
-# 266 "data/maps/Woodholme_Lab/scripts.pory"
-	walk_down
-# 266 "data/maps/Woodholme_Lab/scripts.pory"
-	walk_down
-# 266 "data/maps/Woodholme_Lab/scripts.pory"
+# 267 "data/maps/Woodholme_Lab/scripts.pory"
 	walk_down
 # 267 "data/maps/Woodholme_Lab/scripts.pory"
-	face_right
+	walk_down
+# 267 "data/maps/Woodholme_Lab/scripts.pory"
+	walk_down
+# 267 "data/maps/Woodholme_Lab/scripts.pory"
+	walk_down
+# 267 "data/maps/Woodholme_Lab/scripts.pory"
+	walk_down
 # 268 "data/maps/Woodholme_Lab/scripts.pory"
-	walk_right
+	face_right
 # 269 "data/maps/Woodholme_Lab/scripts.pory"
-	face_down
+	walk_right
 # 270 "data/maps/Woodholme_Lab/scripts.pory"
+	face_down
+# 271 "data/maps/Woodholme_Lab/scripts.pory"
 	walk_down
 	step_end
 
-# 273 "data/maps/Woodholme_Lab/scripts.pory"
-Woodholme_Lab_Movement_RedFaceRight:
 # 274 "data/maps/Woodholme_Lab/scripts.pory"
+Woodholme_Lab_Movement_RedFaceRight:
+# 275 "data/maps/Woodholme_Lab/scripts.pory"
 	face_right
 	step_end
 
-# 277 "data/maps/Woodholme_Lab/scripts.pory"
-Woodholme_Lab_Movement_PlayerMoveToStarter1:
 # 278 "data/maps/Woodholme_Lab/scripts.pory"
+Woodholme_Lab_Movement_PlayerMoveToStarter1:
+# 279 "data/maps/Woodholme_Lab/scripts.pory"
 	face_up
-# 279 "data/maps/Woodholme_Lab/scripts.pory"
-	walk_up
-# 279 "data/maps/Woodholme_Lab/scripts.pory"
-	walk_up
-# 279 "data/maps/Woodholme_Lab/scripts.pory"
+# 280 "data/maps/Woodholme_Lab/scripts.pory"
 	walk_up
 # 280 "data/maps/Woodholme_Lab/scripts.pory"
-	face_right
+	walk_up
+# 280 "data/maps/Woodholme_Lab/scripts.pory"
+	walk_up
 # 281 "data/maps/Woodholme_Lab/scripts.pory"
-	walk_right
+	face_right
 # 282 "data/maps/Woodholme_Lab/scripts.pory"
+	walk_right
+# 283 "data/maps/Woodholme_Lab/scripts.pory"
 	face_up
-# 283 "data/maps/Woodholme_Lab/scripts.pory"
-	walk_up
-# 283 "data/maps/Woodholme_Lab/scripts.pory"
-	walk_up
-# 283 "data/maps/Woodholme_Lab/scripts.pory"
-	walk_up
-# 283 "data/maps/Woodholme_Lab/scripts.pory"
+# 284 "data/maps/Woodholme_Lab/scripts.pory"
 	walk_up
 # 284 "data/maps/Woodholme_Lab/scripts.pory"
-	face_left
+	walk_up
+# 284 "data/maps/Woodholme_Lab/scripts.pory"
+	walk_up
+# 284 "data/maps/Woodholme_Lab/scripts.pory"
+	walk_up
 # 285 "data/maps/Woodholme_Lab/scripts.pory"
+	face_left
+# 286 "data/maps/Woodholme_Lab/scripts.pory"
 	step_end
 
-# 288 "data/maps/Woodholme_Lab/scripts.pory"
+# 289 "data/maps/Woodholme_Lab/scripts.pory"
 Woodholme_Lab_Movement_PlayerMoveToStarter2:
-# 289 "data/maps/Woodholme_Lab/scripts.pory"
-	walk_up
-# 289 "data/maps/Woodholme_Lab/scripts.pory"
-	walk_up
-# 289 "data/maps/Woodholme_Lab/scripts.pory"
-	walk_up
-# 289 "data/maps/Woodholme_Lab/scripts.pory"
-	walk_up
-# 289 "data/maps/Woodholme_Lab/scripts.pory"
-	walk_up
-# 289 "data/maps/Woodholme_Lab/scripts.pory"
+# 290 "data/maps/Woodholme_Lab/scripts.pory"
 	walk_up
 # 290 "data/maps/Woodholme_Lab/scripts.pory"
-	face_left
+	walk_up
+# 290 "data/maps/Woodholme_Lab/scripts.pory"
+	walk_up
+# 290 "data/maps/Woodholme_Lab/scripts.pory"
+	walk_up
+# 290 "data/maps/Woodholme_Lab/scripts.pory"
+	walk_up
+# 290 "data/maps/Woodholme_Lab/scripts.pory"
+	walk_up
 # 291 "data/maps/Woodholme_Lab/scripts.pory"
+	face_left
+# 292 "data/maps/Woodholme_Lab/scripts.pory"
 	step_end
 
-# 294 "data/maps/Woodholme_Lab/scripts.pory"
+# 295 "data/maps/Woodholme_Lab/scripts.pory"
 Woodholme_Lab_Movement_PlayerMoveToStarter3:
-# 295 "data/maps/Woodholme_Lab/scripts.pory"
-	walk_up
-# 295 "data/maps/Woodholme_Lab/scripts.pory"
-	walk_up
-# 295 "data/maps/Woodholme_Lab/scripts.pory"
-	walk_up
-# 295 "data/maps/Woodholme_Lab/scripts.pory"
-	walk_up
-# 295 "data/maps/Woodholme_Lab/scripts.pory"
-	walk_up
-# 295 "data/maps/Woodholme_Lab/scripts.pory"
+# 296 "data/maps/Woodholme_Lab/scripts.pory"
 	walk_up
 # 296 "data/maps/Woodholme_Lab/scripts.pory"
-	face_left
+	walk_up
+# 296 "data/maps/Woodholme_Lab/scripts.pory"
+	walk_up
+# 296 "data/maps/Woodholme_Lab/scripts.pory"
+	walk_up
+# 296 "data/maps/Woodholme_Lab/scripts.pory"
+	walk_up
+# 296 "data/maps/Woodholme_Lab/scripts.pory"
+	walk_up
 # 297 "data/maps/Woodholme_Lab/scripts.pory"
-	walk_left
+	face_left
 # 298 "data/maps/Woodholme_Lab/scripts.pory"
+	walk_left
+# 299 "data/maps/Woodholme_Lab/scripts.pory"
 	step_end
 
-# 301 "data/maps/Woodholme_Lab/scripts.pory"
+# 302 "data/maps/Woodholme_Lab/scripts.pory"
 Woodholme_Lab_Movement_PlayerMoveToStarter4:
-# 302 "data/maps/Woodholme_Lab/scripts.pory"
-	walk_up
-# 302 "data/maps/Woodholme_Lab/scripts.pory"
-	walk_up
-# 302 "data/maps/Woodholme_Lab/scripts.pory"
+# 303 "data/maps/Woodholme_Lab/scripts.pory"
 	walk_up
 # 303 "data/maps/Woodholme_Lab/scripts.pory"
+	walk_up
+# 303 "data/maps/Woodholme_Lab/scripts.pory"
+	walk_up
+# 304 "data/maps/Woodholme_Lab/scripts.pory"
 	face_left
-# 304 "data/maps/Woodholme_Lab/scripts.pory"
-	walk_left
-# 304 "data/maps/Woodholme_Lab/scripts.pory"
+# 305 "data/maps/Woodholme_Lab/scripts.pory"
 	walk_left
 # 305 "data/maps/Woodholme_Lab/scripts.pory"
+	walk_left
+# 306 "data/maps/Woodholme_Lab/scripts.pory"
 	face_up
-# 306 "data/maps/Woodholme_Lab/scripts.pory"
-	walk_up
-# 306 "data/maps/Woodholme_Lab/scripts.pory"
-	walk_up
-# 306 "data/maps/Woodholme_Lab/scripts.pory"
-	walk_up
-# 306 "data/maps/Woodholme_Lab/scripts.pory"
+# 307 "data/maps/Woodholme_Lab/scripts.pory"
 	walk_up
 # 307 "data/maps/Woodholme_Lab/scripts.pory"
-	face_left
+	walk_up
+# 307 "data/maps/Woodholme_Lab/scripts.pory"
+	walk_up
+# 307 "data/maps/Woodholme_Lab/scripts.pory"
+	walk_up
 # 308 "data/maps/Woodholme_Lab/scripts.pory"
+	face_left
+# 309 "data/maps/Woodholme_Lab/scripts.pory"
 	step_end
 
 Woodholme_Lab_EventScript_PokeballLeft::
-# 326 "data/maps/Woodholme_Lab/scripts.pory"
+# 327 "data/maps/Woodholme_Lab/scripts.pory"
 	lock
-# 328 "data/maps/Woodholme_Lab/scripts.pory"
+# 329 "data/maps/Woodholme_Lab/scripts.pory"
 	goto_if_unset FLAG_STARTER_SQUIRTLE, Woodholme_Lab_EventScript_PokeballLeft_4
 Woodholme_Lab_EventScript_PokeballLeft_3:
-# 361 "data/maps/Woodholme_Lab/scripts.pory"
+# 362 "data/maps/Woodholme_Lab/scripts.pory"
 	msgbox Woodholme_Lab_EventScript_PokeballLeft_Text_3
 Woodholme_Lab_EventScript_PokeballLeft_1:
-# 363 "data/maps/Woodholme_Lab/scripts.pory"
-	waitmessage
 # 364 "data/maps/Woodholme_Lab/scripts.pory"
+	waitmessage
+# 365 "data/maps/Woodholme_Lab/scripts.pory"
 	release
 	end
 
 Woodholme_Lab_EventScript_PokeballLeft_2:
-# 329 "data/maps/Woodholme_Lab/scripts.pory"
-	showmonpic SPECIES_SQUIRTLE, 10, 3
 # 330 "data/maps/Woodholme_Lab/scripts.pory"
-	msgbox Woodholme_Lab_EventScript_PokeballLeft_Text_0, MSGBOX_YESNO
+	showmonpic SPECIES_SQUIRTLE, 10, 3
 # 331 "data/maps/Woodholme_Lab/scripts.pory"
+	msgbox Woodholme_Lab_EventScript_PokeballLeft_Text_0, MSGBOX_YESNO
+# 332 "data/maps/Woodholme_Lab/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq Woodholme_Lab_EventScript_PokeballLeft_9
-# 355 "data/maps/Woodholme_Lab/scripts.pory"
-	hidemonpic
 # 356 "data/maps/Woodholme_Lab/scripts.pory"
+	hidemonpic
+# 357 "data/maps/Woodholme_Lab/scripts.pory"
 	msgbox Woodholme_Lab_Text_NotChosen
 	goto Woodholme_Lab_EventScript_PokeballLeft_1
 
 Woodholme_Lab_EventScript_PokeballLeft_4:
-# 328 "data/maps/Woodholme_Lab/scripts.pory"
+# 329 "data/maps/Woodholme_Lab/scripts.pory"
 	goto_if_unset FLAG_STARTER_CHARMANDER, Woodholme_Lab_EventScript_PokeballLeft_6
 	goto Woodholme_Lab_EventScript_PokeballLeft_3
 
 Woodholme_Lab_EventScript_PokeballLeft_6:
-# 328 "data/maps/Woodholme_Lab/scripts.pory"
+# 329 "data/maps/Woodholme_Lab/scripts.pory"
 	goto_if_unset FLAG_STARTER_BULBASAUR, Woodholme_Lab_EventScript_PokeballLeft_2
 	goto Woodholme_Lab_EventScript_PokeballLeft_3
 
 Woodholme_Lab_EventScript_PokeballLeft_9:
-# 332 "data/maps/Woodholme_Lab/scripts.pory"
-	givemon SPECIES_SQUIRTLE, 5
 # 333 "data/maps/Woodholme_Lab/scripts.pory"
+	givemon SPECIES_SQUIRTLE, 5
+# 334 "data/maps/Woodholme_Lab/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq Woodholme_Lab_EventScript_PokeballLeft_12
-# 341 "data/maps/Woodholme_Lab/scripts.pory"
+# 342 "data/maps/Woodholme_Lab/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq Woodholme_Lab_EventScript_PokeballLeft_13
-# 350 "data/maps/Woodholme_Lab/scripts.pory"
-	hidemonpic
 # 351 "data/maps/Woodholme_Lab/scripts.pory"
+	hidemonpic
+# 352 "data/maps/Woodholme_Lab/scripts.pory"
 	msgbox Woodholme_Lab_EventScript_PokeballLeft_Text_2
 	goto Woodholme_Lab_EventScript_PokeballLeft_1
 
 Woodholme_Lab_EventScript_PokeballLeft_12:
-# 334 "data/maps/Woodholme_Lab/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
 # 335 "data/maps/Woodholme_Lab/scripts.pory"
-	msgbox Woodholme_Lab_EventScript_PokeballLeft_Text_1
+	playfanfare MUS_OBTAIN_ITEM
 # 336 "data/maps/Woodholme_Lab/scripts.pory"
-	removeobject 2
+	msgbox Woodholme_Lab_EventScript_PokeballLeft_Text_1
 # 337 "data/maps/Woodholme_Lab/scripts.pory"
-	setflag FLAG_STARTER_SQUIRTLE
+	removeobject 2
 # 338 "data/maps/Woodholme_Lab/scripts.pory"
-	setvar VAR_WOODHOLME_LAB_STATE, 1
+	setflag FLAG_STARTER_SQUIRTLE
 # 339 "data/maps/Woodholme_Lab/scripts.pory"
+	setvar VAR_WOODHOLME_LAB_STATE, 1
+# 340 "data/maps/Woodholme_Lab/scripts.pory"
 	call NicknamePartyMon
 	goto Woodholme_Lab_EventScript_PokeballLeft_1
 
 Woodholme_Lab_EventScript_PokeballLeft_13:
-# 342 "data/maps/Woodholme_Lab/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
 # 343 "data/maps/Woodholme_Lab/scripts.pory"
-	msgbox Woodholme_Lab_EventScript_PokeballLeft_Text_1
+	playfanfare MUS_OBTAIN_ITEM
 # 344 "data/maps/Woodholme_Lab/scripts.pory"
-	removeobject 2
+	msgbox Woodholme_Lab_EventScript_PokeballLeft_Text_1
 # 345 "data/maps/Woodholme_Lab/scripts.pory"
-	setflag FLAG_STARTER_SQUIRTLE
+	removeobject 2
 # 346 "data/maps/Woodholme_Lab/scripts.pory"
-	setvar VAR_WOODHOLME_LAB_STATE, 1
+	setflag FLAG_STARTER_SQUIRTLE
 # 347 "data/maps/Woodholme_Lab/scripts.pory"
+	setvar VAR_WOODHOLME_LAB_STATE, 1
+# 348 "data/maps/Woodholme_Lab/scripts.pory"
 	call NicknameBoxMon
 	goto Woodholme_Lab_EventScript_PokeballLeft_1
 
 
 Woodholme_Lab_EventScript_PokeballCenter::
-# 371 "data/maps/Woodholme_Lab/scripts.pory"
+# 372 "data/maps/Woodholme_Lab/scripts.pory"
 	lock
-# 373 "data/maps/Woodholme_Lab/scripts.pory"
+# 374 "data/maps/Woodholme_Lab/scripts.pory"
 	goto_if_unset FLAG_STARTER_SQUIRTLE, Woodholme_Lab_EventScript_PokeballCenter_4
 Woodholme_Lab_EventScript_PokeballCenter_3:
-# 405 "data/maps/Woodholme_Lab/scripts.pory"
+# 406 "data/maps/Woodholme_Lab/scripts.pory"
 	msgbox Woodholme_Lab_EventScript_PokeballLeft_Text_3
 Woodholme_Lab_EventScript_PokeballCenter_1:
-# 407 "data/maps/Woodholme_Lab/scripts.pory"
-	waitmessage
 # 408 "data/maps/Woodholme_Lab/scripts.pory"
+	waitmessage
+# 409 "data/maps/Woodholme_Lab/scripts.pory"
 	release
 	end
 
 Woodholme_Lab_EventScript_PokeballCenter_2:
-# 374 "data/maps/Woodholme_Lab/scripts.pory"
-	showmonpic SPECIES_CHARMANDER, 10, 3
 # 375 "data/maps/Woodholme_Lab/scripts.pory"
-	msgbox Woodholme_Lab_EventScript_PokeballCenter_Text_0, MSGBOX_YESNO
+	showmonpic SPECIES_CHARMANDER, 10, 3
 # 376 "data/maps/Woodholme_Lab/scripts.pory"
+	msgbox Woodholme_Lab_EventScript_PokeballCenter_Text_0, MSGBOX_YESNO
+# 377 "data/maps/Woodholme_Lab/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq Woodholme_Lab_EventScript_PokeballCenter_9
-# 400 "data/maps/Woodholme_Lab/scripts.pory"
-	hidemonpic
 # 401 "data/maps/Woodholme_Lab/scripts.pory"
+	hidemonpic
+# 402 "data/maps/Woodholme_Lab/scripts.pory"
 	msgbox Woodholme_Lab_Text_NotChosen
 	goto Woodholme_Lab_EventScript_PokeballCenter_1
 
 Woodholme_Lab_EventScript_PokeballCenter_4:
-# 373 "data/maps/Woodholme_Lab/scripts.pory"
+# 374 "data/maps/Woodholme_Lab/scripts.pory"
 	goto_if_unset FLAG_STARTER_CHARMANDER, Woodholme_Lab_EventScript_PokeballCenter_6
 	goto Woodholme_Lab_EventScript_PokeballCenter_3
 
 Woodholme_Lab_EventScript_PokeballCenter_6:
-# 373 "data/maps/Woodholme_Lab/scripts.pory"
+# 374 "data/maps/Woodholme_Lab/scripts.pory"
 	goto_if_unset FLAG_STARTER_BULBASAUR, Woodholme_Lab_EventScript_PokeballCenter_2
 	goto Woodholme_Lab_EventScript_PokeballCenter_3
 
 Woodholme_Lab_EventScript_PokeballCenter_9:
-# 377 "data/maps/Woodholme_Lab/scripts.pory"
-	givemon SPECIES_CHARMANDER, 5
 # 378 "data/maps/Woodholme_Lab/scripts.pory"
+	givemon SPECIES_CHARMANDER, 5
+# 379 "data/maps/Woodholme_Lab/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq Woodholme_Lab_EventScript_PokeballCenter_12
-# 386 "data/maps/Woodholme_Lab/scripts.pory"
+# 387 "data/maps/Woodholme_Lab/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq Woodholme_Lab_EventScript_PokeballCenter_13
-# 395 "data/maps/Woodholme_Lab/scripts.pory"
-	hidemonpic
 # 396 "data/maps/Woodholme_Lab/scripts.pory"
+	hidemonpic
+# 397 "data/maps/Woodholme_Lab/scripts.pory"
 	msgbox Woodholme_Lab_EventScript_PokeballLeft_Text_2
 	goto Woodholme_Lab_EventScript_PokeballCenter_1
 
 Woodholme_Lab_EventScript_PokeballCenter_12:
-# 379 "data/maps/Woodholme_Lab/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
 # 380 "data/maps/Woodholme_Lab/scripts.pory"
-	msgbox Woodholme_Lab_EventScript_PokeballCenter_Text_1
+	playfanfare MUS_OBTAIN_ITEM
 # 381 "data/maps/Woodholme_Lab/scripts.pory"
-	removeobject 3
+	msgbox Woodholme_Lab_EventScript_PokeballCenter_Text_1
 # 382 "data/maps/Woodholme_Lab/scripts.pory"
-	setflag FLAG_STARTER_CHARMANDER
+	removeobject 3
 # 383 "data/maps/Woodholme_Lab/scripts.pory"
-	setvar VAR_WOODHOLME_LAB_STATE, 1
+	setflag FLAG_STARTER_CHARMANDER
 # 384 "data/maps/Woodholme_Lab/scripts.pory"
+	setvar VAR_WOODHOLME_LAB_STATE, 1
+# 385 "data/maps/Woodholme_Lab/scripts.pory"
 	call NicknamePartyMon
 	goto Woodholme_Lab_EventScript_PokeballCenter_1
 
 Woodholme_Lab_EventScript_PokeballCenter_13:
-# 387 "data/maps/Woodholme_Lab/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
 # 388 "data/maps/Woodholme_Lab/scripts.pory"
-	msgbox Woodholme_Lab_EventScript_PokeballCenter_Text_1
+	playfanfare MUS_OBTAIN_ITEM
 # 389 "data/maps/Woodholme_Lab/scripts.pory"
-	removeobject 3
+	msgbox Woodholme_Lab_EventScript_PokeballCenter_Text_1
 # 390 "data/maps/Woodholme_Lab/scripts.pory"
-	setflag FLAG_STARTER_CHARMANDER
+	removeobject 3
 # 391 "data/maps/Woodholme_Lab/scripts.pory"
-	setvar VAR_WOODHOLME_LAB_STATE, 1
+	setflag FLAG_STARTER_CHARMANDER
 # 392 "data/maps/Woodholme_Lab/scripts.pory"
+	setvar VAR_WOODHOLME_LAB_STATE, 1
+# 393 "data/maps/Woodholme_Lab/scripts.pory"
 	call NicknameBoxMon
 	goto Woodholme_Lab_EventScript_PokeballCenter_1
 
 
 Woodholme_Lab_EventScript_PokeballRight::
-# 414 "data/maps/Woodholme_Lab/scripts.pory"
+# 415 "data/maps/Woodholme_Lab/scripts.pory"
 	lock
-# 416 "data/maps/Woodholme_Lab/scripts.pory"
+# 417 "data/maps/Woodholme_Lab/scripts.pory"
 	goto_if_unset FLAG_STARTER_SQUIRTLE, Woodholme_Lab_EventScript_PokeballRight_4
 Woodholme_Lab_EventScript_PokeballRight_3:
-# 448 "data/maps/Woodholme_Lab/scripts.pory"
+# 449 "data/maps/Woodholme_Lab/scripts.pory"
 	msgbox Woodholme_Lab_EventScript_PokeballLeft_Text_3
 Woodholme_Lab_EventScript_PokeballRight_1:
-# 451 "data/maps/Woodholme_Lab/scripts.pory"
-	waitmessage
 # 452 "data/maps/Woodholme_Lab/scripts.pory"
+	waitmessage
+# 453 "data/maps/Woodholme_Lab/scripts.pory"
 	release
 	end
 
 Woodholme_Lab_EventScript_PokeballRight_2:
-# 417 "data/maps/Woodholme_Lab/scripts.pory"
-	showmonpic SPECIES_BULBASAUR, 10, 3
 # 418 "data/maps/Woodholme_Lab/scripts.pory"
-	msgbox Woodholme_Lab_EventScript_PokeballRight_Text_0, MSGBOX_YESNO
+	showmonpic SPECIES_BULBASAUR, 10, 3
 # 419 "data/maps/Woodholme_Lab/scripts.pory"
+	msgbox Woodholme_Lab_EventScript_PokeballRight_Text_0, MSGBOX_YESNO
+# 420 "data/maps/Woodholme_Lab/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq Woodholme_Lab_EventScript_PokeballRight_9
-# 443 "data/maps/Woodholme_Lab/scripts.pory"
-	hidemonpic
 # 444 "data/maps/Woodholme_Lab/scripts.pory"
+	hidemonpic
+# 445 "data/maps/Woodholme_Lab/scripts.pory"
 	msgbox Woodholme_Lab_Text_NotChosen
 	goto Woodholme_Lab_EventScript_PokeballRight_1
 
 Woodholme_Lab_EventScript_PokeballRight_4:
-# 416 "data/maps/Woodholme_Lab/scripts.pory"
+# 417 "data/maps/Woodholme_Lab/scripts.pory"
 	goto_if_unset FLAG_STARTER_CHARMANDER, Woodholme_Lab_EventScript_PokeballRight_6
 	goto Woodholme_Lab_EventScript_PokeballRight_3
 
 Woodholme_Lab_EventScript_PokeballRight_6:
-# 416 "data/maps/Woodholme_Lab/scripts.pory"
+# 417 "data/maps/Woodholme_Lab/scripts.pory"
 	goto_if_unset FLAG_STARTER_BULBASAUR, Woodholme_Lab_EventScript_PokeballRight_2
 	goto Woodholme_Lab_EventScript_PokeballRight_3
 
 Woodholme_Lab_EventScript_PokeballRight_9:
-# 420 "data/maps/Woodholme_Lab/scripts.pory"
-	givemon SPECIES_BULBASAUR, 5
 # 421 "data/maps/Woodholme_Lab/scripts.pory"
+	givemon SPECIES_BULBASAUR, 5
+# 422 "data/maps/Woodholme_Lab/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq Woodholme_Lab_EventScript_PokeballRight_12
-# 429 "data/maps/Woodholme_Lab/scripts.pory"
+# 430 "data/maps/Woodholme_Lab/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq Woodholme_Lab_EventScript_PokeballRight_13
-# 438 "data/maps/Woodholme_Lab/scripts.pory"
-	hidemonpic
 # 439 "data/maps/Woodholme_Lab/scripts.pory"
+	hidemonpic
+# 440 "data/maps/Woodholme_Lab/scripts.pory"
 	msgbox Woodholme_Lab_EventScript_PokeballLeft_Text_2
 	goto Woodholme_Lab_EventScript_PokeballRight_1
 
 Woodholme_Lab_EventScript_PokeballRight_12:
-# 422 "data/maps/Woodholme_Lab/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
 # 423 "data/maps/Woodholme_Lab/scripts.pory"
-	msgbox Woodholme_Lab_EventScript_PokeballRight_Text_1
+	playfanfare MUS_OBTAIN_ITEM
 # 424 "data/maps/Woodholme_Lab/scripts.pory"
-	removeobject 4
+	msgbox Woodholme_Lab_EventScript_PokeballRight_Text_1
 # 425 "data/maps/Woodholme_Lab/scripts.pory"
-	setflag FLAG_STARTER_BULBASAUR
+	removeobject 4
 # 426 "data/maps/Woodholme_Lab/scripts.pory"
-	setvar VAR_WOODHOLME_LAB_STATE, 1
+	setflag FLAG_STARTER_BULBASAUR
 # 427 "data/maps/Woodholme_Lab/scripts.pory"
+	setvar VAR_WOODHOLME_LAB_STATE, 1
+# 428 "data/maps/Woodholme_Lab/scripts.pory"
 	call NicknamePartyMon
 	goto Woodholme_Lab_EventScript_PokeballRight_1
 
 Woodholme_Lab_EventScript_PokeballRight_13:
-# 430 "data/maps/Woodholme_Lab/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
 # 431 "data/maps/Woodholme_Lab/scripts.pory"
-	msgbox Woodholme_Lab_EventScript_PokeballRight_Text_1
+	playfanfare MUS_OBTAIN_ITEM
 # 432 "data/maps/Woodholme_Lab/scripts.pory"
-	removeobject 4
+	msgbox Woodholme_Lab_EventScript_PokeballRight_Text_1
 # 433 "data/maps/Woodholme_Lab/scripts.pory"
-	setflag FLAG_STARTER_BULBASAUR
+	removeobject 4
 # 434 "data/maps/Woodholme_Lab/scripts.pory"
-	setvar VAR_WOODHOLME_LAB_STATE, 1
+	setflag FLAG_STARTER_BULBASAUR
 # 435 "data/maps/Woodholme_Lab/scripts.pory"
+	setvar VAR_WOODHOLME_LAB_STATE, 1
+# 436 "data/maps/Woodholme_Lab/scripts.pory"
 	call NicknameBoxMon
 	goto Woodholme_Lab_EventScript_PokeballRight_1
 
 
 NicknamePartyMon::
-# 458 "data/maps/Woodholme_Lab/scripts.pory"
-	msgbox NicknamePartyMon_Text_0, MSGBOX_YESNO
 # 459 "data/maps/Woodholme_Lab/scripts.pory"
-	hidemonpic
+	msgbox NicknamePartyMon_Text_0, MSGBOX_YESNO
 # 460 "data/maps/Woodholme_Lab/scripts.pory"
+	hidemonpic
+# 461 "data/maps/Woodholme_Lab/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq NicknamePartyMon_1
 	return
 
 NicknamePartyMon_1:
-# 461 "data/maps/Woodholme_Lab/scripts.pory"
-	call Common_EventScript_GetGiftMonPartySlot
 # 462 "data/maps/Woodholme_Lab/scripts.pory"
+	call Common_EventScript_GetGiftMonPartySlot
+# 463 "data/maps/Woodholme_Lab/scripts.pory"
 	call Common_EventScript_NameReceivedPartyMon
 	return
 
 
 NicknameBoxMon::
-# 468 "data/maps/Woodholme_Lab/scripts.pory"
-	msgbox NicknamePartyMon_Text_0, MSGBOX_YESNO
 # 469 "data/maps/Woodholme_Lab/scripts.pory"
-	hidemonpic
+	msgbox NicknamePartyMon_Text_0, MSGBOX_YESNO
 # 470 "data/maps/Woodholme_Lab/scripts.pory"
+	hidemonpic
+# 471 "data/maps/Woodholme_Lab/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq NicknameBoxMon_2
 NicknameBoxMon_1:
-# 473 "data/maps/Woodholme_Lab/scripts.pory"
+# 474 "data/maps/Woodholme_Lab/scripts.pory"
 	msgbox NicknameBoxMon_Text_0
 	return
 
 NicknameBoxMon_2:
-# 471 "data/maps/Woodholme_Lab/scripts.pory"
+# 472 "data/maps/Woodholme_Lab/scripts.pory"
 	call Common_EventScript_NameReceivedBoxMon
 	goto NicknameBoxMon_1
 
@@ -843,7 +845,7 @@ Woodholme_Lab_EventScript_GivePokedex_Text_1:
 	.string "{PLAYER} received the POKéDEX!$"
 
 Woodholme_Lab_EventScript_GivePokedex_Text_2:
-# 154 "data/maps/Woodholme_Lab/scripts.pory"
+# 155 "data/maps/Woodholme_Lab/scripts.pory"
 	.string "The PokéDex automatically records data\n"
 	.string "on Pokémon you've seen. Once you\l"
 	.string "capture a Pokémon, the PokéDex will\l"
@@ -859,7 +861,7 @@ Woodholme_Lab_EventScript_GivePokedex_Text_2:
 	.string "PokéBalls you can purchase.$"
 
 Woodholme_Lab_EventScript_GiveExpShare_Text_0:
-# 163 "data/maps/Woodholme_Lab/scripts.pory"
+# 164 "data/maps/Woodholme_Lab/scripts.pory"
 	.string "I also want you to have this. This is an\n"
 	.string "Exp. Share which lets you train your\l"
 	.string "whole party at once. The Exp. Share can\l"
@@ -873,44 +875,44 @@ Woodholme_Lab_EventScript_GiveExpShare_Text_0:
 	.string "experience together!$"
 
 Woodholme_Lab_EventScript_PokeballLeft_Text_0:
-# 330 "data/maps/Woodholme_Lab/scripts.pory"
+# 331 "data/maps/Woodholme_Lab/scripts.pory"
 	.string "Do you want to choose Squirtle?$"
 
 Woodholme_Lab_EventScript_PokeballLeft_Text_1:
-# 335 "data/maps/Woodholme_Lab/scripts.pory"
+# 336 "data/maps/Woodholme_Lab/scripts.pory"
 	.string "{PLAYER} received the Squirtle!$"
 
 Woodholme_Lab_EventScript_PokeballLeft_Text_2:
-# 351 "data/maps/Woodholme_Lab/scripts.pory"
+# 352 "data/maps/Woodholme_Lab/scripts.pory"
 	.string "You don't have room for that.$"
 
 Woodholme_Lab_EventScript_PokeballLeft_Text_3:
-# 361 "data/maps/Woodholme_Lab/scripts.pory"
+# 362 "data/maps/Woodholme_Lab/scripts.pory"
 	.string "RED: You already have a Pokémon. One is\n"
 	.string "enough.$"
 
 Woodholme_Lab_EventScript_PokeballCenter_Text_0:
-# 375 "data/maps/Woodholme_Lab/scripts.pory"
+# 376 "data/maps/Woodholme_Lab/scripts.pory"
 	.string "Do you want to choose Charmander?$"
 
 Woodholme_Lab_EventScript_PokeballCenter_Text_1:
-# 380 "data/maps/Woodholme_Lab/scripts.pory"
+# 381 "data/maps/Woodholme_Lab/scripts.pory"
 	.string "{PLAYER} received the Charmander!$"
 
 Woodholme_Lab_EventScript_PokeballRight_Text_0:
-# 418 "data/maps/Woodholme_Lab/scripts.pory"
+# 419 "data/maps/Woodholme_Lab/scripts.pory"
 	.string "Do you want to choose Bulbasaur?$"
 
 Woodholme_Lab_EventScript_PokeballRight_Text_1:
-# 423 "data/maps/Woodholme_Lab/scripts.pory"
+# 424 "data/maps/Woodholme_Lab/scripts.pory"
 	.string "{PLAYER} received the Bulbasaur!$"
 
 NicknamePartyMon_Text_0:
-# 458 "data/maps/Woodholme_Lab/scripts.pory"
+# 459 "data/maps/Woodholme_Lab/scripts.pory"
 	.string "Do you want to give it a nickname?$"
 
 NicknameBoxMon_Text_0:
-# 473 "data/maps/Woodholme_Lab/scripts.pory"
+# 474 "data/maps/Woodholme_Lab/scripts.pory"
 	.string "The Pokémon was transferred to the PC.$"
 
 Woodholme_Lab_Text_Red1::
@@ -964,7 +966,7 @@ Woodholme_Lab_Text_GiveExpShare::
 	.string "Hehe. Good luck!$"
 
 Woodholm_Lab_Text_Red_Intro::
-# 311 "data/maps/Woodholme_Lab/scripts.pory"
+# 312 "data/maps/Woodholme_Lab/scripts.pory"
 	.string "RED: Ah! You must be the new trainer\n"
 	.string "that just moved in! {PLAYER} is it?\l"
 	.string "Welcome! My name is Red. I used to be\l"
@@ -983,18 +985,18 @@ Woodholm_Lab_Text_Red_Intro::
 	.string "for yourself?$"
 
 Woodholme_Lab_Text_RedDialogueYes::
-# 315 "data/maps/Woodholme_Lab/scripts.pory"
+# 316 "data/maps/Woodholme_Lab/scripts.pory"
 	.string "Excellent. Go over to the table and\n"
 	.string "take the Pokémon you wish to accompany\l"
 	.string "you on your journey.$"
 
 Woodholme_Lab_Text_RedDialogueNo::
-# 319 "data/maps/Woodholme_Lab/scripts.pory"
+# 320 "data/maps/Woodholme_Lab/scripts.pory"
 	.string "You won't be able to start your Pokémon\n"
 	.string "adventure without a Pokémon! Please,\l"
 	.string "choose one of the Pokémon.$"
 
 Woodholme_Lab_Text_NotChosen::
-# 477 "data/maps/Woodholme_Lab/scripts.pory"
+# 478 "data/maps/Woodholme_Lab/scripts.pory"
 	.string "RED: It's a tough choice. Think hard\n"
 	.string "before making your decision!$"

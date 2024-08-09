@@ -4,8 +4,7 @@ mapscripts Woodholme_PC_MapScripts{
 }
 
 script Woodholme_PC_OnTransition{
-    setrespawn(HEAL_LOCATION_WOODHOLME_CITY)
-    end
+
 }
 
 script Woodholme_PC_Nurse{
@@ -18,10 +17,46 @@ script Woodholme_PC_Nurse{
     else{
     setvar(VAR_0x800B, 1)
         call(Common_EventScript_PkmnCenterNurse)
+        setrespawn(HEAL_LOCATION_WOODHOLME_CITY)
         waitmessage
         waitbuttonpress
         release
         end
     }
     release    
+}
+
+script Woodholme_PC_EventScript_Wally{
+    lock
+    setflag(FLAG_SYS_QUEST_MENU_GET)
+    setflag(FLAG_QUEST_MENU_ACTIVE)
+
+    // If we don't have a pokémon, just a dialogue box.
+    if(var(VAR_WOODHOLME_STATE) == 0){
+        msgbox(format("Hello. Are you a Pokémon trainer? Please come back when you have a Pokémon."))
+        release
+    }
+
+    // If we do have a pokémon, normal questgiver eventscript
+    else{
+    msgbox(Woodholme_PC_Wally_Dialogue, MSGBOX_YESNO)
+    // If we click YES on Wally intro speech.
+    if(var(VAR_RESULT) == YES){
+        waitmessage
+        questmenu(QUEST_MENU_UNLOCK_QUEST, 1)
+        release
+    }
+    // if we click NO on Wally intro.
+    else{
+        msgbox(format("No problem, I'll find a different trainer to help me!"))
+        release
+    }
+
+    }
+
+    release
+}
+
+text Woodholme_PC_Wally_Dialogue{
+    format("Hello! My name is Wally. My brothers and I work at the PokéCenters around the world handing out quests to Pokémon trainers. These quests are tasks that people want help with. It could be a non-trainer looking to get a Pokémon for comfort, or that someone has stumbled across a problem they need help with solving. They come to me and my brothers, and we make sure a fit and able trainer can help them with their problem. To make it worth the trainer's time, we of course make sure you are compensated for your efforts! I have unlocked the QUESTS menu for you. There, you can see your active QUEST and which one of the Wally Brothers that gave you the quest. For the first quest, a kid asked me to find them a Rattata. Do you think you could do that for me?")
 }

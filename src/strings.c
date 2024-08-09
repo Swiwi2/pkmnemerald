@@ -1853,8 +1853,8 @@ const u8 gText_AM[] = _("AM");
 const u8 gText_PM[] = _("PM");
 
 //side quest names
-const u8 gText_SideQuestName_1[] = _("Side Quest 1");
-const u8 gText_SideQuestName_2[] = _("Side Quest 2");
+const u8 gText_SideQuestName_1[] = _("Gym Challenger");
+const u8 gText_SideQuestName_2[] = _("Rat Catching");
 const u8 gText_SideQuestName_3[] = _("Side Quest 3");
 const u8 gText_SideQuestName_4[] = _("Side Quest 4");
 const u8 gText_SideQuestName_5[] = _("Side Quest 5");
@@ -1885,8 +1885,8 @@ const u8 gText_SideQuestName_29[] = _("Side Quest 29");
 const u8 gText_SideQuestName_30[] = _("Side Quest 30");
 
 //side quest descriptions
-const u8 gText_SideQuestDesc_1[] = _("Description 1");
-const u8 gText_SideQuestDesc_2[] = _("Description 2");
+const u8 gText_SideQuestDesc_1[] = _("RED has tasked me with challenging \nand beating all 8 POKÉMON GYMS!");
+const u8 gText_SideQuestDesc_2[] = _("Catch a Rattata and bring it to \nWally in Woodholme City PokéCenter.");
 const u8 gText_SideQuestDesc_3[] = _("Description 3");
 const u8 gText_SideQuestDesc_4[] = _("Description 4");
 const u8 gText_SideQuestDesc_5[] = _("Description 5");
@@ -1917,8 +1917,8 @@ const u8 gText_SideQuestDesc_29[] = _("Description 29");
 const u8 gText_SideQuestDesc_30[] = _("Description 30");
 
 //side quest point of contact
-const u8 gText_SideQuestPOC_1[] = _("POC 1");
-const u8 gText_SideQuestPOC_2[] = _("POC 2");
+const u8 gText_SideQuestPOC_1[] = _("RED, \nWoodholme City Lab.");
+const u8 gText_SideQuestPOC_2[] = _("Wally, \nWoodholme City PokéCenter.");
 const u8 gText_SideQuestPOC_3[] = _("POC 3");
 const u8 gText_SideQuestPOC_4[] = _("POC 4");
 const u8 gText_SideQuestPOC_5[] = _("POC 5");
@@ -1949,8 +1949,8 @@ const u8 gText_SideQuestPOC_29[] = _("POC 29");
 const u8 gText_SideQuestPOC_30[] = _("POC 30");
 
 //side quest map
-const u8 gText_SideQuestMap_1[] = _("Map 1");
-const u8 gText_SideQuestMap_2[] = _("Map 2");
+const u8 gText_SideQuestMap_1[] = _("Woodholme City");
+const u8 gText_SideQuestMap_2[] = _("Woodholme City");
 const u8 gText_SideQuestMap_3[] = _("Map 3");
 const u8 gText_SideQuestMap_4[] = _("Map 4");
 const u8 gText_SideQuestMap_5[] = _("Map 5");
@@ -1981,8 +1981,8 @@ const u8 gText_SideQuestMap_29[] = _("Map 29");
 const u8 gText_SideQuestMap_30[] = _("Map 30");
 
 //side quest rewards
-const u8 gText_SideQuestReward_1[] = _("Reward 1");
-const u8 gText_SideQuestReward_2[] = _("Reward 2");
+const u8 gText_SideQuestReward_1[] = _("Invitation to the Pokémon League.");
+const u8 gText_SideQuestReward_2[] = _("Whiskey and a smoke.");
 const u8 gText_SideQuestReward_3[] = _("Reward 3");
 const u8 gText_SideQuestReward_4[] = _("Reward 4");
 const u8 gText_SideQuestReward_5[] = _("Reward 5");
