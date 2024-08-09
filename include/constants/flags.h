@@ -50,7 +50,7 @@
 #define FLAG_VISITED_WOODHOLMECITY      0x25 // Used for keeping track of wether we have visited Woodholme.
 #define FLAG_RIVAL_DISAPPEAR            0x26 // Used for making May disappear from the Lab after the first visit.
 #define FLAG_QUEST_MENU_ACTIVE          0x27 // Used for QUESTS in the menu.
-#define FLAG_UNUSED_0x028    0x28 // Unused Flag
+#define FLAG_THERRY_TRADE_COMPLETED     0x28 // Used to see if trade has been completed in Serenleaf City.
 #define FLAG_UNUSED_0x029    0x29 // Unused Flag
 #define FLAG_UNUSED_0x02A    0x2A // Unused Flag
 #define FLAG_UNUSED_0x02B    0x2B // Unused Flag
