@@ -26,21 +26,7 @@ script WoodholmeCity_EventScript_SetupRivalBattle{
 }
 
 script WoodholmeCity_EventScript_RivalBattle1{
-        // May is currently only using Mudkip - Todo: change this to depend on your starter choice.
-        // If we chose Bulbasaur as our starter:
-        if(flag(FLAG_STARTER_BULBASAUR)){
-            trainerbattle_single(TRAINER_MAY_ROUTE_103_TORCHIC, May_Intro, May_Outro, RivalBattleOver)
-        }
-        // If we chose Charmander as our starter:
-        elif(flag(FLAG_STARTER_CHARMANDER)){
-            trainerbattle_single(TRAINER_MAY_ROUTE_103_TORCHIC, May_Intro, May_Outro, RivalBattleOver)
-        }
-        // If none of the above (then Squirtle obv):
-        else{
-            trainerbattle_single(TRAINER_MAY_ROUTE_103_TORCHIC, May_Intro, May_Outro, RivalBattleOver)
-        }
-        
-    
+    trainerbattle_single(TRAINER_MAY_ROUTE_103_TORCHIC, May_Intro, May_Outro, RivalBattleOver)    
     end
 }
 
