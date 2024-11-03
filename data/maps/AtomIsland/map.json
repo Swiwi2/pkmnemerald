@@ -1,0 +1,39 @@
+{
+  "id": "MAP_ATOM_ISLAND",
+  "name": "AtomIsland",
+  "layout": "LAYOUT_ATOM_ISLAND",
+  "music": "MUS_DEWFORD",
+  "region_map_section": "MAPSEC_ATOM_ISLAND",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_CITY",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ROUTE10",
+      "offset": 0,
+      "direction": "up"
+    },
+    {
+      "map": "MAP_ROUTE12",
+      "offset": 16,
+      "direction": "left"
+    }
+  ],
+  "object_events": [
+
+  ],
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

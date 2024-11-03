@@ -6,17 +6,17 @@
 #define MAPSEC_DEWFORD_TOWN                 0x02
 #define MAPSEC_LAVARIDGE_TOWN               0x03
 #define MAPSEC_FALLARBOR_TOWN               0x04
-#define MAPSEC_VERDANTURF_TOWN              0x05
+#define MAPSEC_SOLAS_TOWN                   0x05    //Used for my map.
 #define MAPSEC_PACIFIDLOG_TOWN              0x06
-#define MAPSEC_WOODHOLME_CITY               0x07
-#define MAPSEC_ATOM_ISLAND               0x08
-#define MAPSEC_SERENLEAF_CITY                0x09
-#define MAPSEC_AMBERVILLE_CITY                0x0A
-#define MAPSEC_FARMVILLE_CITY                 0x0B
-#define MAPSEC_PAKKASJARVEN_CITY                0x0C
-#define MAPSEC_EMBERVILLE_CITY                0x0D
-#define MAPSEC_ENIMEROS_CITY              0x0E
-#define MAPSEC_EVER_GRANDE_CITY             0x0F
+#define MAPSEC_WOODHOLME_CITY               0x07    //Used for my map.
+#define MAPSEC_ATOM_ISLAND                  0x08    //Used for my map.
+#define MAPSEC_SERENLEAF_CITY               0x09    //Used for my map.
+#define MAPSEC_AMBERVILLE_CITY              0x0A    //Used for my map.
+#define MAPSEC_FARMVILLE_CITY               0x0B    //Used for my map.
+#define MAPSEC_PAKKASJARVEN_CITY            0x0C    //Used for my map.
+#define MAPSEC_EMBERVILLE_CITY              0x0D    //Used for my map.
+#define MAPSEC_ENIMEROS_CITY                0x0E    //Used for my map.
+#define MAPSEC_EVER_GRANDE_CITY             0x0F    //Used for my map.
 #define MAPSEC_ROUTE_101                    0x10
 #define MAPSEC_ROUTE_102                    0x11
 #define MAPSEC_ROUTE_103                    0x12
@@ -102,20 +102,20 @@
 #define MAPSEC_SAFFRON_CITY                 0x62
 #define MAPSEC_ROUTE_4_POKECENTER           0x63
 #define MAPSEC_ROUTE_10_POKECENTER          0x64
-#define MAPSEC_ROUTE_1                      0x65
-#define MAPSEC_ROUTE_2                      0x66
-#define MAPSEC_ROUTE_3                      0x67
-#define MAPSEC_ROUTE_4                      0x68
-#define MAPSEC_ROUTE_5                      0x69
-#define MAPSEC_ROUTE_6                      0x6A
-#define MAPSEC_ROUTE_7                      0x6B
-#define MAPSEC_ROUTE_8                      0x6C
-#define MAPSEC_ROUTE_9                      0x6D
-#define MAPSEC_ROUTE_10                     0x6E
-#define MAPSEC_ROUTE_11                     0x6F
-#define MAPSEC_ROUTE_12                     0x70
-#define MAPSEC_ROUTE_13                     0x71
-#define MAPSEC_ROUTE_14                     0x72
+#define MAPSEC_ROUTE_1                      0x65    //Used for my map.
+#define MAPSEC_ROUTE_2                      0x66    //Used for my map.
+#define MAPSEC_ROUTE_3                      0x67    //Used for my map.
+#define MAPSEC_ROUTE_4                      0x68    //Used for my map.
+#define MAPSEC_ROUTE_5                      0x69    //Used for my map.
+#define MAPSEC_ROUTE_6                      0x6A    //Used for my map.
+#define MAPSEC_ROUTE_7                      0x6B    //Used for my map.
+#define MAPSEC_ROUTE_8                      0x6C    //Used for my map.
+#define MAPSEC_ROUTE_9                      0x6D    //Used for my map.
+#define MAPSEC_ROUTE_10                     0x6E    //Used for my map.
+#define MAPSEC_ROUTE_11                     0x6F    //Used for my map.
+#define MAPSEC_ROUTE_12                     0x70    //Used for my map.
+#define MAPSEC_ROUTE_13                     0x71    //Used for my map.
+#define MAPSEC_ROUTE_14                     0x72    //Used for my map.
 #define MAPSEC_ROUTE_15                     0x73
 #define MAPSEC_ROUTE_16                     0x74
 #define MAPSEC_ROUTE_17                     0x75
@@ -138,7 +138,7 @@
 #define MAPSEC_SILPH_CO                     0x86
 #define MAPSEC_POKEMON_MANSION              0x87
 #define MAPSEC_KANTO_SAFARI_ZONE            0x88
-#define MAPSEC_POKEMON_LEAGUE               0x89
+#define MAPSEC_POKEMON_LEAGUE               0x89    //Used for my map.
 #define MAPSEC_ROCK_TUNNEL                  0x8A
 #define MAPSEC_SEAFOAM_ISLANDS              0x8B
 #define MAPSEC_POKEMON_TOWER                0x8C
