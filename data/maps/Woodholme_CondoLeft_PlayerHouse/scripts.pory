@@ -39,11 +39,17 @@ script Woodholme_CondoLeft_PlayerHouse_Trigger_Intro{
     lock
     applymovement(Mom, Woodholme_CondoLeft_PlayerHouse_Movement_MomIntro)
     waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Woodholme_CondoLeft_PlayerHouse_Movement_PlayerTurnAround)
+    waitmovement(0)
     msgbox(Woodholme_CondoLeft_PlayerHouse_MomIntro)
     setvar(VAR_GAMEINTRO_STATE, 1)
     setrespawn(HEAL_LOCATION_WOODHOLME_CITY)
     setflag(FLAG_SYS_B_DASH)
     release
+}
+
+movement Woodholme_CondoLeft_PlayerHouse_Movement_PlayerTurnAround{
+    face_right
 }
 
 movement Woodholme_CondoLeft_PlayerHouse_Movement_MomIntro{

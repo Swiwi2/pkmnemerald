@@ -65,27 +65,37 @@ Woodholme_CondoLeft_PlayerHouse_Trigger_Intro::
 # 41 "data/maps/Woodholme_CondoLeft_PlayerHouse/scripts.pory"
 	waitmovement 0
 # 42 "data/maps/Woodholme_CondoLeft_PlayerHouse/scripts.pory"
-	msgbox Woodholme_CondoLeft_PlayerHouse_MomIntro
+	applymovement OBJ_EVENT_ID_PLAYER, Woodholme_CondoLeft_PlayerHouse_Movement_PlayerTurnAround
 # 43 "data/maps/Woodholme_CondoLeft_PlayerHouse/scripts.pory"
-	setvar VAR_GAMEINTRO_STATE, 1
+	waitmovement 0
 # 44 "data/maps/Woodholme_CondoLeft_PlayerHouse/scripts.pory"
-	setrespawn HEAL_LOCATION_WOODHOLME_CITY
+	msgbox Woodholme_CondoLeft_PlayerHouse_MomIntro
 # 45 "data/maps/Woodholme_CondoLeft_PlayerHouse/scripts.pory"
-	setflag FLAG_SYS_B_DASH
+	setvar VAR_GAMEINTRO_STATE, 1
 # 46 "data/maps/Woodholme_CondoLeft_PlayerHouse/scripts.pory"
+	setrespawn HEAL_LOCATION_WOODHOLME_CITY
+# 47 "data/maps/Woodholme_CondoLeft_PlayerHouse/scripts.pory"
+	setflag FLAG_SYS_B_DASH
+# 48 "data/maps/Woodholme_CondoLeft_PlayerHouse/scripts.pory"
 	release
 	return
 
 
-# 49 "data/maps/Woodholme_CondoLeft_PlayerHouse/scripts.pory"
-Woodholme_CondoLeft_PlayerHouse_Movement_MomIntro:
-# 50 "data/maps/Woodholme_CondoLeft_PlayerHouse/scripts.pory"
-	face_up
 # 51 "data/maps/Woodholme_CondoLeft_PlayerHouse/scripts.pory"
-	walk_up
+Woodholme_CondoLeft_PlayerHouse_Movement_PlayerTurnAround:
 # 52 "data/maps/Woodholme_CondoLeft_PlayerHouse/scripts.pory"
+	face_right
+	step_end
+
+# 55 "data/maps/Woodholme_CondoLeft_PlayerHouse/scripts.pory"
+Woodholme_CondoLeft_PlayerHouse_Movement_MomIntro:
+# 56 "data/maps/Woodholme_CondoLeft_PlayerHouse/scripts.pory"
+	face_up
+# 57 "data/maps/Woodholme_CondoLeft_PlayerHouse/scripts.pory"
+	walk_up
+# 58 "data/maps/Woodholme_CondoLeft_PlayerHouse/scripts.pory"
 	face_left
-# 53 "data/maps/Woodholme_CondoLeft_PlayerHouse/scripts.pory"
+# 59 "data/maps/Woodholme_CondoLeft_PlayerHouse/scripts.pory"
 	walk_left
 	step_end
 
@@ -98,7 +108,7 @@ Woodholme_CondoLeft_PlayerHouse_EventScript_Mom_Text_1:
 	.string "What would you like to talk about?$"
 
 Woodholme_CondoLeft_PlayerHouse_MomIntro::
-# 56 "data/maps/Woodholme_CondoLeft_PlayerHouse/scripts.pory"
+# 62 "data/maps/Woodholme_CondoLeft_PlayerHouse/scripts.pory"
 	.string "MOM: Hello honey! We've finally arrived\n"
 	.string "in Woodholme City. Can you believe it?\l"
 	.string "Your very own Pokémon journey is about\l"
@@ -113,7 +123,7 @@ Woodholme_CondoLeft_PlayerHouse_MomIntro::
 	.string "Go on, I believe in you!$"
 
 MomDialogueOption1::
-# 61 "data/maps/Woodholme_CondoLeft_PlayerHouse/scripts.pory"
+# 67 "data/maps/Woodholme_CondoLeft_PlayerHouse/scripts.pory"
 	.string "Yes, it's a wonderful city isn't it? I'm\n"
 	.string "excited to start my new job soon. Good\l"
 	.string "luck on your Pokémon adventure, and\l"
@@ -121,7 +131,7 @@ MomDialogueOption1::
 	.string "bit you're always welcome back home.$"
 
 MomDialogueOption2::
-# 66 "data/maps/Woodholme_CondoLeft_PlayerHouse/scripts.pory"
+# 72 "data/maps/Woodholme_CondoLeft_PlayerHouse/scripts.pory"
 	.string "The Pokémon Gym Challenge? Yes, in\n"
 	.string "order to prove that a trainer has the\l"
 	.string "skills needed to challenge the\l"
@@ -130,7 +140,7 @@ MomDialogueOption2::
 	.string "takes to do just that. Good luck!$"
 
 MomDialogueOption3::
-# 71 "data/maps/Woodholme_CondoLeft_PlayerHouse/scripts.pory"
+# 77 "data/maps/Woodholme_CondoLeft_PlayerHouse/scripts.pory"
 	.string "Hmm. May? Oh that lovely young girl from\n"
 	.string "next door? Yes, isn't she sweet? Oh, you\l"
 	.string "two are rivals? That's great. I'm sure\l"
