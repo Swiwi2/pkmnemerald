@@ -8,6 +8,7 @@
     "gMapGroup_pakkasjarvenCity",
     "gMapGroup_AtomIsland",
     "gMapGroup_FarmvilleCity",
+    "gMapGroup_SolasTown",
     "gMapGroup_PokemonLeague",
     "gMapGroup_Route1",
     "gMapGroup_Route2",
@@ -77,25 +78,28 @@
     "Serenleaf_Gym"
   ],
   "gMapGroup_AmbervilleCity": [
-
+    "AmbervilleCity"
   ],
   "gMapGroup_EmbervilleCity": [
-
+    "EmbervilleCity"
   ],
   "gMapGroup_EnimerosCity": [
-
+    "EnimerosCity"
   ],
   "gMapGroup_pakkasjarvenCity": [
-
+    "PakkasjarvenCity"
   ],
   "gMapGroup_AtomIsland": [
-
+    "AtomIsland"
   ],
   "gMapGroup_FarmvilleCity": [
-
+    "FarmvilleCity"
+  ],
+  "gMapGroup_SolasTown": [
+    "SolasTown"
   ],
   "gMapGroup_PokemonLeague": [
-
+    "PokemonLeague"
   ],
   "gMapGroup_Route1": [
     "Route1",
@@ -105,40 +109,41 @@
     "Route2"
   ],
   "gMapGroup_Route3": [
-
+    "Route3"
   ],
   "gMapGroup_Route4": [
-
+    "Route4"
   ],
   "gMapGroup_Route5": [
-
+    "Route5"
   ],
   "gMapGroup_Route6": [
-
+    "Route6"
   ],
   "gMapGroup_Route7": [
-
+    "Route7"
   ],
   "gMapGroup_Route8": [
-
+    "Route8",
+    "Route8N"
   ],
   "gMapGroup_Route9": [
-
+    "Route9"
   ],
   "gMapGroup_Route10": [
-
+    "Route10"
   ],
   "gMapGroup_Route11": [
-
+    "Route11"
   ],
   "gMapGroup_Route12": [
-
+    "Route12"
   ],
   "gMapGroup_Route13": [
-
+    "Route13"
   ],
   "gMapGroup_Route14": [
-
+    "Route14"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",

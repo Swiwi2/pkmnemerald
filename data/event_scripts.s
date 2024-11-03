@@ -1109,3 +1109,45 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Serenleaf_Mart/scripts.inc"
 
 	.include "data/maps/Serenleaf_Gym/scripts.inc"
+
+	.include "data/maps/Route3/scripts.inc"
+
+	.include "data/maps/Route4/scripts.inc"
+
+	.include "data/maps/Route5/scripts.inc"
+
+	.include "data/maps/Route6/scripts.inc"
+
+	.include "data/maps/Route7/scripts.inc"
+
+	.include "data/maps/Route8/scripts.inc"
+
+	.include "data/maps/Route9/scripts.inc"
+
+	.include "data/maps/Route10/scripts.inc"
+
+	.include "data/maps/Route11/scripts.inc"
+
+	.include "data/maps/Route12/scripts.inc"
+
+	.include "data/maps/Route13/scripts.inc"
+
+	.include "data/maps/Route14/scripts.inc"
+
+	.include "data/maps/AmbervilleCity/scripts.inc"
+
+	.include "data/maps/EmbervilleCity/scripts.inc"
+
+	.include "data/maps/EnimerosCity/scripts.inc"
+
+	.include "data/maps/PakkasjarvenCity/scripts.inc"
+
+	.include "data/maps/AtomIsland/scripts.inc"
+
+	.include "data/maps/FarmvilleCity/scripts.inc"
+
+	.include "data/maps/PokemonLeague/scripts.inc"
+
+	.include "data/maps/SolasTown/scripts.inc"
+
+	.include "data/maps/Route8N/scripts.inc"
