@@ -1,0 +1,18 @@
+mapscripts SerenleafPC_MapScripts{
+	MAP_SCRIPT_ON_TRANSITION: SerenleafPC_OnTransition
+	MAP_SCRIPT_ON_RESUME: CableClub_OnResume
+}
+
+script SerenleafPC_OnTransition{
+
+}
+
+script SerenleafPC_Nurse{
+	setvar(VAR_0x800B, 1)
+	call(Common_EventScript_PkmnCenterNurse)
+	setrespawn(HEAL_LOCATION_SERENLEAF_CITY)
+	waitmessage
+	waitbuttonpress
+	release
+	end
+}

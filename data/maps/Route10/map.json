@@ -14,11 +14,6 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_ENIMEROS_CITY",
-      "offset": 0,
-      "direction": "up"
-    },
-    {
       "map": "MAP_ATOM_ISLAND",
       "offset": 0,
       "direction": "down"
@@ -28,7 +23,13 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 21,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_ENIMEROS_CITY",
+      "dest_warp_id": "0"
+    }
   ],
   "coord_events": [
 

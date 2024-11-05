@@ -10,6 +10,7 @@
     "gMapGroup_FarmvilleCity",
     "gMapGroup_SolasTown",
     "gMapGroup_PokemonLeague",
+    "gMapGroup_FairyCircles",
     "gMapGroup_Route1",
     "gMapGroup_Route2",
     "gMapGroup_Route3",
@@ -73,33 +74,43 @@
   ],
   "gMapGroup_SerenleafCity": [
     "SerenleafCity",
-    "Serenleaf_PC",
-    "Serenleaf_Mart",
-    "Serenleaf_Gym"
+    "SerenleafGym",
+    "SerenleafPC",
+    "SerenleafMart"
   ],
   "gMapGroup_AmbervilleCity": [
-    "AmbervilleCity"
+    "AmbervilleCity",
+    "AmbervilleGym"
   ],
   "gMapGroup_EmbervilleCity": [
-    "EmbervilleCity"
+    "EmbervilleCity",
+    "EmbervilleGym"
   ],
   "gMapGroup_EnimerosCity": [
-    "EnimerosCity"
+    "EnimerosCity",
+    "EnimerosGym",
+    "EnimerosPC"
   ],
   "gMapGroup_pakkasjarvenCity": [
-    "PakkasjarvenCity"
+    "PakkasjarvenCity",
+    "PakkasjarvenGym"
   ],
   "gMapGroup_AtomIsland": [
-    "AtomIsland"
+    "AtomIsland",
+    "AtomIslandGym"
   ],
   "gMapGroup_FarmvilleCity": [
-    "FarmvilleCity"
+    "FarmvilleCity",
+    "FarmvilleGym"
   ],
   "gMapGroup_SolasTown": [
     "SolasTown"
   ],
   "gMapGroup_PokemonLeague": [
     "PokemonLeague"
+  ],
+  "gMapGroup_FairyCircles": [
+    "FairyCircleSouth"
   ],
   "gMapGroup_Route1": [
     "Route1",
@@ -118,7 +129,8 @@
     "Route5"
   ],
   "gMapGroup_Route6": [
-    "Route6"
+    "Route6",
+    "DebugArea"
   ],
   "gMapGroup_Route7": [
     "Route7"

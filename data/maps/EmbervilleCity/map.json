@@ -14,21 +14,48 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_ROUTE6",
-      "offset": 0,
-      "direction": "down"
-    },
-    {
       "map": "MAP_ROUTE9",
       "offset": 0,
       "direction": "up"
+    },
+    {
+      "map": "MAP_ROUTE5",
+      "offset": 0,
+      "direction": "down"
     }
   ],
   "object_events": [
 
   ],
   "warp_events": [
-
+    {
+      "x": 17,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_SERENLEAF_CITY",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 16,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_EMBERVILLE_CITY",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 9,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_EMBERVILLE_CITY",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 5,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_EMBERVILLE_GYM",
+      "dest_warp_id": "0"
+    }
   ],
   "coord_events": [
 

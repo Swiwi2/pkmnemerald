@@ -1,0 +1,76 @@
+mapscripts PakkasjarvenGym_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION: PakkasjarvenGym_OnTransition
+}
+// Pakkasjarven Gym States:
+// 0: First match available
+// 1: Defeated & got the badge
+// 2: Rematch available (todo in the future)
+// 3: Rematch completed
+
+
+script PakkasjarvenGym_OnTransition{
+    call(PakkasjarvenGym_EventScript_SetupGymBattle)
+}
+
+script PakkasjarvenGym_EventScript_SetupGymBattle{
+    // Checks if Pakkasjarven Badge already acquired
+    if (!flag(FLAG_BADGE05_GET)){
+        setvar(VAR_PAKKASJARVEN_GYM_STATE,0)
+    }
+    else{
+        setvar(VAR_PAKKASJARVEN_GYM_STATE,1)
+    }
+}
+
+script PakkasjarvenGym_EventScript_Leader{
+    trainerbattle_single(TRAINER_JUAN_1, PakkasjarvenGym_LeaderIntro, PakkasjarvenGym_LeaderOutro, PakkasjarvenGym_EventScript_Battle1Over)
+    msgbox(PakkasjarvenGym_LeaderDialogue_State1)
+    release
+    end
+}
+
+script PakkasjarvenGym_EventScript_Battle1Over{
+    lock
+    msgbox(PakkasjarvenGym_Heretakethis)
+    playfanfare(MUS_OBTAIN_BADGE)
+    message("{PLAYER} received the FIFTH BADGE!")
+    waitfanfare
+    closemessage
+    setflag(FLAG_BADGE05_GET)
+    setvar(VAR_PAKKASJARVEN_GYM_STATE,1)
+    goto(PakkasjarvenGym_EventScript_GiveSurf)
+    release
+    end
+}
+
+script PakkasjarvenGym_EventScript_GiveSurf{
+    lock
+	playfanfare(MUS_OBTAIN_ITEM)
+	giveitem(ITEM_HM03)
+	waitfanfare
+	closemessage
+	setflag(FLAG_RECEIVED_HM_SURF)
+	msgbox(PakkasjarvenGym_ExplainSurf)
+	release
+	return
+}
+
+text PakkasjarvenGym_ExplainSurf{
+    format("This is Surf!")
+}
+
+text PakkasjarvenGym_LeaderIntro{
+    format("Heya!")
+}
+
+text PakkasjarvenGym_LeaderOutro{
+    format("Nice.")
+}
+
+text PakkasjarvenGym_LeaderDialogue_State1{
+    format("Well done.")
+}
+
+text PakkasjarvenGym_Heretakethis{
+    format("Here's your badge!")
+}

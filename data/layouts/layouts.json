@@ -4553,39 +4553,39 @@
     },
     {
       "id": "LAYOUT_SERENLEAF_PC",
-      "name": "Serenleaf_PC_Layout",
+      "name": "SerenleafPC_Layout",
       "width": 14,
       "height": 9,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_PokemonCenter",
-      "border_filepath": "data/layouts/Serenleaf_PC/border.bin",
-      "blockdata_filepath": "data/layouts/Serenleaf_PC/map.bin"
+      "border_filepath": "data/layouts/SerenleafPC/border.bin",
+      "blockdata_filepath": "data/layouts/SerenleafPC/map.bin"
     },
     {
       "id": "LAYOUT_SERENLEAF_MART",
-      "name": "Serenleaf_Mart_Layout",
+      "name": "SerenleafMart_Layout",
       "width": 10,
       "height": 8,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_Shop",
-      "border_filepath": "data/layouts/Serenleaf_Mart/border.bin",
-      "blockdata_filepath": "data/layouts/Serenleaf_Mart/map.bin"
+      "border_filepath": "data/layouts/SerenleafMart/border.bin",
+      "blockdata_filepath": "data/layouts/SerenleafMart/map.bin"
     },
     {
       "id": "LAYOUT_SERENLEAF_GYM",
-      "name": "Serenleaf_Gym_Layout",
+      "name": "SerenleafGym_Layout",
       "width": 13,
       "height": 12,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BattleFactory",
-      "border_filepath": "data/layouts/Serenleaf_Gym/border.bin",
-      "blockdata_filepath": "data/layouts/Serenleaf_Gym/map.bin"
+      "border_filepath": "data/layouts/SerenleafGym/border.bin",
+      "blockdata_filepath": "data/layouts/SerenleafGym/map.bin"
     },
     {
       "id": "LAYOUT_ROUTE3",
       "name": "Route3_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 60,
+      "height": 40,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Mauville",
       "border_filepath": "data/layouts/Route3/border.bin",
@@ -4615,7 +4615,7 @@
       "id": "LAYOUT_ROUTE6",
       "name": "Route6_Layout",
       "width": 20,
-      "height": 20,
+      "height": 60,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/Route6/border.bin",
@@ -4654,8 +4654,8 @@
     {
       "id": "LAYOUT_ROUTE10",
       "name": "Route10_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 40,
+      "height": 70,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Mossdeep",
       "border_filepath": "data/layouts/Route10/border.bin",
@@ -4684,7 +4684,7 @@
     {
       "id": "LAYOUT_ROUTE13",
       "name": "Route13_Layout",
-      "width": 20,
+      "width": 60,
       "height": 20,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Mauville",
@@ -4724,8 +4724,8 @@
     {
       "id": "LAYOUT_ENIMEROS_CITY",
       "name": "EnimerosCity_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 30,
+      "height": 30,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/EnimerosCity/border.bin",
@@ -4790,6 +4790,96 @@
       "secondary_tileset": "gTileset_Sootopolis",
       "border_filepath": "data/layouts/Route8N/border.bin",
       "blockdata_filepath": "data/layouts/Route8N/map.bin"
+    },
+    {
+      "id": "LAYOUT_ENIMEROS_GYM",
+      "name": "EnimerosGym_Layout",
+      "width": 13,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleFactory",
+      "border_filepath": "data/layouts/EnimerosGym/border.bin",
+      "blockdata_filepath": "data/layouts/EnimerosGym/map.bin"
+    },
+    {
+      "id": "LAYOUT_ENIMEROS_PC",
+      "name": "EnimerosPC_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/EnimerosPC/border.bin",
+      "blockdata_filepath": "data/layouts/EnimerosPC/map.bin"
+    },
+    {
+      "id": "LAYOUT_AMBERVILLE_GYM",
+      "name": "AmbervilleGym_Layout",
+      "width": 13,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleFactory",
+      "border_filepath": "data/layouts/AmbervilleGym/border.bin",
+      "blockdata_filepath": "data/layouts/AmbervilleGym/map.bin"
+    },
+    {
+      "id": "LAYOUT_EMBERVILLE_GYM",
+      "name": "EmbervilleGym_Layout",
+      "width": 13,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleFactory",
+      "border_filepath": "data/layouts/EmbervilleGym/border.bin",
+      "blockdata_filepath": "data/layouts/EmbervilleGym/map.bin"
+    },
+    {
+      "id": "LAYOUT_PAKKASJARVEN_GYM",
+      "name": "PakkasjarvenGym_Layout",
+      "width": 13,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleFactory",
+      "border_filepath": "data/layouts/PakkasjarvenGym/border.bin",
+      "blockdata_filepath": "data/layouts/PakkasjarvenGym/map.bin"
+    },
+    {
+      "id": "LAYOUT_ATOM_ISLAND_GYM",
+      "name": "AtomIslandGym_Layout",
+      "width": 13,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleFactory",
+      "border_filepath": "data/layouts/AtomIslandGym/border.bin",
+      "blockdata_filepath": "data/layouts/AtomIslandGym/map.bin"
+    },
+    {
+      "id": "LAYOUT_FARMVILLE_GYM",
+      "name": "FarmvilleGym_Layout",
+      "width": 13,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleFactory",
+      "border_filepath": "data/layouts/FarmvilleGym/border.bin",
+      "blockdata_filepath": "data/layouts/FarmvilleGym/map.bin"
+    },
+    {
+      "id": "LAYOUT_FAIRY_CIRCLE_SOUTH",
+      "name": "FairyCircleSouth_Layout",
+      "width": 20,
+      "height": 26,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mossdeep",
+      "border_filepath": "data/layouts/FairyCircleSouth/border.bin",
+      "blockdata_filepath": "data/layouts/FairyCircleSouth/map.bin"
+    },
+    {
+      "id": "LAYOUT_DEBUG_AREA",
+      "name": "DebugArea_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/DebugArea/border.bin",
+      "blockdata_filepath": "data/layouts/DebugArea/map.bin"
     }
   ]
 }

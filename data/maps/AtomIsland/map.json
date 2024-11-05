@@ -28,7 +28,34 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 28,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_ATOM_ISLAND",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 37,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_ATOM_ISLAND",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 38,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_ATOM_ISLAND_GYM",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 28,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_SERENLEAF_CITY",
+      "dest_warp_id": "0"
+    }
   ],
   "coord_events": [
 

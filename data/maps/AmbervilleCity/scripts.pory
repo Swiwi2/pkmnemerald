@@ -1,0 +1,13 @@
+mapscripts AmbervilleCity_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION: AmbervilleCity_OnTransition
+}
+
+script AmbervilleCity_OnTransition{
+    
+}
+
+script AmbervilleCity_EventScript_Sign_FairyCircle{
+    lock
+    msgbox(format("ANCIENT FAIRY MAGIC AHEAD: STEP ON THE FLOWERBED TO BE TRANSPORTED TO THE FAIRY CIRCLE."))
+    release
+}

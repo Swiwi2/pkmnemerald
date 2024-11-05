@@ -63,219 +63,239 @@ RivalBattleOver::
 # 38 "data/maps/WoodholmeCity/scripts.pory"
 	setflag FLAG_RIVAL_BATTLE1
 # 39 "data/maps/WoodholmeCity/scripts.pory"
-	setvar VAR_WOODHOLME_STATE, 2
+	setflag FLAG_RIVAL_BATTLE2
 # 40 "data/maps/WoodholmeCity/scripts.pory"
-	waitmessage
+	setvar VAR_WOODHOLME_STATE, 2
 # 41 "data/maps/WoodholmeCity/scripts.pory"
+	setvar VAR_RIVAL_BATTLE_STATE, 1
+# 42 "data/maps/WoodholmeCity/scripts.pory"
+	waitmessage
+# 43 "data/maps/WoodholmeCity/scripts.pory"
 	release
 	return
 
 
-# 44 "data/maps/WoodholmeCity/scripts.pory"
-MayLeave:
-# 45 "data/maps/WoodholmeCity/scripts.pory"
-	face_down
 # 46 "data/maps/WoodholmeCity/scripts.pory"
-	walk_down
+MayLeave:
 # 47 "data/maps/WoodholmeCity/scripts.pory"
-	face_right
+	face_down
 # 48 "data/maps/WoodholmeCity/scripts.pory"
-	walk_right
-# 48 "data/maps/WoodholmeCity/scripts.pory"
-	walk_right
+	walk_down
 # 49 "data/maps/WoodholmeCity/scripts.pory"
-	face_up
-# 50 "data/maps/WoodholmeCity/scripts.pory"
-	walk_up
-# 51 "data/maps/WoodholmeCity/scripts.pory"
 	face_right
-# 52 "data/maps/WoodholmeCity/scripts.pory"
+# 50 "data/maps/WoodholmeCity/scripts.pory"
 	walk_right
-# 52 "data/maps/WoodholmeCity/scripts.pory"
+# 50 "data/maps/WoodholmeCity/scripts.pory"
 	walk_right
-# 52 "data/maps/WoodholmeCity/scripts.pory"
-	walk_right
-# 52 "data/maps/WoodholmeCity/scripts.pory"
-	walk_right
-# 52 "data/maps/WoodholmeCity/scripts.pory"
-	walk_right
-# 52 "data/maps/WoodholmeCity/scripts.pory"
-	walk_right
-# 53 "data/maps/WoodholmeCity/scripts.pory"
+# 51 "data/maps/WoodholmeCity/scripts.pory"
 	face_up
-# 54 "data/maps/WoodholmeCity/scripts.pory"
+# 52 "data/maps/WoodholmeCity/scripts.pory"
 	walk_up
+# 53 "data/maps/WoodholmeCity/scripts.pory"
+	face_right
 # 54 "data/maps/WoodholmeCity/scripts.pory"
+	walk_right
+# 54 "data/maps/WoodholmeCity/scripts.pory"
+	walk_right
+# 54 "data/maps/WoodholmeCity/scripts.pory"
+	walk_right
+# 54 "data/maps/WoodholmeCity/scripts.pory"
+	walk_right
+# 54 "data/maps/WoodholmeCity/scripts.pory"
+	walk_right
+# 54 "data/maps/WoodholmeCity/scripts.pory"
+	walk_right
+# 55 "data/maps/WoodholmeCity/scripts.pory"
+	face_up
+# 56 "data/maps/WoodholmeCity/scripts.pory"
 	walk_up
-# 54 "data/maps/WoodholmeCity/scripts.pory"
+# 56 "data/maps/WoodholmeCity/scripts.pory"
 	walk_up
-# 54 "data/maps/WoodholmeCity/scripts.pory"
+# 56 "data/maps/WoodholmeCity/scripts.pory"
 	walk_up
-# 54 "data/maps/WoodholmeCity/scripts.pory"
+# 56 "data/maps/WoodholmeCity/scripts.pory"
 	walk_up
-# 54 "data/maps/WoodholmeCity/scripts.pory"
+# 56 "data/maps/WoodholmeCity/scripts.pory"
 	walk_up
-# 54 "data/maps/WoodholmeCity/scripts.pory"
+# 56 "data/maps/WoodholmeCity/scripts.pory"
 	walk_up
-# 54 "data/maps/WoodholmeCity/scripts.pory"
+# 56 "data/maps/WoodholmeCity/scripts.pory"
+	walk_up
+# 56 "data/maps/WoodholmeCity/scripts.pory"
 	walk_up
 	step_end
 
 WoodholmeCity_EventScript_NPC_Fat_Man::
-# 66 "data/maps/WoodholmeCity/scripts.pory"
-	lock
-# 67 "data/maps/WoodholmeCity/scripts.pory"
-	msgbox WoodholmeCity_EventScript_NPC_Fat_Man_Text_0, MSGBOX_NPC
 # 68 "data/maps/WoodholmeCity/scripts.pory"
+	lock
+# 69 "data/maps/WoodholmeCity/scripts.pory"
+	msgbox WoodholmeCity_EventScript_NPC_Fat_Man_Text_0, MSGBOX_NPC
+# 70 "data/maps/WoodholmeCity/scripts.pory"
 	release
 	return
 
 
 WoodholmeCity_EventScript_NPC_Girl3::
-# 72 "data/maps/WoodholmeCity/scripts.pory"
-	lock
-# 73 "data/maps/WoodholmeCity/scripts.pory"
-	msgbox WoodholmeCity_EventScript_NPC_Fat_Man_Text_0, MSGBOX_NPC
 # 74 "data/maps/WoodholmeCity/scripts.pory"
+	lock
+# 75 "data/maps/WoodholmeCity/scripts.pory"
+	msgbox WoodholmeCity_EventScript_NPC_Fat_Man_Text_0, MSGBOX_NPC
+# 76 "data/maps/WoodholmeCity/scripts.pory"
 	release
 	return
 
 
-WoodholmeCity_Trigger_BlockPath::
-# 78 "data/maps/WoodholmeCity/scripts.pory"
-	lock
-# 79 "data/maps/WoodholmeCity/scripts.pory"
-	msgbox WoodholmeCity_Trigger_BlockPath_Text_0
+WoodholmeCity_EventScript_Sign_FairyCircle::
 # 80 "data/maps/WoodholmeCity/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, StopPlayer
+	lock
 # 81 "data/maps/WoodholmeCity/scripts.pory"
-	waitmovement 0
+	msgbox WoodholmeCity_EventScript_Sign_FairyCircle_Text_0
 # 82 "data/maps/WoodholmeCity/scripts.pory"
 	release
 	return
 
 
-WoodholmeCity_EventScript_BlockCondo::
+WoodholmeCity_Trigger_BlockPath::
 # 86 "data/maps/WoodholmeCity/scripts.pory"
 	lock
 # 87 "data/maps/WoodholmeCity/scripts.pory"
-	msgbox WoodholmeCity_EventScript_BlockCondo_Text_0
+	msgbox WoodholmeCity_Trigger_BlockPath_Text_0
 # 88 "data/maps/WoodholmeCity/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, StopPlayer
+# 89 "data/maps/WoodholmeCity/scripts.pory"
+	waitmovement 0
+# 90 "data/maps/WoodholmeCity/scripts.pory"
 	release
 	return
 
 
-# 91 "data/maps/WoodholmeCity/scripts.pory"
+WoodholmeCity_EventScript_BlockCondo::
+# 94 "data/maps/WoodholmeCity/scripts.pory"
+	lock
+# 95 "data/maps/WoodholmeCity/scripts.pory"
+	msgbox WoodholmeCity_EventScript_BlockCondo_Text_0
+# 96 "data/maps/WoodholmeCity/scripts.pory"
+	release
+	return
+
+
+# 99 "data/maps/WoodholmeCity/scripts.pory"
 StopPlayer:
-# 92 "data/maps/WoodholmeCity/scripts.pory"
+# 100 "data/maps/WoodholmeCity/scripts.pory"
 	walk_down
 	step_end
 
 WoodholmeCity_EventScript_SignLeavingTown::
-# 97 "data/maps/WoodholmeCity/scripts.pory"
+# 105 "data/maps/WoodholmeCity/scripts.pory"
 	lock
-# 98 "data/maps/WoodholmeCity/scripts.pory"
+# 106 "data/maps/WoodholmeCity/scripts.pory"
 	msgbox WoodholmeCity_EventScript_SignLeavingTown_Text_0
-# 99 "data/maps/WoodholmeCity/scripts.pory"
+# 107 "data/maps/WoodholmeCity/scripts.pory"
 	release
 	return
 
 
 WoodholmeCity_EventScript_SignGym::
-# 103 "data/maps/WoodholmeCity/scripts.pory"
+# 111 "data/maps/WoodholmeCity/scripts.pory"
 	lock
-# 104 "data/maps/WoodholmeCity/scripts.pory"
+# 112 "data/maps/WoodholmeCity/scripts.pory"
 	msgbox WoodholmeCity_EventScript_SignGym_Text_0
-# 105 "data/maps/WoodholmeCity/scripts.pory"
+# 113 "data/maps/WoodholmeCity/scripts.pory"
 	release
 	return
 
 
 WoodholmeCity_EventScript_SignCondoTopRight::
-# 109 "data/maps/WoodholmeCity/scripts.pory"
+# 117 "data/maps/WoodholmeCity/scripts.pory"
 	lock
-# 110 "data/maps/WoodholmeCity/scripts.pory"
+# 118 "data/maps/WoodholmeCity/scripts.pory"
 	msgbox WoodholmeCity_EventScript_SignCondoTopRight_Text_0
-# 111 "data/maps/WoodholmeCity/scripts.pory"
+# 119 "data/maps/WoodholmeCity/scripts.pory"
 	release
 	return
 
 
 WoodholmeCity_EventScript_SignCondoLeft::
-# 115 "data/maps/WoodholmeCity/scripts.pory"
+# 123 "data/maps/WoodholmeCity/scripts.pory"
 	lock
-# 116 "data/maps/WoodholmeCity/scripts.pory"
+# 124 "data/maps/WoodholmeCity/scripts.pory"
 	msgbox WoodholmeCity_EventScript_SignCondoLeft_Text_0
-# 117 "data/maps/WoodholmeCity/scripts.pory"
+# 125 "data/maps/WoodholmeCity/scripts.pory"
 	release
 	return
 
 
 WoodholmeCity_EventScript_SignCondoRight::
-# 121 "data/maps/WoodholmeCity/scripts.pory"
+# 129 "data/maps/WoodholmeCity/scripts.pory"
 	lock
-# 122 "data/maps/WoodholmeCity/scripts.pory"
+# 130 "data/maps/WoodholmeCity/scripts.pory"
 	msgbox WoodholmeCity_EventScript_SignCondoRight_Text_0
-# 123 "data/maps/WoodholmeCity/scripts.pory"
+# 131 "data/maps/WoodholmeCity/scripts.pory"
 	release
 	return
 
 
 WoodholmeCity_EventScript_SignRedsLab::
-# 127 "data/maps/WoodholmeCity/scripts.pory"
+# 135 "data/maps/WoodholmeCity/scripts.pory"
 	lock
-# 128 "data/maps/WoodholmeCity/scripts.pory"
+# 136 "data/maps/WoodholmeCity/scripts.pory"
 	msgbox WoodholmeCity_EventScript_SignRedsLab_Text_0
-# 129 "data/maps/WoodholmeCity/scripts.pory"
+# 137 "data/maps/WoodholmeCity/scripts.pory"
 	release
 	return
 
 
 WoodholmeCity_EventScript_NPC_Fat_Man_Text_0:
-# 67 "data/maps/WoodholmeCity/scripts.pory"
+# 69 "data/maps/WoodholmeCity/scripts.pory"
 	.string "Hello.$"
 
+WoodholmeCity_EventScript_Sign_FairyCircle_Text_0:
+# 81 "data/maps/WoodholmeCity/scripts.pory"
+	.string "ANCIENT FAIRY MAGIC AHEAD: STEP ON\n"
+	.string "THE FLOWERBED TO BE TRANSPORTED TO\l"
+	.string "THE FAIRY CIRCLE.$"
+
 WoodholmeCity_Trigger_BlockPath_Text_0:
-# 79 "data/maps/WoodholmeCity/scripts.pory"
+# 87 "data/maps/WoodholmeCity/scripts.pory"
 	.string "Hmm. I'd better visit RED before I\n"
 	.string "venture out into the grass.$"
 
 WoodholmeCity_EventScript_BlockCondo_Text_0:
-# 87 "data/maps/WoodholmeCity/scripts.pory"
+# 95 "data/maps/WoodholmeCity/scripts.pory"
 	.string "Hmm. It appears to be locked from the\n"
 	.string "inside.$"
 
 WoodholmeCity_EventScript_SignLeavingTown_Text_0:
-# 98 "data/maps/WoodholmeCity/scripts.pory"
+# 106 "data/maps/WoodholmeCity/scripts.pory"
 	.string "ROUTE 1 TO SERENLEAF CITY. BEWARE:\n"
 	.string "WILD POKÉMON AHEAD.$"
 
 WoodholmeCity_EventScript_SignGym_Text_0:
-# 104 "data/maps/WoodholmeCity/scripts.pory"
+# 112 "data/maps/WoodholmeCity/scripts.pory"
 	.string "STELLA'S POKÉMON GYM$"
 
 WoodholmeCity_EventScript_SignCondoTopRight_Text_0:
-# 110 "data/maps/WoodholmeCity/scripts.pory"
+# 118 "data/maps/WoodholmeCity/scripts.pory"
 	.string "WOODHOLME REALTY INC. CHEAP\n"
 	.string "ACCOMMODATION OPTIONS AVAILABLE!$"
 
 WoodholmeCity_EventScript_SignCondoLeft_Text_0:
-# 116 "data/maps/WoodholmeCity/scripts.pory"
+# 124 "data/maps/WoodholmeCity/scripts.pory"
 	.string "WOODHOLME REALTY INC. LUXURY CONDOS\n"
 	.string "FOR YOU AND YOUR POKÉMON!$"
 
 WoodholmeCity_EventScript_SignCondoRight_Text_0:
-# 122 "data/maps/WoodholmeCity/scripts.pory"
+# 130 "data/maps/WoodholmeCity/scripts.pory"
 	.string "WOODHOLME REALTY INC. CONDOS WITH THE\n"
 	.string "BEST VIEW IN WOODHOLME!$"
 
 WoodholmeCity_EventScript_SignRedsLab_Text_0:
-# 128 "data/maps/WoodholmeCity/scripts.pory"
+# 136 "data/maps/WoodholmeCity/scripts.pory"
 	.string "RED'S LAB: HELPING NEW TRAINERS LEARN\n"
 	.string "ABOUT POKÉMON.$"
 
 May_Intro::
-# 57 "data/maps/WoodholmeCity/scripts.pory"
+# 59 "data/maps/WoodholmeCity/scripts.pory"
 	.string "Hello! My name is May and I just got a\n"
 	.string "really cute Pokémon from RED! He said\l"
 	.string "that apparently you and I are going to\l"
@@ -287,7 +307,7 @@ May_Intro::
 	.string "on!$"
 
 May_Outro::
-# 61 "data/maps/WoodholmeCity/scripts.pory"
+# 63 "data/maps/WoodholmeCity/scripts.pory"
 	.string "Oh wow, cool! That was really fun!\n"
 	.string "Except for the losing part... That\l"
 	.string "wasn't very fun. That's it. That was the\l"

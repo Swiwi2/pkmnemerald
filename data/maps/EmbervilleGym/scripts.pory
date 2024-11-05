@@ -1,0 +1,59 @@
+mapscripts EmbervilleGym_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION: EmbervilleGym_OnTransition
+}
+
+// Emberville Gym States
+// 0: First Match Available
+// 1: Defeated & got the badge
+// 2: Rematch available (todo in the future)
+// 3: Rematch completed
+
+script EmbervilleGym_OnTransition{
+    call(EmbervilleGym_EventScript_SetupGymBattle)
+}
+
+script EmbervilleGym_EventScript_SetupGymBattle{
+    // checks if badge 3 is already acquired
+    if (!flag(FLAG_BADGE03_GET)){
+        setvar(VAR_EMBERVILLE_GYM_STATE,0)
+    }
+    else{
+        setvar(VAR_EMBERVILLE_GYM_STATE,1)
+    }
+}
+
+script EmbervilleGym_EventScript_Leader{
+    trainerbattle_single(TRAINER_FLANNERY_1, EmbervilleGym_LeaderIntro, EmbervilleGym_LeaderOutro, EmbervilleGym_EventScript_Battle1Over)
+    msgbox(EmbervilleGym_LeaderDialogue_State1)
+    release
+    end
+}
+
+script EmbervilleGym_EventScript_Battle1Over{
+    lock
+	msgbox(EmbervilleGym_Heretakethis)
+	playfanfare(MUS_OBTAIN_BADGE)
+	message("{PLAYER} received the THIRD BADGE!")
+	waitfanfare
+	closemessage
+	setflag(FLAG_BADGE03_GET)
+	setvar(VAR_EMBERVILLE_GYM_STATE,1)
+	release
+	end
+}
+
+text EmbervilleGym_LeaderIntro{
+    format("Heya, I'm a gym leader boiii")
+}
+
+text EmbervilleGym_LeaderOutro{
+    format("Woah, you beat me!!")
+}
+
+text EmbervilleGym_LeaderDialogue_State1{
+    format("Well done!")
+}
+
+text EmbervilleGym_Heretakethis{
+    format("Here, take this badge! You earned it!")
+}

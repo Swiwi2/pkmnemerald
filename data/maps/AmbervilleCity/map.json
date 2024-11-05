@@ -28,12 +28,74 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 5,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_AMBERVILLE_CITY",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 16,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_AMBERVILLE_CITY",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 5,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_AMBERVILLE_GYM",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 13,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_SERENLEAF_CITY",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 17,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_FAIRY_CIRCLE_SOUTH",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 18,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_FAIRY_CIRCLE_SOUTH",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 17,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_FAIRY_CIRCLE_SOUTH",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 18,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_FAIRY_CIRCLE_SOUTH",
+      "dest_warp_id": "0"
+    }
   ],
   "coord_events": [
 
   ],
   "bg_events": [
-
+    {
+      "type": "sign",
+      "x": 16,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "AmbervilleCity_EventScript_Sign_FairyCircle"
+    }
   ]
 }

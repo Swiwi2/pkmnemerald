@@ -1,0 +1,75 @@
+mapscripts AmbervilleGym_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION: AmbervilleGym_OnTransition
+}
+// Amberville Gym States:
+// 0: First match available
+// 1: Defeated & got the badge
+// 2: Rematch available (todo in the future)
+// 3: Rematch completed
+
+script AmbervilleGym_OnTransition{
+    call(AmbervilleGym_EventScript_SetupGymBattle)
+}
+
+script AmbervilleGym_EventScript_SetupGymBattle{
+    // Checks if Amberville Badge already acquired
+    if (!flag(FLAG_BADGE02_GET)){
+        setvar(VAR_AMBERVILLE_GYM_STATE,0)
+    }
+    else{
+        setvar(VAR_AMBERVILLE_GYM_STATE,1)
+    }
+}
+
+script AmbervilleGym_EventScript_Leader{
+    trainerbattle_single(TRAINER_ROXANNE_1, AmbervilleGym_LeaderIntro, AmbervilleGym_LeaderOutro, AmbervilleGym_EventScript_Battle1Over)
+    msgbox(AmbervilleGym_LeaderDialogue_State1)
+    release
+    end
+}
+
+script AmbervilleGym_EventScript_Battle1Over{
+	lock
+	msgbox(AmbervilleGym_Heretakethis)
+	playfanfare(MUS_OBTAIN_BADGE)
+	message("{PLAYER} received the SECOND BADGE!")
+	waitfanfare
+	closemessage
+	setflag(FLAG_BADGE02_GET)
+	setvar(VAR_AMBERVILLE_GYM_STATE,1)
+	goto(AmbervilleGym_EventScript_GiveRockSmash)
+	release
+	end
+}
+
+script AmbervilleGym_EventScript_GiveRockSmash{
+    lock
+	playfanfare(MUS_OBTAIN_ITEM)
+	giveitem(ITEM_HM06)
+	waitfanfare
+	closemessage
+	setflag(FLAG_RECEIVED_HM_ROCK_SMASH)
+	msgbox(AmbervilleGym_ExplainRockSmash)
+	release
+	return
+}
+
+text AmbervilleGym_ExplainRockSmash{
+    format("This HM contains Rock Smash. Rock Smash lets your Pokémon smash small boulders that in your way! Use it to open up areas that previously weren't accessible.")
+}
+
+text AmbervilleGym_LeaderIntro{
+    format("Hello!")
+}
+
+text AmbervilleGym_LeaderOutro{
+    format("Nice job!")
+}
+
+text AmbervilleGym_LeaderDialogue_State1{
+    format("Nice!")
+}
+
+text AmbervilleGym_Heretakethis{
+    format("Here, take this BADGE!")
+}

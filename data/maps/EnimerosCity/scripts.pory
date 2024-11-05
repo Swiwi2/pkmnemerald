@@ -1,0 +1,13 @@
+mapscripts EnimerosCity_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION: EnimerosCity_OnTransition
+}
+
+script EnimerosCity_OnTransition{
+
+}
+
+script EnimerosCity_EventScript_Sign_FairyCircle{
+    lock
+    msgbox(format("ANCIENT FAIRY MAGIC AHEAD: STEP ON THE FLOWERBED TO BE TRANSPORTED TO THE FAIRY CIRCLE."))
+    release
+}

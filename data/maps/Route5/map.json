@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_ROUTE3",
-      "offset": 0,
+      "offset": 13,
       "direction": "left"
     },
     {
@@ -25,8 +25,13 @@
     },
     {
       "map": "MAP_ROUTE7",
-      "offset": 0,
+      "offset": 13,
       "direction": "right"
+    },
+    {
+      "map": "MAP_EMBERVILLE_CITY",
+      "offset": 0,
+      "direction": "up"
     }
   ],
   "object_events": [

@@ -1,0 +1,58 @@
+mapscripts EnimerosGym_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION: EnimerosGym_OnTransition
+}
+// Enimeros Gym States:
+// 0: First match available
+// 1: Defeated & got the badge
+// 2: Rematch available (todo in the future)
+// 3: Rematch completed
+
+script EnimerosGym_OnTransition{
+    call(EnimerosGym_EventScript_SetupGymBattle)
+}
+
+script EnimerosGym_EventScript_SetupGymBattle{
+    // checks if Enimeros Badge already acquired
+    if (!flag(FLAG_BADGE04_GET)){
+        setvar(VAR_ENIMEROS_GYM_STATE,0)
+    }
+    else{
+        setvar(VAR_ENIMEROS_GYM_STATE,1)
+    }
+}
+
+script EnimerosGym_EventScript_Leader{
+    trainerbattle_single(TRAINER_NORMAN_1, EnimerosGym_LeaderIntro, EnimerosGym_LeaderOutro, EnimerosGym_EventScript_Battle1Over)
+    msgbox(EnimerosGym_LeaderDialogue_State1)
+    release
+    end
+}
+
+script EnimerosGym_EventScript_Battle1Over{
+ 	lock
+	msgbox(EnimerosGym_Heretakethis)
+	playfanfare(MUS_OBTAIN_BADGE)
+	message("{PLAYER} received the FOURTH BADGE!")
+	waitfanfare
+	closemessage
+	setflag(FLAG_BADGE04_GET)
+	setvar(VAR_ENIMEROS_GYM_STATE,1)
+	release
+	end   
+}
+
+text EnimerosGym_LeaderIntro{
+    format("Yoyo..")
+}
+
+text EnimerosGym_LeaderOutro{
+    format("YIKES!")
+}
+
+text EnimerosGym_LeaderDialogue_State1{
+    format("Well done!")
+}
+
+text EnimerosGym_Heretakethis{
+    format("Here's the badge! You're on fire! HEHE.")
+}
