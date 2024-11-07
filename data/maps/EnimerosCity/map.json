@@ -14,7 +14,7 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_ROUTE7",
+      "map": "MAP_ROUTE6NEW",
       "offset": 0,
       "direction": "left"
     }
@@ -24,15 +24,8 @@
   ],
   "warp_events": [
     {
-      "x": 16,
-      "y": 29,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE10",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 17,
-      "y": 29,
+      "x": 20,
+      "y": 24,
       "elevation": 0,
       "dest_map": "MAP_ROUTE10",
       "dest_warp_id": "0"

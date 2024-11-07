@@ -56,294 +56,296 @@ SerenleafCity_EventScript_RivalBattleOver::
 # 39 "data/maps/SerenleafCity/scripts.pory"
 SerenleafCity_RivalLeave:
 # 40 "data/maps/SerenleafCity/scripts.pory"
-	face_up
+	face_right
 # 41 "data/maps/SerenleafCity/scripts.pory"
-	walk_up
+	walk_right
 # 41 "data/maps/SerenleafCity/scripts.pory"
-	walk_up
+	walk_right
 # 41 "data/maps/SerenleafCity/scripts.pory"
-	walk_up
-# 42 "data/maps/SerenleafCity/scripts.pory"
-	face_left
-# 43 "data/maps/SerenleafCity/scripts.pory"
-	walk_left
-# 43 "data/maps/SerenleafCity/scripts.pory"
-	walk_left
-# 43 "data/maps/SerenleafCity/scripts.pory"
-	walk_left
-# 43 "data/maps/SerenleafCity/scripts.pory"
-	walk_left
-# 43 "data/maps/SerenleafCity/scripts.pory"
-	walk_left
-# 43 "data/maps/SerenleafCity/scripts.pory"
-	walk_left
-# 43 "data/maps/SerenleafCity/scripts.pory"
-	walk_left
-# 43 "data/maps/SerenleafCity/scripts.pory"
-	walk_left
-# 43 "data/maps/SerenleafCity/scripts.pory"
-	walk_left
-# 43 "data/maps/SerenleafCity/scripts.pory"
-	walk_left
+	walk_right
+# 41 "data/maps/SerenleafCity/scripts.pory"
+	walk_right
+# 41 "data/maps/SerenleafCity/scripts.pory"
+	walk_right
+# 41 "data/maps/SerenleafCity/scripts.pory"
+	walk_right
+# 41 "data/maps/SerenleafCity/scripts.pory"
+	walk_right
+# 41 "data/maps/SerenleafCity/scripts.pory"
+	walk_right
+# 41 "data/maps/SerenleafCity/scripts.pory"
+	walk_right
+# 41 "data/maps/SerenleafCity/scripts.pory"
+	walk_right
+# 41 "data/maps/SerenleafCity/scripts.pory"
+	walk_right
+# 41 "data/maps/SerenleafCity/scripts.pory"
+	walk_right
+# 41 "data/maps/SerenleafCity/scripts.pory"
+	walk_right
+# 41 "data/maps/SerenleafCity/scripts.pory"
+	walk_right
+# 41 "data/maps/SerenleafCity/scripts.pory"
+	walk_right
 	step_end
 
 SerenleafCity_EventScript_Sign_South::
-# 47 "data/maps/SerenleafCity/scripts.pory"
+# 46 "data/maps/SerenleafCity/scripts.pory"
 	lock
-# 48 "data/maps/SerenleafCity/scripts.pory"
+# 47 "data/maps/SerenleafCity/scripts.pory"
 	msgbox SerenleafCity_EventScript_Sign_South_Text_0
-# 49 "data/maps/SerenleafCity/scripts.pory"
+# 48 "data/maps/SerenleafCity/scripts.pory"
 	release
 	return
 
 
 SerenleafCity_EventScript_Sign_West::
-# 53 "data/maps/SerenleafCity/scripts.pory"
+# 52 "data/maps/SerenleafCity/scripts.pory"
 	lock
-# 54 "data/maps/SerenleafCity/scripts.pory"
+# 53 "data/maps/SerenleafCity/scripts.pory"
 	msgbox SerenleafCity_EventScript_Sign_West_Text_0
-# 55 "data/maps/SerenleafCity/scripts.pory"
+# 54 "data/maps/SerenleafCity/scripts.pory"
 	release
 	return
 
 
 SerenleafCity_EventScript_Sign_FairyCircle::
-# 59 "data/maps/SerenleafCity/scripts.pory"
+# 58 "data/maps/SerenleafCity/scripts.pory"
 	lock
-# 60 "data/maps/SerenleafCity/scripts.pory"
+# 59 "data/maps/SerenleafCity/scripts.pory"
 	msgbox SerenleafCity_EventScript_Sign_FairyCircle_Text_0
-# 61 "data/maps/SerenleafCity/scripts.pory"
+# 60 "data/maps/SerenleafCity/scripts.pory"
 	release
 	return
 
 
 SerenleafCity_EventScript_Sign_East::
-# 65 "data/maps/SerenleafCity/scripts.pory"
+# 64 "data/maps/SerenleafCity/scripts.pory"
 	lock
-# 66 "data/maps/SerenleafCity/scripts.pory"
+# 65 "data/maps/SerenleafCity/scripts.pory"
 	msgbox SerenleafCity_EventScript_Sign_East_Text_0
-# 67 "data/maps/SerenleafCity/scripts.pory"
+# 66 "data/maps/SerenleafCity/scripts.pory"
 	release
 	return
 
 
 SerenleafCity_EventScript_Sign_Gym::
-# 71 "data/maps/SerenleafCity/scripts.pory"
+# 70 "data/maps/SerenleafCity/scripts.pory"
 	lock
-# 72 "data/maps/SerenleafCity/scripts.pory"
+# 71 "data/maps/SerenleafCity/scripts.pory"
 	msgbox SerenleafCity_EventScript_Sign_Gym_Text_0
-# 73 "data/maps/SerenleafCity/scripts.pory"
+# 72 "data/maps/SerenleafCity/scripts.pory"
 	release
 	return
 
 
 SerenleafCity_EventScript_Sign_PokeCorner::
-# 77 "data/maps/SerenleafCity/scripts.pory"
+# 76 "data/maps/SerenleafCity/scripts.pory"
 	lock
-# 78 "data/maps/SerenleafCity/scripts.pory"
+# 77 "data/maps/SerenleafCity/scripts.pory"
 	msgbox SerenleafCity_EventScript_Sign_PokeCorner_Text_0
-# 79 "data/maps/SerenleafCity/scripts.pory"
+# 78 "data/maps/SerenleafCity/scripts.pory"
 	release
 	return
 
 
 SerenleafCity_EventScript_Sign_BikeShop::
-# 83 "data/maps/SerenleafCity/scripts.pory"
+# 82 "data/maps/SerenleafCity/scripts.pory"
 	lock
-# 84 "data/maps/SerenleafCity/scripts.pory"
+# 83 "data/maps/SerenleafCity/scripts.pory"
 	msgbox SerenleafCity_EventScript_Sign_BikeShop_Text_0
-# 85 "data/maps/SerenleafCity/scripts.pory"
+# 84 "data/maps/SerenleafCity/scripts.pory"
 	release
 	return
 
 
 SerenleafCity_EventScript_Sign_LockedHome1::
-# 89 "data/maps/SerenleafCity/scripts.pory"
+# 88 "data/maps/SerenleafCity/scripts.pory"
 	lock
-# 90 "data/maps/SerenleafCity/scripts.pory"
+# 89 "data/maps/SerenleafCity/scripts.pory"
 	msgbox SerenleafCity_EventScript_Sign_LockedHome1_Text_0
-# 91 "data/maps/SerenleafCity/scripts.pory"
+# 90 "data/maps/SerenleafCity/scripts.pory"
 	release
 	return
 
 
 SerenleafCity_EventScript_Sign_LockedHome2::
-# 95 "data/maps/SerenleafCity/scripts.pory"
+# 94 "data/maps/SerenleafCity/scripts.pory"
 	lock
-# 96 "data/maps/SerenleafCity/scripts.pory"
+# 95 "data/maps/SerenleafCity/scripts.pory"
 	msgbox SerenleafCity_EventScript_Sign_LockedHome1_Text_0
-# 97 "data/maps/SerenleafCity/scripts.pory"
+# 96 "data/maps/SerenleafCity/scripts.pory"
 	release
 	return
 
 
 SerenleafCity_EventScript_Sign_Bike1::
-# 101 "data/maps/SerenleafCity/scripts.pory"
+# 100 "data/maps/SerenleafCity/scripts.pory"
 	lock
-# 102 "data/maps/SerenleafCity/scripts.pory"
+# 101 "data/maps/SerenleafCity/scripts.pory"
 	msgbox SerenleafCity_EventScript_Sign_Bike1_Text_0
-# 103 "data/maps/SerenleafCity/scripts.pory"
+# 102 "data/maps/SerenleafCity/scripts.pory"
 	release
 	return
 
 
 SerenleafCity_EventScript_Sign_Bike2::
-# 107 "data/maps/SerenleafCity/scripts.pory"
+# 106 "data/maps/SerenleafCity/scripts.pory"
 	lock
-# 108 "data/maps/SerenleafCity/scripts.pory"
+# 107 "data/maps/SerenleafCity/scripts.pory"
 	msgbox SerenleafCity_EventScript_Sign_Bike1_Text_0
-# 109 "data/maps/SerenleafCity/scripts.pory"
+# 108 "data/maps/SerenleafCity/scripts.pory"
 	release
 	return
 
 
 SerenleafCity_EventScript_NPC_Man::
-# 113 "data/maps/SerenleafCity/scripts.pory"
+# 112 "data/maps/SerenleafCity/scripts.pory"
 	lock
-# 114 "data/maps/SerenleafCity/scripts.pory"
+# 113 "data/maps/SerenleafCity/scripts.pory"
 	msgbox SerenleafCity_EventScript_NPC_Man_Text_0, MSGBOX_NPC
-# 115 "data/maps/SerenleafCity/scripts.pory"
+# 114 "data/maps/SerenleafCity/scripts.pory"
 	release
 	return
 
 
 SerenleafCity_EventScript_NPC_Girl::
-# 119 "data/maps/SerenleafCity/scripts.pory"
+# 118 "data/maps/SerenleafCity/scripts.pory"
 	lock
-# 120 "data/maps/SerenleafCity/scripts.pory"
+# 119 "data/maps/SerenleafCity/scripts.pory"
 	faceplayer
-# 122 "data/maps/SerenleafCity/scripts.pory"
+# 121 "data/maps/SerenleafCity/scripts.pory"
 	goto_if_set FLAG_THERRY_TRADE_COMPLETED, SerenleafCity_EventScript_NPC_Girl_2
-# 127 "data/maps/SerenleafCity/scripts.pory"
+# 126 "data/maps/SerenleafCity/scripts.pory"
 	setvar VAR_0x8008, INGAME_TRADE_ONIX
-# 128 "data/maps/SerenleafCity/scripts.pory"
+# 127 "data/maps/SerenleafCity/scripts.pory"
 	copyvar VAR_0x8004, VAR_0x8008
-# 129 "data/maps/SerenleafCity/scripts.pory"
+# 128 "data/maps/SerenleafCity/scripts.pory"
 	specialvar VAR_0x8009, GetInGameTradeSpeciesInfo
-# 130 "data/maps/SerenleafCity/scripts.pory"
+# 129 "data/maps/SerenleafCity/scripts.pory"
 	msgbox SerenleafCity_Text_WantToTrade, MSGBOX_YESNO
-# 132 "data/maps/SerenleafCity/scripts.pory"
+# 131 "data/maps/SerenleafCity/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq SerenleafCity_EventScript_NPC_Girl_6
 SerenleafCity_EventScript_NPC_Girl_5:
-# 161 "data/maps/SerenleafCity/scripts.pory"
+# 160 "data/maps/SerenleafCity/scripts.pory"
 	release
 SerenleafCity_EventScript_NPC_Girl_1:
-# 163 "data/maps/SerenleafCity/scripts.pory"
+# 162 "data/maps/SerenleafCity/scripts.pory"
 	release
 	return
 
 SerenleafCity_EventScript_NPC_Girl_2:
-# 123 "data/maps/SerenleafCity/scripts.pory"
+# 122 "data/maps/SerenleafCity/scripts.pory"
 	msgbox SerenleafCity_Text_TradeCompleted
 	goto SerenleafCity_EventScript_NPC_Girl_1
 
 SerenleafCity_EventScript_NPC_Girl_6:
-# 133 "data/maps/SerenleafCity/scripts.pory"
+# 132 "data/maps/SerenleafCity/scripts.pory"
 	special ChoosePartyMon
-# 134 "data/maps/SerenleafCity/scripts.pory"
+# 133 "data/maps/SerenleafCity/scripts.pory"
 	waitstate
-# 136 "data/maps/SerenleafCity/scripts.pory"
+# 135 "data/maps/SerenleafCity/scripts.pory"
 	compare VAR_0x8004, PARTY_NOTHING_CHOSEN
 	goto_if_eq SerenleafCity_EventScript_NPC_Girl_9
-# 141 "data/maps/SerenleafCity/scripts.pory"
+# 140 "data/maps/SerenleafCity/scripts.pory"
 	copyvar VAR_0x8005, VAR_0x8004
-# 142 "data/maps/SerenleafCity/scripts.pory"
+# 141 "data/maps/SerenleafCity/scripts.pory"
 	specialvar VAR_RESULT, GetTradeSpecies
-# 143 "data/maps/SerenleafCity/scripts.pory"
+# 142 "data/maps/SerenleafCity/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq SerenleafCity_EventScript_NPC_Girl_13
-# 148 "data/maps/SerenleafCity/scripts.pory"
+# 147 "data/maps/SerenleafCity/scripts.pory"
 	copyvar VAR_0x8004, VAR_0x8008
-# 149 "data/maps/SerenleafCity/scripts.pory"
+# 148 "data/maps/SerenleafCity/scripts.pory"
 	special CreateInGameTradePokemon
-# 150 "data/maps/SerenleafCity/scripts.pory"
+# 149 "data/maps/SerenleafCity/scripts.pory"
 	special DoInGameTradeScene
-# 151 "data/maps/SerenleafCity/scripts.pory"
+# 150 "data/maps/SerenleafCity/scripts.pory"
 	waitstate
-# 152 "data/maps/SerenleafCity/scripts.pory"
+# 151 "data/maps/SerenleafCity/scripts.pory"
 	msgbox SerenleafCity_EventScript_NPC_Girl_Text_2
-# 153 "data/maps/SerenleafCity/scripts.pory"
+# 152 "data/maps/SerenleafCity/scripts.pory"
 	setflag FLAG_THERRY_TRADE_COMPLETED
-# 154 "data/maps/SerenleafCity/scripts.pory"
+# 153 "data/maps/SerenleafCity/scripts.pory"
 	release
 	end
 
 SerenleafCity_EventScript_NPC_Girl_8:
-# 159 "data/maps/SerenleafCity/scripts.pory"
+# 158 "data/maps/SerenleafCity/scripts.pory"
 	release
 	goto SerenleafCity_EventScript_NPC_Girl_5
 
 SerenleafCity_EventScript_NPC_Girl_9:
-# 137 "data/maps/SerenleafCity/scripts.pory"
+# 136 "data/maps/SerenleafCity/scripts.pory"
 	msgbox SerenleafCity_EventScript_NPC_Girl_Text_0
 	goto SerenleafCity_EventScript_NPC_Girl_8
 
 SerenleafCity_EventScript_NPC_Girl_12:
-# 157 "data/maps/SerenleafCity/scripts.pory"
+# 156 "data/maps/SerenleafCity/scripts.pory"
 	release
 	goto SerenleafCity_EventScript_NPC_Girl_8
 
 SerenleafCity_EventScript_NPC_Girl_13:
-# 144 "data/maps/SerenleafCity/scripts.pory"
+# 143 "data/maps/SerenleafCity/scripts.pory"
 	msgbox SerenleafCity_EventScript_NPC_Girl_Text_1
 	goto SerenleafCity_EventScript_NPC_Girl_12
 
 
 SerenleafCity_EventScript_Sign_South_Text_0:
-# 48 "data/maps/SerenleafCity/scripts.pory"
+# 47 "data/maps/SerenleafCity/scripts.pory"
 	.string "NORTH: SERENLEAF CITY, SOUTH: ROUTE 2$"
 
 SerenleafCity_EventScript_Sign_West_Text_0:
-# 54 "data/maps/SerenleafCity/scripts.pory"
+# 53 "data/maps/SerenleafCity/scripts.pory"
 	.string "EAST: SERENLEAF CITY, WEST: ROUTE XX$"
 
 SerenleafCity_EventScript_Sign_FairyCircle_Text_0:
-# 60 "data/maps/SerenleafCity/scripts.pory"
+# 59 "data/maps/SerenleafCity/scripts.pory"
 	.string "ANCIENT FAIRY MAGIC AHEAD: STEP ON\n"
 	.string "THE FLOWERBED TO BE TRANSPORTED TO\l"
 	.string "THE FAIRY CIRCLE.$"
 
 SerenleafCity_EventScript_Sign_East_Text_0:
-# 66 "data/maps/SerenleafCity/scripts.pory"
+# 65 "data/maps/SerenleafCity/scripts.pory"
 	.string "WEST: SERENLEAF CITY, EAST: ROUTE 3$"
 
 SerenleafCity_EventScript_Sign_Gym_Text_0:
-# 72 "data/maps/SerenleafCity/scripts.pory"
+# 71 "data/maps/SerenleafCity/scripts.pory"
 	.string "XX'S GYM!$"
 
 SerenleafCity_EventScript_Sign_PokeCorner_Text_0:
-# 78 "data/maps/SerenleafCity/scripts.pory"
+# 77 "data/maps/SerenleafCity/scripts.pory"
 	.string "POKÉMON TRADING CLUB: TRADE YOUR\n"
 	.string "FAVORITE POKÉMON HERE!$"
 
 SerenleafCity_EventScript_Sign_BikeShop_Text_0:
-# 84 "data/maps/SerenleafCity/scripts.pory"
+# 83 "data/maps/SerenleafCity/scripts.pory"
 	.string "SERENLEAF BIKE SHOP$"
 
 SerenleafCity_EventScript_Sign_LockedHome1_Text_0:
-# 90 "data/maps/SerenleafCity/scripts.pory"
+# 89 "data/maps/SerenleafCity/scripts.pory"
 	.string "It's locked from the inside. This is\n"
 	.string "someone's home!$"
 
 SerenleafCity_EventScript_Sign_Bike1_Text_0:
-# 102 "data/maps/SerenleafCity/scripts.pory"
+# 101 "data/maps/SerenleafCity/scripts.pory"
 	.string "It's a bicycle!$"
 
 SerenleafCity_EventScript_NPC_Man_Text_0:
-# 114 "data/maps/SerenleafCity/scripts.pory"
+# 113 "data/maps/SerenleafCity/scripts.pory"
 	.string "Hello.$"
 
 SerenleafCity_EventScript_NPC_Girl_Text_0:
-# 137 "data/maps/SerenleafCity/scripts.pory"
+# 136 "data/maps/SerenleafCity/scripts.pory"
 	.string "Declined trade.$"
 
 SerenleafCity_EventScript_NPC_Girl_Text_1:
-# 144 "data/maps/SerenleafCity/scripts.pory"
+# 143 "data/maps/SerenleafCity/scripts.pory"
 	.string "Wrong Pokémon.$"
 
 SerenleafCity_EventScript_NPC_Girl_Text_2:
-# 152 "data/maps/SerenleafCity/scripts.pory"
+# 151 "data/maps/SerenleafCity/scripts.pory"
 	.string "Thx!$"
 
 SerenleafCity_RivalIntro::
@@ -361,9 +363,9 @@ SerenleafCity_RivalOutro::
 	.string "you around!$"
 
 SerenleafCity_Text_TradeCompleted::
-# 166 "data/maps/SerenleafCity/scripts.pory"
+# 165 "data/maps/SerenleafCity/scripts.pory"
 	.string "Thank you! Take good care of SNAKEY!$"
 
 SerenleafCity_Text_WantToTrade::
-# 170 "data/maps/SerenleafCity/scripts.pory"
+# 169 "data/maps/SerenleafCity/scripts.pory"
 	.string "Do you want my Onix?$"

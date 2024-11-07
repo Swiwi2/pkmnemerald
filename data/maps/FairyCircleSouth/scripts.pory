@@ -87,7 +87,7 @@ script FairyCircleSouth_EventScript_AmbervilleWarp{
         lock
         applymovement(OBJ_EVENT_ID_PLAYER, PlayerMoveUp)
         waitmovement(0)
-        warp(MAP_AMBERVILLE_CITY, 4)
+        warp(MAP_AMBERVILLE_CITY, 5)
         releaseall
     }
     else{
@@ -104,7 +104,7 @@ script FairyCircleSouth_EventScript_EmbervilleWarp{
         lock
         applymovement(OBJ_EVENT_ID_PLAYER, PlayerMoveUp)
         waitmovement(0)
-        warp(MAP_EMBERVILLE_CITY, 1)
+        warp(MAP_EMBERVILLE_CITY, 4)
         releaseall
     }
     else{

@@ -134,7 +134,7 @@ FairyCircleSouth_EventScript_AmbervilleWarp_1:
 # 89 "data/maps/FairyCircleSouth/scripts.pory"
 	waitmovement 0
 # 90 "data/maps/FairyCircleSouth/scripts.pory"
-	warp MAP_AMBERVILLE_CITY, 4
+	warp MAP_AMBERVILLE_CITY, 5
 # 91 "data/maps/FairyCircleSouth/scripts.pory"
 	releaseall
 	return
@@ -164,7 +164,7 @@ FairyCircleSouth_EventScript_EmbervilleWarp_1:
 # 106 "data/maps/FairyCircleSouth/scripts.pory"
 	waitmovement 0
 # 107 "data/maps/FairyCircleSouth/scripts.pory"
-	warp MAP_EMBERVILLE_CITY, 1
+	warp MAP_EMBERVILLE_CITY, 4
 # 108 "data/maps/FairyCircleSouth/scripts.pory"
 	releaseall
 	return

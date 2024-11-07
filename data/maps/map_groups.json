@@ -11,20 +11,8 @@
     "gMapGroup_SolasTown",
     "gMapGroup_PokemonLeague",
     "gMapGroup_FairyCircles",
-    "gMapGroup_Route1",
-    "gMapGroup_Route2",
-    "gMapGroup_Route3",
-    "gMapGroup_Route4",
-    "gMapGroup_Route5",
-    "gMapGroup_Route6",
-    "gMapGroup_Route7",
-    "gMapGroup_Route8",
-    "gMapGroup_Route9",
-    "gMapGroup_Route10",
-    "gMapGroup_Route11",
-    "gMapGroup_Route12",
-    "gMapGroup_Route13",
-    "gMapGroup_Route14",
+    "gMapGroup_NewRoutes",
+    "gMapGroup_Debug",
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorOldale",
@@ -112,50 +100,29 @@
   "gMapGroup_FairyCircles": [
     "FairyCircleSouth"
   ],
-  "gMapGroup_Route1": [
+  "gMapGroup_NewRoutes": [
     "Route1",
-    "IndoorRoute1Cottage"
+    "IndoorRoute1Cottage",
+    "Route2",
+    "Route3",
+    "Route4",
+    "Route5",
+    "MountKeb",
+    "MountKeb_B1F",
+    "Route6New",
+    "Route7",
+    "Route8",
+    "Route8N",
+    "Route9",
+    "Route10",
+    "Route11",
+    "Route12",
+    "Route13",
+    "Route14"
   ],
-  "gMapGroup_Route2": [
-    "Route2"
-  ],
-  "gMapGroup_Route3": [
-    "Route3"
-  ],
-  "gMapGroup_Route4": [
-    "Route4"
-  ],
-  "gMapGroup_Route5": [
-    "Route5"
-  ],
-  "gMapGroup_Route6": [
+  "gMapGroup_Debug": [
     "Route6",
     "DebugArea"
-  ],
-  "gMapGroup_Route7": [
-    "Route7"
-  ],
-  "gMapGroup_Route8": [
-    "Route8",
-    "Route8N"
-  ],
-  "gMapGroup_Route9": [
-    "Route9"
-  ],
-  "gMapGroup_Route10": [
-    "Route10"
-  ],
-  "gMapGroup_Route11": [
-    "Route11"
-  ],
-  "gMapGroup_Route12": [
-    "Route12"
-  ],
-  "gMapGroup_Route13": [
-    "Route13"
-  ],
-  "gMapGroup_Route14": [
-    "Route14"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",

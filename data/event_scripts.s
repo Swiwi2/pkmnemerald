@@ -1175,3 +1175,9 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/FairyCircleSouth/scripts.inc"
 
 	.include "data/maps/DebugArea/scripts.inc"
+
+	.include "data/maps/MountKeb/scripts.inc"
+
+	.include "data/maps/MountKeb_B1F/scripts.inc"
+
+	.include "data/maps/Route6New/scripts.inc"

@@ -1,0 +1,7 @@
+mapscripts Route3_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION: Route3_OnTransition
+}
+
+script Route3_OnTransition{
+    
+}

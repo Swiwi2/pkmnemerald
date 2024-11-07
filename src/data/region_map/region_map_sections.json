@@ -833,6 +833,14 @@
       "height": 1
     },
     {
+    "map_section": "MAPSEC_ROUTE_6",
+    "name": "ROUTE 6",
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1
+  },
+    {
       "map_section": "MAPSEC_ROUTE_7",
       "name": "ROUTE 7",
       "x": 0,

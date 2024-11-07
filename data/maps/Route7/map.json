@@ -3,7 +3,7 @@
   "name": "Route7",
   "layout": "LAYOUT_ROUTE7",
   "music": "MUS_ROUTE101",
-  "region_map_section": "MAPSEC_ROUTE_7",
+  "region_map_section": "MAPSEC_ROUTE_6",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_ROUTE",
@@ -14,19 +14,14 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_ROUTE5",
-      "offset": -13,
-      "direction": "left"
-    },
-    {
-      "map": "MAP_ROUTE6",
-      "offset": 0,
+      "map": "MAP_ROUTE3",
+      "offset": -40,
       "direction": "up"
     },
     {
-      "map": "MAP_ENIMEROS_CITY",
-      "offset": 0,
-      "direction": "right"
+      "map": "MAP_ROUTE11",
+      "offset": 12,
+      "direction": "down"
     }
   ],
   "object_events": [
