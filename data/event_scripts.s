@@ -1151,3 +1151,35 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/SolasTown/scripts.inc"
 
 	.include "data/maps/Route8N/scripts.inc"
+
+	.include "data/maps/EnimerosGym/scripts.inc"
+
+	.include "data/maps/EnimerosPC/scripts.inc"
+
+	.include "data/maps/AmbervilleGym/scripts.inc"
+
+	.include "data/maps/EmbervilleGym/scripts.inc"
+
+	.include "data/maps/PakkasjarvenGym/scripts.inc"
+
+	.include "data/maps/AtomIslandGym/scripts.inc"
+
+	.include "data/maps/FarmvilleGym/scripts.inc"
+
+	.include "data/maps/SerenleafGym/scripts.inc"
+
+	.include "data/maps/SerenleafPC/scripts.inc"
+
+	.include "data/maps/SerenleafMart/scripts.inc"
+
+	.include "data/maps/FairyCircleSouth/scripts.inc"
+
+	.include "data/maps/DebugArea/scripts.inc"
+
+	.include "data/maps/MountKeb/scripts.inc"
+
+	.include "data/maps/MountKeb_B1F/scripts.inc"
+
+	.include "data/maps/Route6New/scripts.inc"
+
+	.include "data/maps/Route21/scripts.inc"

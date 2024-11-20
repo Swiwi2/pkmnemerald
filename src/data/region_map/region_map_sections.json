@@ -51,18 +51,18 @@
     {
       "map_section": "MAPSEC_WOODHOLME_CITY",
       "name": "WOODHOLME CITY",
-      "x": 1,
-      "y": 9,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "map_section": "MAPSEC_ATOM_ISLAND",
-      "name": "ATOM ISLAND",
       "x": 8,
       "y": 10,
       "width": 1,
       "height": 2
+    },
+    {
+      "map_section": "MAPSEC_ATOM_ISLAND",
+      "name": "ATOM ISLAND",
+      "x": 16,
+      "y": 11,
+      "width": 1,
+      "height": 1
     },
     {
       "map_section": "MAPSEC_SERENLEAF_CITY",
@@ -75,41 +75,41 @@
     {
       "map_section": "MAPSEC_AMBERVILLE_CITY",
       "name": "AMBERVILLE CITY",
-      "x": 0,
-      "y": 5,
+      "x": 11,
+      "y": 3,
       "width": 1,
       "height": 2
     },
     {
       "map_section": "MAPSEC_FARMVILLE_CITY",
       "name": "FARMVILLE CITY",
-      "x": 12,
-      "y": 0,
+      "x": 0,
+      "y": 5,
       "width": 1,
-      "height": 1
+      "height": 2
     },
     {
       "map_section": "MAPSEC_PAKKASJARVEN_CITY",
       "name": "PAKKASJARVEN CITY",
-      "x": 18,
-      "y": 3,
+      "x": 11,
+      "y": 0,
       "width": 2,
       "height": 1
     },
     {
       "map_section": "MAPSEC_EMBERVILLE_CITY",
       "name": "EMBERVILLE CITY",
-      "x": 24,
-      "y": 5,
-      "width": 2,
-      "height": 1
+      "x": 13,
+      "y": 3,
+      "width": 1,
+      "height": 2
     },
     {
       "map_section": "MAPSEC_ENIMEROS_CITY",
       "name": "ENIMEROS CITY",
-      "x": 21,
-      "y": 7,
-      "width": 1,
+      "x": 16,
+      "y": 6,
+      "width": 2,
       "height": 1
     },
     {
@@ -833,6 +833,14 @@
       "height": 1
     },
     {
+    "map_section": "MAPSEC_ROUTE_6",
+    "name": "ROUTE 6",
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1
+  },
+    {
       "map_section": "MAPSEC_ROUTE_7",
       "name": "ROUTE 7",
       "x": 0,
@@ -1075,8 +1083,8 @@
     {
       "map_section": "MAPSEC_POKEMON_LEAGUE",
       "name": "POKéMON LEAGUE",
-      "x": 0,
-      "y": 0,
+      "x": 1,
+      "y": 9,
       "width": 1,
       "height": 1
     },

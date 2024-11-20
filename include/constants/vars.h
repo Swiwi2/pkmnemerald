@@ -139,16 +139,16 @@
 #define VAR_ROUTE124_STATE                               0x4077 // Unused Var
 #define VAR_ROUTE125_STATE                               0x4078 // Unused Var
 #define VAR_ROUTE126_STATE                               0x4079 // Unused Var
-#define VAR_ROUTE127_STATE                               0x407A // Unused Var
+#define VAR_ROUTE8_STATE                                 0x407A // Used to determine if we can progress past the tunnel in Route 8 (0= no, 1= yes)
 #define VAR_ROUTE128_STATE                               0x407B
-#define VAR_ROUTE129_STATE                               0x407C // Unused Var
-#define VAR_ROUTE130_STATE                               0x407D // Unused Var
-#define VAR_ROUTE131_STATE                               0x407E // Unused Var
-#define VAR_ROUTE132_STATE                               0x407F // Unused Var
-#define VAR_ROUTE133_STATE                               0x4080 // Unused Var
-#define VAR_ROUTE134_STATE                               0x4081 // Unused Var
+#define VAR_RIVAL_BATTLE_STATE                           0x407C // Used to determine if we're going to battle our Rival.
+#define VAR_FAIRY_CIRCLE_SOUTH_STATE                     0x407D // Used to determine what teleport options are open to the Fairy Circle.
+#define VAR_FARMVILLE_GYM_STATE                          0x407E // Used to determine status of the Farmville Gym.
+#define VAR_ATOM_ISLAND_GYM_STATE                        0x407F // Used to determine status of the Atom Island Gym.
+#define VAR_PAKKASJARVEN_GYM_STATE                       0x4080 // Used to determine status of the Pakkasjarven Gym.
+#define VAR_ENIMEROS_GYM_STATE                           0x4081 // Used to determine status of the Enimeros Gym.
 #define VAR_LITTLEROOT_HOUSES_STATE_MAY                  0x4082
-#define VAR_UNUSED_0x4083                                0x4083 // Unused Var
+#define VAR_EMBERVILLE_GYM_STATE                         0x4083 // Used to determine status of the Emberville Gym.
 #define VAR_BIRCH_LAB_STATE                              0x4084
 #define VAR_PETALBURG_GYM_STATE                          0x4085 // 0-1: Wally tutorial, 2-6: 0-4 badges, 7: Defeated Norman, 8: Rematch Norman
 #define VAR_CONTEST_HALL_STATE                           0x4086
@@ -156,13 +156,13 @@
 #define VAR_CONTEST_TYPE                                 0x4088
 #define VAR_SECRET_BASE_INITIALIZED                      0x4089
 #define VAR_CONTEST_PRIZE_PICKUP                         0x408A
-#define VAR_SERENLEAF_GYM_STATE                          0x408B // 0: First match available, 1: Defeated, 2: Rematch available.
+#define VAR_SERENLEAF_GYM_STATE                          0x408B // Used to determine status of the Serenleaf Gym.
 #define VAR_LITTLEROOT_HOUSES_STATE_BRENDAN              0x408C
 #define VAR_LITTLEROOT_RIVAL_STATE                       0x408D
 #define VAR_BOARD_BRINEY_BOAT_STATE                      0x408E
 #define VAR_DEVON_CORP_3F_STATE                          0x408F
 #define VAR_BRINEY_HOUSE_STATE                           0x4090
-#define VAR_UNUSED_0x4091                                0x4091 // Unused Var
+#define VAR_AMBERVILLE_GYM_STATE                         0x4091 // Used to determine status of the Amberville Gym.
 #define VAR_LITTLEROOT_INTRO_STATE                       0x4092
 #define VAR_MAUVILLE_GYM_STATE                           0x4093
 #define VAR_LILYCOVE_MUSEUM_2F_STATE                     0x4094

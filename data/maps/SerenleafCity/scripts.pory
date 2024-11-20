@@ -4,6 +4,42 @@ mapscripts SerenleafCity_MapScripts{
 
 script SerenleafCity_OnTransition{
     setflag(FLAG_VISITED_SERENLEAFCITY)
+    if ((var(VAR_SERENLEAF_GYM_STATE)==1) && (var(VAR_RIVAL_BATTLE_STATE)==1)){
+        clearflag(FLAG_RIVAL_BATTLE2)
+    }
+    else{
+        setflag(FLAG_RIVAL_BATTLE2)
+    }
+}
+
+script SerenleafCity_EventScript_RivalBattle2{
+    trainerbattle_single(TRAINER_MAY_ROUTE_103_MUDKIP, SerenleafCity_RivalIntro, SerenleafCity_RivalOutro, SerenleafCity_EventScript_RivalBattleOver)
+    end
+}
+
+text SerenleafCity_RivalIntro{
+    format("Hey {PLAYER}! I hope you've been training your Pokémon. I sure have. How about you give me another shot at battling? I won't lose this time!")
+}
+
+text SerenleafCity_RivalOutro{
+    format("Oh darn! I lost again. I swore this wouldn't happen again! I'll have to train even harder to beat you. I'll see you around!")
+}
+
+script SerenleafCity_EventScript_RivalBattleOver{
+    lock
+    applymovement(3, SerenleafCity_RivalLeave)
+    waitmovement(3)
+    removeobject(3)
+    setflag(FLAG_RIVAL_BATTLE2)
+    setvar(VAR_RIVAL_BATTLE_STATE, 2)
+    waitmessage
+    release
+}
+
+movement SerenleafCity_RivalLeave{
+    face_right
+    walk_right * 15
+
 }
 
 script SerenleafCity_EventScript_Sign_South{
@@ -15,6 +51,12 @@ script SerenleafCity_EventScript_Sign_South{
 script SerenleafCity_EventScript_Sign_West{
     lock
     msgbox(format("EAST: SERENLEAF CITY, WEST: ROUTE XX"))
+    release
+}
+
+script SerenleafCity_EventScript_Sign_FairyCircle{
+    lock
+    msgbox(format("ANCIENT FAIRY MAGIC AHEAD: STEP ON THE FLOWERBED TO BE TRANSPORTED TO THE FAIRY CIRCLE."))
     release
 }
 

@@ -51,9 +51,9 @@
 #define FLAG_RIVAL_DISAPPEAR            0x26 // Used for making May disappear from the Lab after the first visit.
 #define FLAG_QUEST_MENU_ACTIVE          0x27 // Used for QUESTS in the menu.
 #define FLAG_THERRY_TRADE_COMPLETED     0x28 // Used to see if trade has been completed in Serenleaf City.
-#define FLAG_SERENLEAF_GYM_BATTLE1      0x29 // Used for the Serenleaf Gym
-#define FLAG_SERENLEAF_GYM_BATTLE2      0x2A // Used for rematch against Serenleaf gym leader.
-#define FLAG_UNUSED_0x02B    0x2B // Unused Flag
+#define FLAG_RIVAL_BATTLE2              0x29 // Used for the second Rival battle in Serenleaf City.
+#define FLAG_SERENLEAF_GYM_BATTLE2      0x2A // Unused?
+#define FLAG_ROUTE8_UNBLOCKED           0x2B // Used to show/hide the man that'll block Route 8 if you haven't beaten Enimeros Gym.
 #define FLAG_UNUSED_0x02C    0x2C // Unused Flag
 #define FLAG_UNUSED_0x02D    0x2D // Unused Flag
 #define FLAG_UNUSED_0x02E    0x2E // Unused Flag

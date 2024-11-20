@@ -1,0 +1,77 @@
+mapscripts SerenleafGym_MapScripts{
+	MAP_SCRIPT_ON_TRANSITION: SerenleafGym_OnTransition
+}
+// Serenleaf Gym States:
+// 0: First match available
+// 1: Defeated & got the badge
+// 2: Rematch available (todo in the future)
+// 3: Rematch completed
+
+
+script SerenleafGym_OnTransition{
+	call(SerenleafGym_EventScript_SetupGymBattle)
+}
+
+script SerenleafGym_EventScript_SetupGymBattle{
+	// Checks for Serenleaf Badge already acquired
+	if (!flag(FLAG_BADGE01_GET)){
+		setvar(VAR_SERENLEAF_GYM_STATE,0)
+	}
+	else{
+		setvar(VAR_SERENLEAF_GYM_STATE,1)
+	}
+}
+
+script SerenleafGym_EventScript_Leader{
+	trainerbattle_single(TRAINER_BRAWLY_1, SerenleafGym_LeaderIntro, SerenleafGym_LeaderOutro, SerenleafGym_EventScript_Battle1Over)
+	msgbox(SerenleafGym_LeaderDialogue_State1)
+	release
+	end
+}
+
+script SerenleafGym_EventScript_Battle1Over{
+	lock
+	msgbox(SerenleafGym_Heretakethis)
+	playfanfare(MUS_OBTAIN_BADGE)
+	message("{PLAYER} received the FIRST BADGE!")
+	waitfanfare
+	closemessage
+	setflag(FLAG_BADGE01_GET)
+	setvar(VAR_SERENLEAF_GYM_STATE,1)
+	goto(SerenleafGym_EventScript_GiveCut)
+	release
+	end
+}
+
+script SerenleafGym_EventScript_GiveCut{
+	lock
+	playfanfare(MUS_OBTAIN_ITEM)
+	giveitem(ITEM_HM01)
+	waitfanfare
+	closemessage
+	setflag(FLAG_RECEIVED_HM_CUT)
+	msgbox(SerenleafGym_ExplainCut)
+	release
+	return
+}
+
+text SerenleafGym_LeaderIntro{
+	format("Hello there. My name is Brawly and I run the Serenleaf City Gym! I am one of 8 GYM leaders that you should challenge in order to prove that you're a well-rounded and capable trainer. My speciality is GRASS type Pokémon! You'd better have a FIRE or FLYING type Pokémon with you! But enough talk - let's battle!")
+}
+
+text SerenleafGym_LeaderOutro{
+	format("Nice job! That was a real battle!")
+}
+
+text SerenleafGym_LeaderDialogue_State1{
+	format("You'd better head EAST to Amberville City where the next gym challenge awaits!")
+}
+
+text SerenleafGym_ExplainCut{
+	format("The HM contains CUT. CUT is a move that allows you to chop down certain trees! You should try it on the trees between Serenleaf City and Woodholme City!")
+}
+
+
+text SerenleafGym_Heretakethis{
+	format("Here you go, you earned this. This is the FIRST BADGE! It proves that you have bested me in battle and are now one step closer toward completing the Pokémon GYM CHALLENGE.")
+}

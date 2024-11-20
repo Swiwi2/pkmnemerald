@@ -1,0 +1,75 @@
+mapscripts AtomIslandGym_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION: AtomIslandGym_OnTransition
+}
+//Atom Island Gym states:
+// 0: First match available
+// 1: Defeated & got the badge
+// 2: Rematch available (todo in the future)
+// 3: Rematch completed
+
+script AtomIslandGym_OnTransition{
+    call(AtomIslandGym_EventScript_SetupGymBattle)
+}
+
+script AtomIslandGym_EventScript_SetupGymBattle{
+    // checks if badge already acquired
+    if (!flag(FLAG_BADGE06_GET)){
+        setvar(VAR_ATOM_ISLAND_GYM_STATE,0)
+    }
+    else{
+        setvar(VAR_ATOM_ISLAND_GYM_STATE,1)
+    }
+}
+
+script AtomIslandGym_EventScript_Leader{
+    trainerbattle_single(TRAINER_WATTSON_1, AtomIslandGym_LeaderIntro, AtomIslandGym_LeaderOutro, AtomIslandGym_EventScript_Battle1Over)
+    msgbox(AtomIslandGym_LeaderDialogue_State1)
+    release
+    end
+}
+
+script AtomIslandGym_EventScript_Battle1Over{
+ 	lock
+	msgbox(AtomIslandGym_Heretakethis)
+	playfanfare(MUS_OBTAIN_BADGE)
+	message("{PLAYER} received the SIXTH BADGE!")
+	waitfanfare
+	closemessage
+	setflag(FLAG_BADGE06_GET)
+	setvar(VAR_ATOM_ISLAND_GYM_STATE,1)
+	goto(AtomIslandGym_EventScript_GiveStrength)
+	release
+	end   
+}
+
+script AtomIslandGym_EventScript_GiveStrength{
+    lock
+	playfanfare(MUS_OBTAIN_ITEM)
+	giveitem(ITEM_HM04)
+	waitfanfare
+	closemessage
+	setflag(FLAG_RECEIVED_HM_STRENGTH)
+	msgbox(AtomIslandGym_ExplainStrength)
+	release
+	return    
+}
+
+text AtomIslandGym_ExplainStrength{
+    format("This is Strength!")
+}
+
+text AtomIslandGym_LeaderIntro{
+    format("Heya.")
+}
+
+text AtomIslandGym_LeaderOutro{
+    format("Well done.")
+}
+
+text AtomIslandGym_LeaderDialogue_State1{
+    format("Nice!!")
+}
+
+text AtomIslandGym_Heretakethis{
+    format("Here ya go.")
+}

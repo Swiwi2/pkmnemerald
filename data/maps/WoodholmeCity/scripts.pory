@@ -6,7 +6,6 @@ script WoodholmeCity_OnTransition{
     setflag(FLAG_VISITED_WOODHOLMECITY)
     call(WoodholmeCity_EventScript_SetupRivalBattle)
 }
-
 // WOODHOLME STATES
 // 0 = START (Can't leave town north)
 // 1 = Received Pokédex, changes Red dialogue.
@@ -36,7 +35,9 @@ script RivalBattleOver{
     waitmovement(1)
     removeobject(1)
     setflag(FLAG_RIVAL_BATTLE1)
+    setflag(FLAG_RIVAL_BATTLE2)
     setvar(VAR_WOODHOLME_STATE, 2)
+    setvar(VAR_RIVAL_BATTLE_STATE, 1)
     waitmessage
     release
 }
@@ -71,6 +72,12 @@ script WoodholmeCity_EventScript_NPC_Fat_Man{
 script WoodholmeCity_EventScript_NPC_Girl3{
     lock
     msgbox("Hello.", MSGBOX_NPC)
+    release
+}
+
+script WoodholmeCity_EventScript_Sign_FairyCircle{
+    lock
+    msgbox(format("ANCIENT FAIRY MAGIC AHEAD: STEP ON THE FLOWERBED TO BE TRANSPORTED TO THE FAIRY CIRCLE."))
     release
 }
 

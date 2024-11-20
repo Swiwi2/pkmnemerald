@@ -1,0 +1,266 @@
+mapscripts FairyCircleSouth_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION: FairyCircleSouth_OnTransition
+}
+// Fairy Circle States:
+// 0: Woodholme teleport available
+// 1: Serenleaf added to list
+// 2: Amberville added
+// 3: Emberville added
+// 4: Enimeros added
+// 5: Pakkasjarven added
+// 6: Atom Island added
+// 7: Farmville added
+// 8: Pokémon League added
+
+script FairyCircleSouth_OnTransition{
+    if(flag(FLAG_BADGE08_GET)){
+        setvar(VAR_FAIRY_CIRCLE_SOUTH_STATE,8)
+    }
+    else{
+        if(flag(FLAG_BADGE07_GET)){
+            setvar(VAR_FAIRY_CIRCLE_SOUTH_STATE,7)
+        }
+        else{
+            if(flag(FLAG_BADGE06_GET)){
+                setvar(VAR_FAIRY_CIRCLE_SOUTH_STATE,6)
+            }
+            else{
+                if(flag(FLAG_BADGE05_GET)){
+                    setvar(VAR_FAIRY_CIRCLE_SOUTH_STATE,5)
+                }
+                else{
+                    if(flag(FLAG_BADGE04_GET)){
+                        setvar(VAR_FAIRY_CIRCLE_SOUTH_STATE,4)
+                    }
+                    else{
+                        if(flag(FLAG_BADGE03_GET)){
+                            setvar(VAR_FAIRY_CIRCLE_SOUTH_STATE,3)
+                        }
+                        else{
+                            if(flag(FLAG_BADGE02_GET)){
+                                setvar(VAR_FAIRY_CIRCLE_SOUTH_STATE,2)
+                            }
+                            else{
+                                if(flag(FLAG_BADGE01_GET)){
+                                    setvar(VAR_FAIRY_CIRCLE_SOUTH_STATE,1)
+                                }
+                                else{
+                                    setvar(VAR_FAIRY_CIRCLE_SOUTH_STATE,0)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Trigger warp scripts below here
+script FairyCircleSouth_EventScript_WoodholmeWarp{
+    lock
+    applymovement(OBJ_EVENT_ID_PLAYER, PlayerMoveUp)
+    waitmovement(0)
+    warp(MAP_WOODHOLME_CITY, 5)
+    releaseall
+}
+
+script FairyCircleSouth_EventScript_SerenleafWarp{
+    if(var(VAR_FAIRY_CIRCLE_SOUTH_STATE)>0){
+        lock
+        applymovement(OBJ_EVENT_ID_PLAYER, PlayerMoveDown)
+        waitmovement(0)
+        warp(MAP_SERENLEAF_CITY, 7)
+        releaseall
+    }
+    else{
+        lock
+        msgbox(format("Can't do that right now."))
+        applymovement(OBJ_EVENT_ID_PLAYER, PlayerMoveUp)
+        waitmovement(0)
+        releaseall
+    }
+}
+
+script FairyCircleSouth_EventScript_AmbervilleWarp{
+    if(var(VAR_FAIRY_CIRCLE_SOUTH_STATE)>1){
+        lock
+        applymovement(OBJ_EVENT_ID_PLAYER, PlayerMoveUp)
+        waitmovement(0)
+        warp(MAP_AMBERVILLE_CITY, 5)
+        releaseall
+    }
+    else{
+        lock
+        msgbox(format("Can't do that right now."))
+        applymovement(OBJ_EVENT_ID_PLAYER, PlayerMoveDown)
+        waitmovement(0)
+        releaseall
+    }
+}
+
+script FairyCircleSouth_EventScript_EmbervilleWarp{
+    if(var(VAR_FAIRY_CIRCLE_SOUTH_STATE)>2){
+        lock
+        applymovement(OBJ_EVENT_ID_PLAYER, PlayerMoveUp)
+        waitmovement(0)
+        warp(MAP_EMBERVILLE_CITY, 4)
+        releaseall
+    }
+    else{
+        lock
+        msgbox(format("Can't do that right now."))
+        applymovement(OBJ_EVENT_ID_PLAYER, PlayerMoveDown)
+        waitmovement(0)
+        releaseall
+    }
+}
+
+script FairyCircleSouth_EventScript_EnimerosWarp{
+    if(var(VAR_FAIRY_CIRCLE_SOUTH_STATE)>3){
+        lock
+        applymovement(OBJ_EVENT_ID_PLAYER, PlayerMoveDown)
+        waitmovement(0)
+        warp(MAP_ENIMEROS_CITY, 5)
+        releaseall
+    }
+    else{
+        lock
+        msgbox(format("Can't do that right now."))
+        applymovement(OBJ_EVENT_ID_PLAYER, PlayerMoveUp)
+        waitmovement(0)
+        releaseall
+    }
+}
+
+script FairyCircleSouth_EventScript_PakkasjarvenWarp{
+    if(var(VAR_FAIRY_CIRCLE_SOUTH_STATE)>4){
+        lock
+        applymovement(OBJ_EVENT_ID_PLAYER, PlayerMoveUp)
+        waitmovement(0)
+        warp(MAP_PAKKASJARVEN_CITY, 6)
+        releaseall
+    }
+    else{
+        lock
+        msgbox(format("Can't do that right now."))
+        applymovement(OBJ_EVENT_ID_PLAYER, PlayerMoveDown)
+        waitmovement(0)
+        releaseall
+    }
+}
+
+script FairyCircleSouth_EventScript_AtomIslandWarp{
+    if(var(VAR_FAIRY_CIRCLE_SOUTH_STATE)>5){
+        lock
+        applymovement(OBJ_EVENT_ID_PLAYER, PlayerMoveUp)
+        waitmovement(0)
+        warp(MAP_ATOM_ISLAND, 1)
+        releaseall
+    }
+    else{
+        lock
+        msgbox(format("Can't do that right now."))
+        applymovement(OBJ_EVENT_ID_PLAYER, PlayerMoveDown)
+        waitmovement(0)
+        releaseall
+    }
+}
+
+script FairyCircleSouth_EventScript_FarmvilleWarp{
+    if(var(VAR_FAIRY_CIRCLE_SOUTH_STATE)>6){
+        lock
+        applymovement(OBJ_EVENT_ID_PLAYER, PlayerMoveUp)
+        waitmovement(0)
+        warp(MAP_FARMVILLE_CITY, 1)
+        releaseall
+    }
+    else{
+        lock
+        msgbox(format("Can't do that right now."))
+        applymovement(OBJ_EVENT_ID_PLAYER, PlayerMoveDown)
+        waitmovement(0)
+        releaseall
+    }
+}
+
+script FairyCircleSouth_EventScript_PokeLeagueWarp{
+    if(var(VAR_FAIRY_CIRCLE_SOUTH_STATE)>7){
+        lock
+        applymovement(OBJ_EVENT_ID_PLAYER, PlayerMoveUp)
+        waitmovement(0)
+        warp(MAP_POKEMON_LEAGUE, 0)
+        releaseall
+    }
+    else{
+        lock
+        msgbox(format("Can't do that right now."))
+        applymovement(OBJ_EVENT_ID_PLAYER, PlayerMoveDown)
+        waitmovement(0)
+        releaseall
+    }
+}
+
+// Sign scripts below here
+script FairyCircleSouth_EventScript_WoodholmeSign{
+    lock
+    msgbox(format("Travel to the Fairy Circle near Woodholme City."))
+    release
+}
+
+script FairyCircleSouth_EventScript_SerenleafSign{
+    lock
+    msgbox(format("Travel to the Fairy Circle near Serenleaf City."))
+    release
+}
+
+script FairyCircleSouth_EventScript_AmbervilleSign{
+    lock
+    msgbox(format("Travel to the Fairy Circle near Amberville City."))
+    release
+}
+
+script FairyCircleSouth_EventScript_EmbervilleSign{
+    lock
+    msgbox(format("Travel to the Fairy Circle near Emberville City."))
+    release
+}
+
+script FairyCircleSouth_EventScript_EnimerosSign{
+    lock
+    msgbox(format("Travel to the Fairy Circle near Enimeros City."))
+    release
+}
+
+script FairyCircleSouth_EventScript_PakkasjarvenSign{
+    lock
+    msgbox(format("Travel to the Fairy Circle near Pakkasjarven City."))
+    release
+}
+
+script FairyCircleSouth_EventScript_AtomIslandSign{
+    lock
+    msgbox(format("Travel to the Fairy Circle near Atom Island."))
+    release
+}
+
+script FairyCircleSouth_EventScript_FarmvilleSign{
+    lock
+    msgbox(format("Travel to the Fairy Circle near Farmville City."))
+    release
+}
+
+script FairyCircleSouth_EventScript_PokemonLeagueSign{
+    lock
+    msgbox(format("Travel to the Fairy Circle near the Pokémon League."))
+    release
+}
+
+// Movement scripts below here
+movement PlayerMoveUp{
+    walk_up
+}
+
+movement PlayerMoveDown{
+    walk_down
+}

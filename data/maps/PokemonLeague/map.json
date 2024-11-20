@@ -15,8 +15,8 @@
   "connections": [
     {
       "map": "MAP_ROUTE14",
-      "offset": 0,
-      "direction": "right"
+      "offset": -15,
+      "direction": "left"
     }
   ],
   "object_events": [

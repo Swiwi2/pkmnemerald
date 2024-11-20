@@ -1,0 +1,7 @@
+mapscripts Route5_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION: Route5_OnTransition
+}
+
+script Route5_OnTransition{
+    
+}

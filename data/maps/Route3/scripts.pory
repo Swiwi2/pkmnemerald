@@ -1,0 +1,35 @@
+mapscripts Route3_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION: Route3_OnTransition
+}
+
+script Route3_OnTransition{
+    
+}
+
+script Route3_EventScript_Trainer_Victor{
+    trainerbattle_single(TRAINER_VICTOR, Route3_VictorIntro, Route3_VictorOutro)
+    msgbox(format("I just love Pokémon!"),MSGBOX_NPC)
+    release
+}
+
+text Route3_VictorIntro{
+    format("I'm a huge fan of Pokémon! Let's battle.")
+}
+
+text Route3_VictorOutro{
+    format("I'm not very good at battling, though. I guess I'll stick to collecting them.")
+}
+
+script Route3_EventScript_Trainer_Miguel{
+    trainerbattle_single(TRAINER_MIGUEL_1, Route3_MiguelIntro, Route3_MiguelOutro)
+    msgbox(format("Bah, I'll win next time."), MSGBOX_NPC)
+    release
+}
+
+text Route3_MiguelIntro{
+    format("Let us have a quick Pokémon match!")
+}
+
+text Route3_MiguelOutro{
+    format("Well, that was quick indeed. Darn it!")
+}

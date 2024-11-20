@@ -1,0 +1,62 @@
+mapscripts FarmvilleGym_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION: FarmvilleGym_OnTransition
+}
+//Farmville Gym States:
+// 0: First match available
+// 1: Defeated & got the badge
+// 2: Rematch available (todo in the future)
+// 3: Rematch completed
+
+script FarmvilleGym_OnTransition{
+    call(FarmvilleGym_EventScript_SetupGymBattle)
+}
+
+script FarmvilleGym_EventScript_SetupGymBattle{
+    // Checks if badge already acquired
+    if (!flag(FLAG_BADGE07_GET)){
+        setvar(VAR_FARMVILLE_GYM_STATE,0)
+    }
+    else{
+        setvar(VAR_FARMVILLE_GYM_STATE,1)
+    }
+}
+
+script FarmvilleGym_EventScript_Leader{
+    trainerbattle_double(TRAINER_TATE_AND_LIZA_1, FarmvilleGym_LeaderIntro, FarmvilleGym_LeaderOutro, FarmvilleGym_NotEnoughPokemon, FarmvilleGym_EventScript_Battle1Over)
+    msgbox(FarmvilleGym_LeaderDialogue_State1)
+    release
+    end
+}
+
+script FarmvilleGym_EventScript_Battle1Over{
+	lock
+	msgbox(FarmvilleGym_Heretakethis)
+	playfanfare(MUS_OBTAIN_BADGE)
+	message("{PLAYER} received the SEVENTH BADGE!")
+	waitfanfare
+	closemessage
+	setflag(FLAG_BADGE07_GET)
+	setvar(VAR_FARMVILLE_GYM_STATE,1)
+	release
+	end    
+}
+
+text FarmvilleGym_LeaderIntro{
+    format("We battle together!")
+}
+
+text FarmvilleGym_NotEnoughPokemon{
+    format("You need at least 2 Pokémon to engage in a double battle.")
+}
+
+text FarmvilleGym_LeaderOutro{
+    format("YIKES!")
+}
+
+text FarmvilleGym_LeaderDialogue_State1{
+    format("Nice one. We thought we had you...")
+}
+
+text FarmvilleGym_Heretakethis{
+    format("Now you have seven badges..... Nice work!")
+}

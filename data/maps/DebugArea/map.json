@@ -1,0 +1,90 @@
+{
+  "id": "MAP_DEBUG_AREA",
+  "name": "DebugArea",
+  "layout": "LAYOUT_DEBUG_AREA",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 6,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_SERENLEAF_CITY",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 9,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_PAKKASJARVEN_CITY",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 16,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_ENIMEROS_CITY",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 16,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_ATOM_ISLAND",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 1,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_FARMVILLE_CITY",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 6,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_WOODHOLME_CITY",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 7,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_AMBERVILLE_CITY",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 12,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_EMBERVILLE_CITY",
+      "dest_warp_id": "4"
+    },
+    {
+      "x": 1,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_POKEMON_LEAGUE",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

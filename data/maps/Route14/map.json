@@ -15,13 +15,13 @@
   "connections": [
     {
       "map": "MAP_POKEMON_LEAGUE",
-      "offset": 0,
-      "direction": "left"
+      "offset": 15,
+      "direction": "right"
     },
     {
-      "map": "MAP_SOLAS_TOWN",
+      "map": "MAP_FARMVILLE_CITY",
       "offset": 0,
-      "direction": "down"
+      "direction": "up"
     }
   ],
   "object_events": [

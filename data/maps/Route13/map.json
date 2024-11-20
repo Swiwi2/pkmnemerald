@@ -14,12 +14,12 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_SERENLEAF_CITY",
-      "offset": 0,
-      "direction": "right"
+      "map": "MAP_SOLAS_TOWN",
+      "offset": 40,
+      "direction": "down"
     },
     {
-      "map": "MAP_SOLAS_TOWN",
+      "map": "MAP_FARMVILLE_CITY",
       "offset": 0,
       "direction": "left"
     }
