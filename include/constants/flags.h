@@ -49,7 +49,7 @@
 #define FLAG_RIVAL_BATTLE1              0x24 // Used for the first rival battle outside Red's Lab.
 #define FLAG_VISITED_WOODHOLMECITY      0x25 // Used for keeping track of wether we have visited Woodholme.
 #define FLAG_RIVAL_DISAPPEAR            0x26 // Used for making May disappear from the Lab after the first visit.
-#define FLAG_QUEST_MENU_ACTIVE          0x27 // Used for QUESTS in the menu.
+#define FLAG_QUEST_MENU_ACTIVE          0x27 // Unused
 #define FLAG_THERRY_TRADE_COMPLETED     0x28 // Used to see if trade has been completed in Serenleaf City.
 #define FLAG_RIVAL_BATTLE2              0x29 // Used for the second Rival battle in Serenleaf City.
 #define FLAG_SERENLEAF_GYM_BATTLE2      0x2A // Unused?
@@ -1346,7 +1346,6 @@
 #define FLAG_SYS_POKEMON_GET                         (SYSTEM_FLAGS + 0x0) // FLAG_0x860
 #define FLAG_SYS_POKEDEX_GET                         (SYSTEM_FLAGS + 0x1)
 #define FLAG_SYS_POKENAV_GET                         (SYSTEM_FLAGS + 0x2)
-#define FLAG_SYS_QUEST_MENU_GET                      (SYSTEM_FLAGS + 0x3) // adding QUESTS to start menu
 #define FLAG_SYS_GAME_CLEAR                          (SYSTEM_FLAGS + 0x4)
 #define FLAG_SYS_CHAT_USED                           (SYSTEM_FLAGS + 0x5)
 #define FLAG_UNLOCKED_TRENDY_SAYINGS                 (SYSTEM_FLAGS + 0x6)

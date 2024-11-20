@@ -27,6 +27,8 @@ script Woodholme_PC_Nurse{
 }
 
 script Woodholme_PC_EventScript_Wally{
-    format("Hello! My name is Wally. My brothers and I work at the PokéCenters around the world handing out quests to Pokémon trainers. These quests are tasks that people want help with. It could be a non-trainer looking to get a Pokémon for comfort, or that someone has stumbled across a problem they need help with solving. They come to me and my brothers, and we make sure a fit and able trainer can help them with their problem. To make it worth the trainer's time, we of course make sure you are compensated for your efforts! I have unlocked the QUESTS menu for you. There, you can see your active QUEST and which one of the Wally Brothers that gave you the quest. For the first quest, a kid asked me to find them a Rattata. Do you think you could do that for me?")
+    lock
+    msgbox(format("Hello!"))
+    release
 
 }
