@@ -146,7 +146,6 @@ script Woodholme_Lab_EventScript_GivePokedex{
     setflag(FLAG_SYS_POKEDEX_GET)
     setflag(FLAG_SYS_NATIONAL_DEX)
     setflag(FLAG_ADVENTURE_STARTED)
-    questmenu(QUEST_MENU_UNLOCK_QUEST, 0)
     special(SetUnlockedPokedexFlags)
     special(EnableNationalPokedex)
     setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
