@@ -25,27 +25,37 @@ Route1_EventScript_Trainer_Flint::
 	msgbox Route1_EventScript_Trainer_Flint_Text_0, MSGBOX_NPC
 # 18 "data/maps/Route1/scripts.pory"
 	release
-	end
+	return
 
 
 Route1_EventScript_NPCTeala::
-# 31 "data/maps/Route1/scripts.pory"
+# 30 "data/maps/Route1/scripts.pory"
 	lock
-# 32 "data/maps/Route1/scripts.pory"
+# 31 "data/maps/Route1/scripts.pory"
 	msgbox Route1_EventScript_NPCTeala_Text_0, MSGBOX_NPC
-# 33 "data/maps/Route1/scripts.pory"
+# 32 "data/maps/Route1/scripts.pory"
 	release
-	end
+	return
 
 
 Route1_EventScript_Trainer_Ashley::
-# 38 "data/maps/Route1/scripts.pory"
+# 36 "data/maps/Route1/scripts.pory"
 	trainerbattle_single TRAINER_ASHLEY, Route1_AshleyIntro, Route1_AshleyOutro
-# 39 "data/maps/Route1/scripts.pory"
+# 37 "data/maps/Route1/scripts.pory"
 	msgbox Route1_EventScript_Trainer_Ashley_Text_0, MSGBOX_NPC
-# 40 "data/maps/Route1/scripts.pory"
+# 38 "data/maps/Route1/scripts.pory"
 	release
-	end
+	return
+
+
+Route1_EventScript_Hikers::
+# 50 "data/maps/Route1/scripts.pory"
+	lock
+# 51 "data/maps/Route1/scripts.pory"
+	msgbox Route1_EventScript_Hikers_Text_0, MSGBOX_NPC
+# 52 "data/maps/Route1/scripts.pory"
+	release
+	return
 
 
 Route1_EventScript_SignCottage_Text_0:
@@ -57,7 +67,7 @@ Route1_EventScript_Trainer_Flint_Text_0:
 	.string "Hmpf. I'll get you next time.$"
 
 Route1_EventScript_NPCTeala_Text_0:
-# 32 "data/maps/Route1/scripts.pory"
+# 31 "data/maps/Route1/scripts.pory"
 	.string "Hello. Be careful when venturing\n"
 	.string "outside of cities. Wild Pokémon may jump\l"
 	.string "out from the tall grass to battle, and\l"
@@ -67,24 +77,31 @@ Route1_EventScript_NPCTeala_Text_0:
 	.string "Potions at the Mart.$"
 
 Route1_EventScript_Trainer_Ashley_Text_0:
-# 39 "data/maps/Route1/scripts.pory"
+# 37 "data/maps/Route1/scripts.pory"
 	.string "Good luck with your adventure!$"
 
+Route1_EventScript_Hikers_Text_0:
+# 51 "data/maps/Route1/scripts.pory"
+	.string "Sorry kid, a mysterious Pokémon was\n"
+	.string "sighted down past Route 21. Could be\l"
+	.string "dangerous so road's closed until\l"
+	.string "further notice.$"
+
 Route1_FlintIntro::
-# 22 "data/maps/Route1/scripts.pory"
+# 21 "data/maps/Route1/scripts.pory"
 	.string "Aha, you made eye contact! That means\n"
 	.string "you owe me a Pokémon Battle!$"
 
 Route1_FlintOutro::
-# 26 "data/maps/Route1/scripts.pory"
+# 25 "data/maps/Route1/scripts.pory"
 	.string "Wow, too strong!$"
 
 Route1_AshleyIntro::
-# 44 "data/maps/Route1/scripts.pory"
+# 41 "data/maps/Route1/scripts.pory"
 	.string "Hello. Would you like a quick Pokémon\n"
 	.string "Battle?$"
 
 Route1_AshleyOutro::
-# 48 "data/maps/Route1/scripts.pory"
+# 45 "data/maps/Route1/scripts.pory"
 	.string "Oh, I lost? It seems I need to train my\n"
 	.string "Pokémon some more.$"

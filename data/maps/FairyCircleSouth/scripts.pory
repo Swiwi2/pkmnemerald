@@ -138,7 +138,7 @@ script FairyCircleSouth_EventScript_PakkasjarvenWarp{
         lock
         applymovement(OBJ_EVENT_ID_PLAYER, PlayerMoveUp)
         waitmovement(0)
-        warp(MAP_PAKKASJARVEN_CITY, 1)
+        warp(MAP_PAKKASJARVEN_CITY, 6)
         releaseall
     }
     else{

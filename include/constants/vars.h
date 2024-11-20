@@ -139,7 +139,7 @@
 #define VAR_ROUTE124_STATE                               0x4077 // Unused Var
 #define VAR_ROUTE125_STATE                               0x4078 // Unused Var
 #define VAR_ROUTE126_STATE                               0x4079 // Unused Var
-#define VAR_ROUTE127_STATE                               0x407A // Unused Var
+#define VAR_ROUTE8_STATE                                 0x407A // Used to determine if we can progress past the tunnel in Route 8 (0= no, 1= yes)
 #define VAR_ROUTE128_STATE                               0x407B
 #define VAR_RIVAL_BATTLE_STATE                           0x407C // Used to determine if we're going to battle our Rival.
 #define VAR_FAIRY_CIRCLE_SOUTH_STATE                     0x407D // Used to determine what teleport options are open to the Fairy Circle.

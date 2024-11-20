@@ -224,7 +224,7 @@ FairyCircleSouth_EventScript_PakkasjarvenWarp_1:
 # 140 "data/maps/FairyCircleSouth/scripts.pory"
 	waitmovement 0
 # 141 "data/maps/FairyCircleSouth/scripts.pory"
-	warp MAP_PAKKASJARVEN_CITY, 1
+	warp MAP_PAKKASJARVEN_CITY, 6
 # 142 "data/maps/FairyCircleSouth/scripts.pory"
 	releaseall
 	return

@@ -1,0 +1,44 @@
+mapscripts Route8_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION: Route8_OnTransition
+}
+
+script Route8_OnTransition{
+    if(flag(FLAG_BADGE04_GET)){
+        setvar(VAR_ROUTE8_STATE, 1)
+        setflag(FLAG_ROUTE8_UNBLOCKED)
+    }
+    else{
+        setvar(VAR_ROUTE8_STATE, 0)
+    }
+}
+
+script Route8_EventScript_Hiker{
+    lock
+}
+
+script Route8_EventScript_BlockedRoad{
+    lock
+    applymovement(1, Route8_ManWalkDown)
+    waitmovement(1)
+    msgbox(format("Sorry kid, only strong trainers are allowed to pass through the tunnel to Pakkasjarven City. If you haven't defeated Amberville Gym, you should do so. After that, head to Emberville, to the East."),MSGBOX_NPC)
+    applymovement(OBJ_EVENT_ID_PLAYER, Route8_PlayerMove)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    applymovement(1, Route8_ManWalkBack)
+    waitmovement(1)
+    releaseall
+}
+
+movement Route8_ManWalkDown{
+    walk_down * 2
+}
+
+movement Route8_ManWalkBack{
+    face_up
+    walk_up * 2
+    face_down
+}
+
+movement Route8_PlayerMove{
+    face_down
+    walk_down
+}

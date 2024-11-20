@@ -1,4 +1,47 @@
-raw `
-Route2_MapScripts::
-	.byte 0
-`
+mapscripts Route2_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION: Route2_EventScript_Transition
+}
+
+script Route2_EventScript_Transition{
+
+}
+
+script Route2_EventScript_Trainer_Marcel{
+    trainerbattle_single(TRAINER_MARCEL, Route2_MarcelIntro, Route2_MarcelOutro)
+    msgbox(format("Hmm. Guess I need to train more..."),MSGBOX_NPC)
+    release
+    end
+}
+
+text Route2_MarcelIntro{
+    format("Yo, kid! Let's have a quick battle!")
+}
+
+text Route2_MarcelOutro{
+    format("What, I lost?")
+}
+
+script Route2_EventScript_Trainer_Twins{
+    trainerbattle_double(TRAINER_ANNA_AND_MEG_1, Route2_TwinsIntro, Route2_TwinsOutro, Route2_NotEnoughPokemon)
+    msgbox(format("We'll practise some more and maybe we can beat you one day!"),MSGBOX_NPC)
+    release
+    end
+}
+
+text Route2_TwinsIntro{
+	format("We're twins so we battle together!")
+}
+
+text Route2_TwinsOutro{
+	format("Wow, you're strong.")
+}
+
+text Route2_NotEnoughPokemon{
+	format("You'll need to have at least TWO Pokémon if you want to battle US!")
+}
+
+script Route2_EventScript_Sign1{
+	lock
+	msgbox(format("Routes 1 & 2, connecting Woodholme City and Serenleaf City."))
+	release
+}

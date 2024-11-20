@@ -16,7 +16,6 @@ script Route1_EventScript_Trainer_Flint{
     trainerbattle_single(TRAINER_FLINT, Route1_FlintIntro, Route1_FlintOutro)
     msgbox(format("Hmpf. I'll get you next time."),MSGBOX_NPC)
     release
-    end
 }
 
 text Route1_FlintIntro{
@@ -31,14 +30,12 @@ script Route1_EventScript_NPCTeala{
     lock
     msgbox(format("Hello. Be careful when venturing outside of cities. Wild Pokémon may jump out from the tall grass to battle, and other trainers will want to battle you if you make eye contact with them! You'd better stock up on PokéBalls and Potions at the Mart."),MSGBOX_NPC)
     release
-    end
 }
 
 script Route1_EventScript_Trainer_Ashley{
     trainerbattle_single(TRAINER_ASHLEY, Route1_AshleyIntro, Route1_AshleyOutro)
     msgbox(format("Good luck with your adventure!"),MSGBOX_NPC)
     release
-    end
 }
 
 text Route1_AshleyIntro{
@@ -47,4 +44,10 @@ text Route1_AshleyIntro{
 
 text Route1_AshleyOutro{
     format("Oh, I lost? It seems I need to train my Pokémon some more. ")
+}
+
+script Route1_EventScript_Hikers{
+    lock
+    msgbox(format("Sorry kid, a mysterious Pokémon was sighted down past Route 21. Could be dangerous so road's closed until further notice."),MSGBOX_NPC)
+    release
 }

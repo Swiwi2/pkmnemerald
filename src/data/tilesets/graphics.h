@@ -1634,3 +1634,22 @@ const u16 gTilesetPalettes_UnionRoom[][16] =
 };
 
 const u32 gTilesetTiles_UnionRoom[] = INCBIN_U32("data/tilesets/secondary/union_room/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_Pakkasjarven[][16] =
+{
+    INCBIN_U16("data/tilesets/primary/pakkasjarven/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/primary/pakkasjarven/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/primary/pakkasjarven/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/primary/pakkasjarven/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/primary/pakkasjarven/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/primary/pakkasjarven/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/primary/pakkasjarven/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/primary/pakkasjarven/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/primary/pakkasjarven/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/primary/pakkasjarven/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/primary/pakkasjarven/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/primary/pakkasjarven/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/primary/pakkasjarven/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_Pakkasjarven[] = INCBIN_U32("data/tilesets/primary/pakkasjarven/tiles.4bpp.lz");

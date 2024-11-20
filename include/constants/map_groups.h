@@ -76,6 +76,7 @@
 #define MAP_ROUTE12              (15 | (11 << 8))
 #define MAP_ROUTE13              (16 | (11 << 8))
 #define MAP_ROUTE14              (17 | (11 << 8))
+#define MAP_ROUTE21              (18 | (11 << 8))
 
 // gMapGroup_Debug
 #define MAP_ROUTE6     (0 | (12 << 8))

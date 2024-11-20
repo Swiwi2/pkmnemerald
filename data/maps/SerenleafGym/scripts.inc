@@ -83,12 +83,15 @@ SerenleafGym_EventScript_Battle1Over_Text_0:
 
 SerenleafGym_LeaderIntro::
 # 58 "data/maps/SerenleafGym/scripts.pory"
-	.string "Hello there. My name is Gabby and I run\n"
+	.string "Hello there. My name is Brawly and I run\n"
 	.string "the Serenleaf City Gym! I am one of 8\l"
 	.string "GYM leaders that you should challenge\l"
 	.string "in order to prove that you're a\l"
-	.string "well-rounded and capable trainer. I\l"
-	.string "hope you've prepared - let's battle!$"
+	.string "well-rounded and capable trainer. My\l"
+	.string "speciality is GRASS type Pokémon! You'd\l"
+	.string "better have a FIRE or FLYING type\l"
+	.string "Pokémon with you! But enough talk -\l"
+	.string "let's battle!$"
 
 SerenleafGym_LeaderOutro::
 # 62 "data/maps/SerenleafGym/scripts.pory"
@@ -96,7 +99,9 @@ SerenleafGym_LeaderOutro::
 
 SerenleafGym_LeaderDialogue_State1::
 # 66 "data/maps/SerenleafGym/scripts.pory"
-	.string "Nice job!$"
+	.string "You'd better head EAST to Amberville\n"
+	.string "City where the next gym challenge\l"
+	.string "awaits!$"
 
 SerenleafGym_ExplainCut::
 # 70 "data/maps/SerenleafGym/scripts.pory"
@@ -108,7 +113,7 @@ SerenleafGym_ExplainCut::
 SerenleafGym_Heretakethis::
 # 75 "data/maps/SerenleafGym/scripts.pory"
 	.string "Here you go, you earned this. This is the\n"
-	.string "GRASS BADGE! It proves that you have\l"
+	.string "FIRST BADGE! It proves that you have\l"
 	.string "bested me in battle and are now one\l"
 	.string "step closer toward completing the\l"
 	.string "Pokémon GYM CHALLENGE.$"

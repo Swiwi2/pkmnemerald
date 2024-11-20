@@ -56,7 +56,7 @@ script SerenleafGym_EventScript_GiveCut{
 }
 
 text SerenleafGym_LeaderIntro{
-	format("Hello there. My name is Gabby and I run the Serenleaf City Gym! I am one of 8 GYM leaders that you should challenge in order to prove that you're a well-rounded and capable trainer. I hope you've prepared - let's battle!")
+	format("Hello there. My name is Brawly and I run the Serenleaf City Gym! I am one of 8 GYM leaders that you should challenge in order to prove that you're a well-rounded and capable trainer. My speciality is GRASS type Pokémon! You'd better have a FIRE or FLYING type Pokémon with you! But enough talk - let's battle!")
 }
 
 text SerenleafGym_LeaderOutro{
@@ -64,7 +64,7 @@ text SerenleafGym_LeaderOutro{
 }
 
 text SerenleafGym_LeaderDialogue_State1{
-	format("Nice job!")
+	format("You'd better head EAST to Amberville City where the next gym challenge awaits!")
 }
 
 text SerenleafGym_ExplainCut{
@@ -73,5 +73,5 @@ text SerenleafGym_ExplainCut{
 
 
 text SerenleafGym_Heretakethis{
-	format("Here you go, you earned this. This is the GRASS BADGE! It proves that you have bested me in battle and are now one step closer toward completing the Pokémon GYM CHALLENGE.")
+	format("Here you go, you earned this. This is the FIRST BADGE! It proves that you have bested me in battle and are now one step closer toward completing the Pokémon GYM CHALLENGE.")
 }

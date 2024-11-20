@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_ROUTE9",
-      "offset": 0,
+      "offset": 4,
       "direction": "right"
     },
     {
@@ -30,30 +30,58 @@
   "warp_events": [
     {
       "x": 17,
-      "y": 6,
+      "y": 10,
       "elevation": 0,
       "dest_map": "MAP_PAKKASJARVEN_CITY",
       "dest_warp_id": "0"
     },
     {
       "x": 11,
-      "y": 7,
+      "y": 12,
       "elevation": 0,
       "dest_map": "MAP_PAKKASJARVEN_CITY",
       "dest_warp_id": "0"
     },
     {
       "x": 5,
-      "y": 7,
+      "y": 12,
       "elevation": 0,
       "dest_map": "MAP_PAKKASJARVEN_GYM",
       "dest_warp_id": "0"
     },
     {
-      "x": 6,
-      "y": 17,
+      "x": 2,
+      "y": 19,
       "elevation": 0,
       "dest_map": "MAP_SERENLEAF_CITY",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 11,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_FAIRY_CIRCLE_SOUTH",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 12,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_FAIRY_CIRCLE_SOUTH",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 11,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_FAIRY_CIRCLE_SOUTH",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 12,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_FAIRY_CIRCLE_SOUTH",
       "dest_warp_id": "0"
     }
   ],
@@ -61,6 +89,21 @@
 
   ],
   "bg_events": [
-
+    {
+      "type": "sign",
+      "x": 14,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NULL"
+    },
+    {
+      "type": "sign",
+      "x": 8,
+      "y": 12,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NULL"
+    }
   ]
 }

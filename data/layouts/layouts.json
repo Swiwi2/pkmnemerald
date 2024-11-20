@@ -4644,8 +4644,8 @@
     {
       "id": "LAYOUT_ROUTE9",
       "name": "Route9_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 34,
+      "height": 60,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Sootopolis",
       "border_filepath": "data/layouts/Route9/border.bin",
@@ -4735,7 +4735,7 @@
       "id": "LAYOUT_PAKKASJARVEN_CITY",
       "name": "PakkasjarvenCity_Layout",
       "width": 20,
-      "height": 20,
+      "height": 46,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Sootopolis",
       "border_filepath": "data/layouts/PakkasjarvenCity/border.bin",
@@ -4785,7 +4785,7 @@
       "id": "LAYOUT_ROUTE8N",
       "name": "Route8N_Layout",
       "width": 20,
-      "height": 20,
+      "height": 60,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Sootopolis",
       "border_filepath": "data/layouts/Route8N/border.bin",
@@ -4910,6 +4910,16 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Route6New/border.bin",
       "blockdata_filepath": "data/layouts/Route6New/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE21",
+      "name": "Route21_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/Route21/border.bin",
+      "blockdata_filepath": "data/layouts/Route21/map.bin"
     }
   ]
 }

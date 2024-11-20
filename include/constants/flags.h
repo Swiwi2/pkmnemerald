@@ -53,7 +53,7 @@
 #define FLAG_THERRY_TRADE_COMPLETED     0x28 // Used to see if trade has been completed in Serenleaf City.
 #define FLAG_RIVAL_BATTLE2              0x29 // Used for the second Rival battle in Serenleaf City.
 #define FLAG_SERENLEAF_GYM_BATTLE2      0x2A // Unused?
-#define FLAG_UNUSED_0x02B    0x2B // Unused Flag
+#define FLAG_ROUTE8_UNBLOCKED           0x2B // Used to show/hide the man that'll block Route 8 if you haven't beaten Enimeros Gym.
 #define FLAG_UNUSED_0x02C    0x2C // Unused Flag
 #define FLAG_UNUSED_0x02D    0x2D // Unused Flag
 #define FLAG_UNUSED_0x02E    0x2E // Unused Flag
