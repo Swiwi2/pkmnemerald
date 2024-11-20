@@ -1853,15 +1853,6 @@
 	.2byte \quantity
 	.endm
 
-	.macro questmenu case:req, questId:req
-    .byte 0xe5
-    .byte \case
-    .byte \questId
-    .endm
-
-    .macro openquestmenu
-    questmenu 0 0
-    .endm
 
 	.macro _dynmultichoice left:req, top:req, ignoreBPress:req, maxBeforeScroll:req, shouldSort:req, initialSelected:req, callbacks:req argv:vararg
 	.byte 0xe3
