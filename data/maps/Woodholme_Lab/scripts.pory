@@ -12,6 +12,8 @@ const PokeballCenter = 3
 const PokeballRight = 4
 const May = 5
 
+//FYI: using FLAG_STARTER_SQUIRTLE, FLAG_STARTER_CHARMANDER and FLAG_STARTER_BULBASAUR even tho we have other gen starters.
+
 script Woodholme_Lab_EventScript_Red{
     lock
     faceplayer
@@ -54,6 +56,8 @@ script Woodholme_Lab_Trigger_GetPokedexLeft{
     msgbox(Woodholme_Lab_Text_GivePokedex)
     setvar(VAR_WOODHOLME_LAB_STATE, 2)
     waitmessage
+    msgbox(Woodholme_Lab_Text_SecondMon)
+    call(Woodholme_Lab_EventScript_GiveSecondMon)
     call(Woodholme_Lab_EventScript_GivePokedex)
     msgbox(Woodholme_Lab_Text_GivePokedex2)
     call(Woodholme_Lab_EventScript_GiveExpShare)
@@ -71,6 +75,8 @@ script Woodholme_Lab_Trigger_GetPokedexCenter{
     msgbox(Woodholme_Lab_Text_GivePokedex)
     setvar(VAR_WOODHOLME_LAB_STATE, 2)
     waitmessage
+    msgbox(Woodholme_Lab_Text_SecondMon)
+    call(Woodholme_Lab_EventScript_GiveSecondMon)
     call(Woodholme_Lab_EventScript_GivePokedex)
     msgbox(Woodholme_Lab_Text_GivePokedex2)
     call(Woodholme_Lab_EventScript_GiveExpShare)
@@ -92,6 +98,8 @@ script Woodholme_Lab_Trigger_GetPokedexRight{
     msgbox(Woodholme_Lab_Text_GivePokedex)
     setvar(VAR_WOODHOLME_LAB_STATE, 2)
     waitmessage
+    msgbox(Woodholme_Lab_Text_SecondMon)
+    call(Woodholme_Lab_EventScript_GiveSecondMon)
     call(Woodholme_Lab_EventScript_GivePokedex)
     msgbox(Woodholme_Lab_Text_GivePokedex2)
     call(Woodholme_Lab_EventScript_GiveExpShare)
@@ -102,6 +110,11 @@ script Woodholme_Lab_Trigger_GetPokedexRight{
 // Dialogue when Red comes down when we try to leave.
 text Woodholme_Lab_Text_GivePokedex{
     format("Oh, {PLAYER}, hang on a second! I almost forgot.")
+}
+
+// Dialogue to give second Pokémon.
+text Woodholme_Lab_Text_SecondMon{
+    format("There are a few more things we need to cover before you head out on your journey. Firstly, most Pokémon battles today are two versus two. Wild Pokémon tend to gang up on trainers and so trainers have started using two Pokémon simultaneously as a result. You can't realistically command more than two Pokémon at once, but two at a time is very doable!")
 }
 
 // Dialogue after getting PokéDex:
@@ -134,10 +147,24 @@ movement RedMove3{
 
 }
 
+script Woodholme_Lab_EventScript_GiveSecondMon{
+    lock
+    msgbox(format("In order to be safe, you'll need another Pokémon to accompany your new friend. Here, take this one."))
+    playfanfare(MUS_OBTAIN_ITEM)
+    message("{PLAYER} received a Lechonk!")
+    waitfanfare
+    givemon(SPECIES_LECHONK, 5)
+    closemessage
+    msgbox(format("Once you've gotten the hang of battling you can catch some more Pokémon to fill out your party. Feel free to replace your Pokémon with new ones that you catch."))
+    waitmessage
+    release
+    return
+}
+
 // Our script for giving Pokédex
 script Woodholme_Lab_EventScript_GivePokedex{
     lock
-    msgbox(format("Here, I use this thing called the PokéDex for my research. We are dicovering more and more types of Pokémon all the time. That's why I need your help. Please take this PokéDex and help me further my research."))
+    msgbox(format("Secondly, I use this thing called the PokéDex for my research. We are dicovering more and more types of Pokémon all the time. That's why I need your help. Please take this PokéDex and help me further my research."))
     playfanfare(MUS_OBTAIN_ITEM)
     message("{PLAYER} received the POKéDEX!")
     waitfanfare
@@ -160,7 +187,7 @@ script Woodholme_Lab_EventScript_GivePokedex{
 // Script to have RED give us an Exp Share
 script Woodholme_Lab_EventScript_GiveExpShare{
     lock
-    msgbox(format("I also want you to have this. This is an Exp. Share which lets you train your whole party at once. The Exp. Share can be toggled on or off in your Key Items pocket of your bag. When toggled on, your party Pokémon will receive a share of the Experience Points from the battle, even if they didn't join the battle! Don't forget to turn it on if you want all your Pokémon to gain experience together!"))
+    msgbox(format("Was that everything? Let's see.... Ah yes, I also want you to have this. This is an Exp. Share which lets you train your whole party at once. The Exp. Share can be toggled on or off in your Key Items pocket of your bag. When toggled on, your party Pokémon will receive a share of the Experience Points from the battle, even if they didn't join the battle! Don't forget to turn it on if you want all your Pokémon to gain experience together!"))
     playfanfare(MUS_OBTAIN_ITEM)
     giveitem(ITEM_EXP_SHARE, 1)
     waitfanfare
@@ -326,24 +353,26 @@ script Woodholme_Lab_EventScript_PokeballLeft{
     lock
     // If we haven't claimed any Pokémon from the table:
     if(!(flag(FLAG_STARTER_SQUIRTLE) || flag(FLAG_STARTER_CHARMANDER) || flag(FLAG_STARTER_BULBASAUR))){
-    showmonpic(SPECIES_SQUIRTLE, 10,3)
-    msgbox("Do you want to choose Squirtle?", MSGBOX_YESNO)
+    showmonpic(SPECIES_QUAXLY, 10,3)
+    msgbox("Do you want to choose Quaxly?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_SQUIRTLE, 5,)
+        givemon(SPECIES_QUAXLY, 5)
         if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
             playfanfare(MUS_OBTAIN_ITEM)
-            msgbox(format("{PLAYER} received the Squirtle!"))
+            msgbox(format("{PLAYER} received the Quaxly!"))
             removeobject(PokeballLeft)
             setflag(FLAG_STARTER_SQUIRTLE)
             setvar(VAR_WOODHOLME_LAB_STATE, 1)
+            setvar(VAR_STARTER_MON, 0)
             call(NicknamePartyMon)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
-            msgbox(format("{PLAYER} received the Squirtle!"))
+            msgbox(format("{PLAYER} received the Quaxly!"))
             removeobject(PokeballLeft)
             setflag(FLAG_STARTER_SQUIRTLE)
             setvar(VAR_WOODHOLME_LAB_STATE, 1)
+            setvar(VAR_STARTER_MON, 0)
             call(NicknameBoxMon)
         }
         else{
@@ -371,24 +400,26 @@ script Woodholme_Lab_EventScript_PokeballCenter{
     lock
     // If we haven't claimed any Pokémon from the table:
     if(!(flag(FLAG_STARTER_SQUIRTLE) || flag(FLAG_STARTER_CHARMANDER) || flag(FLAG_STARTER_BULBASAUR))){
-    showmonpic(SPECIES_CHARMANDER, 10,3)
-    msgbox("Do you want to choose Charmander?", MSGBOX_YESNO)
+    showmonpic(SPECIES_LITTEN, 10,3)
+    msgbox("Do you want to choose Litten?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_CHARMANDER, 5)
+        givemon(SPECIES_LITTEN, 5)
         if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
             playfanfare(MUS_OBTAIN_ITEM)
-            msgbox(format("{PLAYER} received the Charmander!"))
+            msgbox(format("{PLAYER} received the Litten!"))
             removeobject(PokeballCenter)
             setflag(FLAG_STARTER_CHARMANDER)
             setvar(VAR_WOODHOLME_LAB_STATE, 1)
+            setvar(VAR_STARTER_MON, 1)
             call(NicknamePartyMon)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
-            msgbox(format("{PLAYER} received the Charmander!"))
+            msgbox(format("{PLAYER} received the Litten!"))
             removeobject(PokeballCenter)
             setflag(FLAG_STARTER_CHARMANDER)
             setvar(VAR_WOODHOLME_LAB_STATE, 1)
+            setvar(VAR_STARTER_MON, 1)
             call(NicknameBoxMon)
         }
         else{
@@ -414,24 +445,26 @@ script Woodholme_Lab_EventScript_PokeballRight{
     lock
     // If we haven't claimed any Pokémon from the table:
     if(!(flag(FLAG_STARTER_SQUIRTLE) || flag(FLAG_STARTER_CHARMANDER) || flag(FLAG_STARTER_BULBASAUR))){
-    showmonpic(SPECIES_BULBASAUR, 10,3)
-    msgbox("Do you want to choose Bulbasaur?", MSGBOX_YESNO)
+    showmonpic(SPECIES_GROOKEY, 10,3)
+    msgbox("Do you want to choose Grookey?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_BULBASAUR, 5)
+        givemon(SPECIES_GROOKEY, 5)
         if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
             playfanfare(MUS_OBTAIN_ITEM)
-            msgbox(format("{PLAYER} received the Bulbasaur!"))
+            msgbox(format("{PLAYER} received the Grookey!"))
             removeobject(PokeballRight)
             setflag(FLAG_STARTER_BULBASAUR)
             setvar(VAR_WOODHOLME_LAB_STATE, 1)
+            setvar(VAR_STARTER_MON, 2)
             call(NicknamePartyMon)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
-            msgbox(format("{PLAYER} received the Bulbasaur!"))
+            msgbox(format("{PLAYER} received the Grookey!"))
             removeobject(PokeballRight)
             setflag(FLAG_STARTER_BULBASAUR)
             setvar(VAR_WOODHOLME_LAB_STATE, 1)
+            setvar(VAR_STARTER_MON, 2)
             call(NicknameBoxMon)
         }
         else{

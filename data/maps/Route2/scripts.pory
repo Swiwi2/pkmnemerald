@@ -7,7 +7,7 @@ script Route2_EventScript_Transition{
 }
 
 script Route2_EventScript_Trainer_Marcel{
-    trainerbattle_single(TRAINER_MARCEL, Route2_MarcelIntro, Route2_MarcelOutro)
+    trainerbattle_double(TRAINER_MARCEL, Route2_MarcelIntro, Route2_MarcelOutro, Route2_NotEnoughPokemon)
     msgbox(format("Hmm. Guess I need to train more..."),MSGBOX_NPC)
     release
     end

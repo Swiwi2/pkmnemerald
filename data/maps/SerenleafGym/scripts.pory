@@ -23,7 +23,7 @@ script SerenleafGym_EventScript_SetupGymBattle{
 }
 
 script SerenleafGym_EventScript_Leader{
-	trainerbattle_single(TRAINER_BRAWLY_1, SerenleafGym_LeaderIntro, SerenleafGym_LeaderOutro, SerenleafGym_EventScript_Battle1Over)
+	trainerbattle_double(TRAINER_BRAWLY_1, SerenleafGym_LeaderIntro, SerenleafGym_LeaderOutro, SerenleafGym_NotEnoughPokemon, SerenleafGym_EventScript_Battle1Over)
 	msgbox(SerenleafGym_LeaderDialogue_State1)
 	release
 	end
@@ -55,6 +55,9 @@ script SerenleafGym_EventScript_GiveCut{
 	return
 }
 
+text SerenleafGym_NotEnoughPokemon{
+	format("You don't have enough Pokémon. Come back with at least two Pokémon!")
+}
 text SerenleafGym_LeaderIntro{
 	format("Hello there. My name is Brawly and I run the Serenleaf City Gym! I am one of 8 GYM leaders that you should challenge in order to prove that you're a well-rounded and capable trainer. My speciality is GRASS type Pokémon! You'd better have a FIRE or FLYING type Pokémon with you! But enough talk - let's battle!")
 }

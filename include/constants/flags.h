@@ -658,7 +658,7 @@
 #define FLAG_ITEM_ROUTE_1_POKE_BALL                 0x267 // Flag used for ground item in Route 1.
 #define FLAG_ITEM_ROUTE_1_POTION                    0x268 // Flag used for ground item in Route 1.
 #define FLAG_VISITED_SERENLEAFCITY                  0x269 // Flag used for making sure we can fly to Serenleaf?
-#define FLAG_UNUSED_0x26A  0x26A // Unused Flag
+#define FLAG_SHOW_STAT_UI                           0x26A // Flag used for hiding or showing the stat editor UI.
 #define FLAG_UNUSED_0x26B  0x26B // Unused Flag
 #define FLAG_UNUSED_0x26C  0x26C // Unused Flag
 #define FLAG_UNUSED_0x26D  0x26D // Unused Flag

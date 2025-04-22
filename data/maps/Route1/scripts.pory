@@ -13,11 +13,14 @@ script Route1_EventScript_SignCottage{
 }
 
 script Route1_EventScript_Trainer_Flint{
-    trainerbattle_single(TRAINER_FLINT, Route1_FlintIntro, Route1_FlintOutro)
+    trainerbattle_double(TRAINER_FLINT, Route1_FlintIntro, Route1_FlintOutro, Route1_NotEnoughMons)
     msgbox(format("Hmpf. I'll get you next time."),MSGBOX_NPC)
     release
 }
 
+text Route1_NotEnoughMons{
+    format("You don't have enough Pokémon for a battle...")
+}
 text Route1_FlintIntro{
     format("Aha, you made eye contact! That means you owe me a Pokémon Battle!")
 }
@@ -33,7 +36,7 @@ script Route1_EventScript_NPCTeala{
 }
 
 script Route1_EventScript_Trainer_Ashley{
-    trainerbattle_single(TRAINER_ASHLEY, Route1_AshleyIntro, Route1_AshleyOutro)
+    trainerbattle_double(TRAINER_ASHLEY, Route1_AshleyIntro, Route1_AshleyOutro, Route1_NotEnoughMons)
     msgbox(format("Good luck with your adventure!"),MSGBOX_NPC)
     release
 }

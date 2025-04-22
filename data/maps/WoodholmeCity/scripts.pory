@@ -11,6 +11,8 @@ script WoodholmeCity_OnTransition{
 // 1 = Received Pokédex, changes Red dialogue.
 // 2 = Battled Rival.
 
+const May = 1
+
 script WoodholmeCity_EventScript_SetupRivalBattle{
     if (!(flag(FLAG_STARTER_BULBASAUR) || flag(FLAG_STARTER_CHARMANDER) || flag(FLAG_STARTER_SQUIRTLE))){
         setflag(FLAG_RIVAL_BATTLE1)
@@ -24,8 +26,61 @@ script WoodholmeCity_EventScript_SetupRivalBattle{
     return
 }
 
+script WoodholmeCity_EventScript_TriggerRivalBattle1{
+    lock
+    applymovement(1, MayEnter1)
+    waitmovement(0)
+    switch (var(VAR_STARTER_MON)){
+        case 0:
+            goto(WoodholmeCity_EventScript_RivalBattle1)
+        case 1:
+            goto(WoodholmeCity_EventScript_RivalBattle2)
+        case 2:
+            goto(WoodholmeCity_EventScript_RivalBattle3)
+    }
+    call(RivalBattleOver)
+    release
+    end
+}
+
+script WoodholmeCity_EventScript_TriggerRivalBattle2{
+    lock
+    applymovement(1, MayEnter2)
+    waitmovement(0)
+    switch (var(VAR_STARTER_MON)){
+        case 0:
+            goto(WoodholmeCity_EventScript_RivalBattle1)
+        case 1:
+            goto(WoodholmeCity_EventScript_RivalBattle2)
+        case 2:
+            goto(WoodholmeCity_EventScript_RivalBattle3)
+    }
+    call(RivalBattleOver)
+    release
+    end
+}
+
+
+movement MayEnter1{
+    walk_left * 3
+}
+
+movement MayEnter2{
+    walk_down
+    face_left
+    walk_left * 3
+}
+
 script WoodholmeCity_EventScript_RivalBattle1{
-    trainerbattle_single(TRAINER_MAY_ROUTE_103_TORCHIC, May_Intro, May_Outro, RivalBattleOver)    
+    trainerbattle_double(TRAINER_MAY_ROUTE_103_MUDKIP, May_Intro, May_Outro, May_NotEnoughPokemon, RivalBattleOver)
+    end
+}
+script WoodholmeCity_EventScript_RivalBattle2{
+    trainerbattle_double(TRAINER_MAY_ROUTE_103_TORCHIC, May_Intro, May_Outro, May_NotEnoughPokemon, RivalBattleOver)
+    end
+}
+script WoodholmeCity_EventScript_RivalBattle3{
+    trainerbattle_double(TRAINER_MAY_ROUTE_103_TREECKO, May_Intro, May_Outro, May_NotEnoughPokemon, RivalBattleOver)
     end
 }
 
@@ -43,14 +98,8 @@ script RivalBattleOver{
 }
 
 movement MayLeave{
-    face_down
-    walk_down
     face_right
-    walk_right * 2
-    face_up
-    walk_up
-    face_right
-    walk_right *6
+    walk_right * 5
     face_up
     walk_up * 8
 }
@@ -61,6 +110,10 @@ text May_Intro{
 
 text May_Outro{
     format("Oh wow, cool! That was really fun! Except for the losing part... That wasn't very fun. That's it. That was the last time I lose a Pokémon battle! I'm going to go train my Pokémon by battling other trainers! RED said that the next step for us is to take on the Gym Challenge. I'm going to go buy some PokéBalls at the PokéMart and then head up to Route 1 to try and find some more Pokémon for my team. Next time we meet I'll be a lot stronger, I promise! See you later!")
+}
+
+text May_NotEnoughPokemon{
+    format("You don't have two Pokémon?")
 }
 
 script WoodholmeCity_EventScript_NPC_Fat_Man{

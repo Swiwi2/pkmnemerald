@@ -10,7 +10,7 @@ Route2_EventScript_Transition::
 
 Route2_EventScript_Trainer_Marcel::
 # 10 "data/maps/Route2/scripts.pory"
-	trainerbattle_single TRAINER_MARCEL, Route2_MarcelIntro, Route2_MarcelOutro
+	trainerbattle_double TRAINER_MARCEL, Route2_MarcelIntro, Route2_MarcelOutro, Route2_NotEnoughPokemon
 # 11 "data/maps/Route2/scripts.pory"
 	msgbox Route2_EventScript_Trainer_Marcel_Text_0, MSGBOX_NPC
 # 12 "data/maps/Route2/scripts.pory"
