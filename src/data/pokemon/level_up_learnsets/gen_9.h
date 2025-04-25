@@ -16650,9 +16650,9 @@ static const struct LevelUpMove sPrimarinaLevelUpLearnset[] = {
 
 #if P_FAMILY_PIKIPEK
 static const struct LevelUpMove sPikipekLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_PECK),
+    LEVEL_UP_MOVE( 1, MOVE_TACKLE),
     LEVEL_UP_MOVE( 3, MOVE_GROWL),
-    LEVEL_UP_MOVE( 7, MOVE_ECHOED_VOICE),
+    LEVEL_UP_MOVE( 6, MOVE_PECK),
     LEVEL_UP_MOVE( 9, MOVE_ROCK_SMASH),
     LEVEL_UP_MOVE(13, MOVE_SUPERSONIC),
     LEVEL_UP_MOVE(15, MOVE_PLUCK),
@@ -16667,7 +16667,7 @@ static const struct LevelUpMove sPikipekLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sTrumbeakLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_ECHOED_VOICE),
+    LEVEL_UP_MOVE( 1, MOVE_TACKLE),
     LEVEL_UP_MOVE( 1, MOVE_GROWL),
     LEVEL_UP_MOVE( 1, MOVE_PECK),
     LEVEL_UP_MOVE( 1, MOVE_ROCK_SMASH),

@@ -54,7 +54,7 @@
 #define FLAG_RIVAL_BATTLE2              0x29 // Used for the second Rival battle in Serenleaf City.
 #define FLAG_SERENLEAF_GYM_BATTLE2      0x2A // Unused?
 #define FLAG_ROUTE8_UNBLOCKED           0x2B // Used to show/hide the man that'll block Route 8 if you haven't beaten Enimeros Gym.
-#define FLAG_UNUSED_0x02C    0x2C // Unused Flag
+#define FLAG_FORCE_DOUBLE_WILD          0x2C // Flag used to force double battles in the wild
 #define FLAG_UNUSED_0x02D    0x2D // Unused Flag
 #define FLAG_UNUSED_0x02E    0x2E // Unused Flag
 #define FLAG_UNUSED_0x02F    0x2F // Unused Flag

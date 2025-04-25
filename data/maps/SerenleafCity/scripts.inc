@@ -217,7 +217,7 @@ SerenleafCity_EventScript_NPC_Girl::
 # 121 "data/maps/SerenleafCity/scripts.pory"
 	goto_if_set FLAG_THERRY_TRADE_COMPLETED, SerenleafCity_EventScript_NPC_Girl_2
 # 126 "data/maps/SerenleafCity/scripts.pory"
-	setvar VAR_0x8008, INGAME_TRADE_ONIX
+	setvar VAR_0x8008, INGAME_TRADE_TINKATINK
 # 127 "data/maps/SerenleafCity/scripts.pory"
 	copyvar VAR_0x8004, VAR_0x8008
 # 128 "data/maps/SerenleafCity/scripts.pory"
@@ -338,15 +338,15 @@ SerenleafCity_EventScript_NPC_Man_Text_0:
 
 SerenleafCity_EventScript_NPC_Girl_Text_0:
 # 136 "data/maps/SerenleafCity/scripts.pory"
-	.string "Declined trade.$"
+	.string "Oh, I guess I'll keep PINKEYY then...$"
 
 SerenleafCity_EventScript_NPC_Girl_Text_1:
 # 143 "data/maps/SerenleafCity/scripts.pory"
-	.string "Wrong Pokémon.$"
+	.string "That's not a Pawmi!$"
 
 SerenleafCity_EventScript_NPC_Girl_Text_2:
 # 151 "data/maps/SerenleafCity/scripts.pory"
-	.string "Thx!$"
+	.string "Wow, thanks! I'll take great care of your Pawmi!$"
 
 SerenleafCity_RivalIntro::
 # 20 "data/maps/SerenleafCity/scripts.pory"
@@ -364,8 +364,9 @@ SerenleafCity_RivalOutro::
 
 SerenleafCity_Text_TradeCompleted::
 # 165 "data/maps/SerenleafCity/scripts.pory"
-	.string "Thank you! Take good care of SNAKEY!$"
+	.string "Thank you! Take good care of PINKEYY!$"
 
 SerenleafCity_Text_WantToTrade::
 # 169 "data/maps/SerenleafCity/scripts.pory"
-	.string "Do you want my Onix?$"
+	.string "Hi there. I'm looking for a Pawmi. Would\n"
+	.string "you trade me one for my Tinkatink?$"

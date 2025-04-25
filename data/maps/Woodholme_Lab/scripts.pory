@@ -97,6 +97,7 @@ script Woodholme_Lab_Trigger_GetPokedexRight{
     waitmovement(0)
     msgbox(Woodholme_Lab_Text_GivePokedex)
     setvar(VAR_WOODHOLME_LAB_STATE, 2)
+    setflag(FLAG_FORCE_DOUBLE_WILD)
     waitmessage
     msgbox(Woodholme_Lab_Text_SecondMon)
     call(Woodholme_Lab_EventScript_GiveSecondMon)
@@ -114,17 +115,17 @@ text Woodholme_Lab_Text_GivePokedex{
 
 // Dialogue to give second Pokémon.
 text Woodholme_Lab_Text_SecondMon{
-    format("There are a few more things we need to cover before you head out on your journey. Firstly, most Pokémon battles today are two versus two. Wild Pokémon tend to gang up on trainers and so trainers have started using two Pokémon simultaneously as a result. You can't realistically command more than two Pokémon at once, but two at a time is very doable!")
+    format("There are a few more things we need to cover before you head out. Firstly, most Pokémon battles today are two versus two. You can't realistically command more than two Pokémon at once, but two is very doable!")
 }
 
 // Dialogue after getting PokéDex:
 text Woodholme_Lab_Text_GivePokedex2{
-    format("Not only does that PokéDex help us understand more about different species of Pokémon, but it is also useful to helping us understand how Pokémon TYPES work. That is where the Gym Challenge comes in. There are several different types of Pokémon and in order to prove that you fully grasp how Pokémon types work, you can challenge the various Gyms. Each Gym will only use Pokémon of a certain type. That way, you can show that you master that specific type by beating the corresponding gym leader. You should head up past Route 1 to Serenleaf City, where the first Gym Leader in the Gym Challenge is waiting.")
+    format("That PokéDex is also useful to helping us understand how Pokémon TYPES work. There are several different types of Pokémon and in order to prove that you fully grasp how Pokémon types work, you can challenge Gyms. You should head up past Route 1 to Serenleaf City, where the first Gym Leader is waiting.")
 }
 
 // Dialogue after getting Exp. Share:
 text Woodholme_Lab_Text_GiveExpShare{
-    format("The final thing I wanted to mention is that I don't expect you to complete the Gym Challenge all on your own. That girl you saw leaving before is called May. She will be your RIVAL! She also received her first Pokémon just now, and she will also be attempting the Gym Challenge alongside you. I told her to wait for you outside so that you can get acquainted. A bit of friendly rivalry to keep you two motivated eh? Hehe. Good luck!")
+    format("Finally, I don't expect you to complete the Gym Challenge all on your own. That girl you saw leaving before is May. She will be your RIVAL! She also received her first Pokémon just now, and will also be attempting the Gym Challenge alongside you. I told her to wait outside so that you can get acquainted. A bit of friendly rivalry to keep you two motivated eh? Hehe. Good luck!")
 }
 
 movement RedMove1{
@@ -155,7 +156,7 @@ script Woodholme_Lab_EventScript_GiveSecondMon{
     waitfanfare
     givemon(SPECIES_LECHONK, 5)
     closemessage
-    msgbox(format("Once you've gotten the hang of battling you can catch some more Pokémon to fill out your party. Feel free to replace your Pokémon with new ones that you catch."))
+    msgbox(format("Feel free to replace your Pokémon with new ones that you catch."))
     waitmessage
     release
     return
@@ -164,7 +165,7 @@ script Woodholme_Lab_EventScript_GiveSecondMon{
 // Our script for giving Pokédex
 script Woodholme_Lab_EventScript_GivePokedex{
     lock
-    msgbox(format("Secondly, I use this thing called the PokéDex for my research. We are dicovering more and more types of Pokémon all the time. That's why I need your help. Please take this PokéDex and help me further my research."))
+    msgbox(format("Secondly, I use this thing called the PokéDex for my research. Please take this PokéDex and help me further my research."))
     playfanfare(MUS_OBTAIN_ITEM)
     message("{PLAYER} received the POKéDEX!")
     waitfanfare
@@ -178,7 +179,7 @@ script Woodholme_Lab_EventScript_GivePokedex{
     setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
     setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
     setvar(VAR_WOODHOLME_STATE, 1)
-    msgbox(format("The PokéDex automatically records data on Pokémon you've seen. Once you capture a Pokémon, the PokéDex will also automatically update the record with more information. These records are sent to myself and to my colleagues Professor Oak and Professor Birch, both of whom also have their own labs where they study Pokémon. In order to fill your PokéDex you need to catch wild Pokémon using PokéBalls. The PokéMart here in Woodholme should have some PokéBalls you can purchase."))
+    msgbox(format("The PokéDex automatically records data on Pokémon you've seen. In order to fill your PokéDex you need to catch wild Pokémon using PokéBalls that can be purchased from the PokéMart."))
     waitmessage
     release 
     return
@@ -187,7 +188,7 @@ script Woodholme_Lab_EventScript_GivePokedex{
 // Script to have RED give us an Exp Share
 script Woodholme_Lab_EventScript_GiveExpShare{
     lock
-    msgbox(format("Was that everything? Let's see.... Ah yes, I also want you to have this. This is an Exp. Share which lets you train your whole party at once. The Exp. Share can be toggled on or off in your Key Items pocket of your bag. When toggled on, your party Pokémon will receive a share of the Experience Points from the battle, even if they didn't join the battle! Don't forget to turn it on if you want all your Pokémon to gain experience together!"))
+    msgbox(format("I also want you to have this Exp. Share which lets you train your whole party at once. Exp. Share can be toggled on or off in your Key Items pocket of your bag."))
     playfanfare(MUS_OBTAIN_ITEM)
     giveitem(ITEM_EXP_SHARE, 1)
     waitfanfare
@@ -336,7 +337,7 @@ movement Woodholme_Lab_Movement_PlayerMoveToStarter4{
 }
 
 text Woodholm_Lab_Text_Red_Intro{
-    format("RED: Ah! You must be the new trainer that just moved in! {PLAYER} is it? Welcome! My name is Red. I used to be the very best trainer in the world. That was long ago, and I've since retired from battling Pokémon. Nowadays, I've set my sights on a completely different challenge... To help new trainers get started on their own Pokémon journey! {PLAYER}, I want you to choose your very own Pokémon friend to take with you on your adventure! Inside those Pokéballs on the table I have three different Pokémon. You may have one of them. Are you ready to choose a Pokémon for yourself?")
+    format("RED: Ah! You must be the new trainer that just moved in! {PLAYER} is it? Welcome! My name is Red. I used to be the very best trainer in the world. Nowadays, I've set my sights on a completely different challenge... To help new trainers get started on their own Pokémon journey! {PLAYER}, I want you to choose your very own Pokémon friend to take with you on your adventure! Inside those Pokéballs on the table I have three different Pokémon. You may have one of them. Are you ready to choose a Pokémon for yourself?")
 }
 
 text Woodholme_Lab_Text_RedDialogueYes{
