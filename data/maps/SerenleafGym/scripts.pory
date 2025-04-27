@@ -10,6 +10,7 @@ mapscripts SerenleafGym_MapScripts{
 
 script SerenleafGym_OnTransition{
 	call(SerenleafGym_EventScript_SetupGymBattle)
+	end
 }
 
 script SerenleafGym_EventScript_SetupGymBattle{
@@ -20,6 +21,7 @@ script SerenleafGym_EventScript_SetupGymBattle{
 	else{
 		setvar(VAR_SERENLEAF_GYM_STATE,1)
 	}
+	return
 }
 
 script SerenleafGym_EventScript_Leader{
@@ -63,7 +65,7 @@ text SerenleafGym_LeaderIntro{
 }
 
 text SerenleafGym_LeaderOutro{
-	format("Nice job! That was a real battle!")
+	format("Nice job! That was a real battle! You'd better head EAST to Amberville City where the next gym challenge awaits!")
 }
 
 text SerenleafGym_LeaderDialogue_State1{
@@ -73,7 +75,6 @@ text SerenleafGym_LeaderDialogue_State1{
 text SerenleafGym_ExplainCut{
 	format("The HM contains CUT. CUT is a move that allows you to chop down certain trees! You should try it on the trees between Serenleaf City and Woodholme City!")
 }
-
 
 text SerenleafGym_Heretakethis{
 	format("Here you go, you earned this. This is the FIRST BADGE! It proves that you have bested me in battle and are now one step closer toward completing the Pokémon GYM CHALLENGE.")
