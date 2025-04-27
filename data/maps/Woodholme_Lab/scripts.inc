@@ -244,14 +244,10 @@ Woodholme_Lab_EventScript_GivePokedex::
 	setflag FLAG_SYS_POKEMON_GET
 # 174 "data/maps/Woodholme_Lab/scripts.pory"
 	setflag FLAG_SYS_POKEDEX_GET
-# 175 "data/maps/Woodholme_Lab/scripts.pory"
-	setflag FLAG_SYS_NATIONAL_DEX
 # 176 "data/maps/Woodholme_Lab/scripts.pory"
 	setflag FLAG_ADVENTURE_STARTED
 # 177 "data/maps/Woodholme_Lab/scripts.pory"
 	special SetUnlockedPokedexFlags
-# 178 "data/maps/Woodholme_Lab/scripts.pory"
-	special EnableNationalPokedex
 # 179 "data/maps/Woodholme_Lab/scripts.pory"
 	setflag FLAG_RECEIVED_POKEDEX_FROM_BIRCH
 # 180 "data/maps/Woodholme_Lab/scripts.pory"

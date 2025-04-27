@@ -23526,16 +23526,18 @@ F_TRAINER_FEMALE |
     [TRAINER_BRENDAN_ROUTE_103_MUDKIP] =
     {
 #line 9409
-        .trainerName = _("BRENDAN"),
+        .trainerName = _("May"),
 #line 9410
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 9411
-        .trainerPic = TRAINER_PIC_BRENDAN,
+        .trainerPic = TRAINER_PIC_MAY,
         .encounterMusic_gender = 
+#line 9412
+F_TRAINER_FEMALE | 
 #line 9413
-            TRAINER_ENCOUNTER_MUSIC_MALE,
+            TRAINER_ENCOUNTER_MUSIC_FEMALE,
 #line 9414
-        .doubleBattle = FALSE,
+        .doubleBattle = TRUE,
 #line 9415
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
