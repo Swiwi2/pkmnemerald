@@ -9054,6 +9054,7 @@ static const u16 sLedianTeachableLearnset[] = {
 #if P_FAMILY_SPINARAK
 static const u16 sSpinarakTeachableLearnset[] = {
     MOVE_ATTRACT,
+    MOVE_CUT,
     MOVE_DIG,
     MOVE_DOUBLE_TEAM,
     MOVE_FACADE,
@@ -9078,6 +9079,7 @@ static const u16 sSpinarakTeachableLearnset[] = {
 
 static const u16 sAriadosTeachableLearnset[] = {
     MOVE_ATTRACT,
+    MOVE_CUT,
     MOVE_DIG,
     MOVE_DOUBLE_TEAM,
     MOVE_FACADE,
@@ -29190,6 +29192,7 @@ static const u16 sGumshoosTeachableLearnset[] = {
 #if P_FAMILY_GRUBBIN
 static const u16 sGrubbinTeachableLearnset[] = {
     MOVE_ATTRACT,
+    MOVE_CUT,
     MOVE_DIG,
     MOVE_DOUBLE_TEAM,
     MOVE_FACADE,
@@ -29211,6 +29214,7 @@ static const u16 sGrubbinTeachableLearnset[] = {
 
 static const u16 sCharjabugTeachableLearnset[] = {
     MOVE_ATTRACT,
+    MOVE_CUT,
     MOVE_DIG,
     MOVE_DOUBLE_TEAM,
     MOVE_FACADE,
@@ -29233,6 +29237,7 @@ static const u16 sCharjabugTeachableLearnset[] = {
 
 static const u16 sVikavoltTeachableLearnset[] = {
     MOVE_ATTRACT,
+    MOVE_CUT,
     MOVE_DIG,
     MOVE_DOUBLE_TEAM,
     MOVE_FACADE,
@@ -31593,6 +31598,7 @@ static const u16 sInteleonTeachableLearnset[] = {
 static const u16 sSkwovetTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BULLET_SEED,
+    MOVE_CUT,
     MOVE_DIG,
     MOVE_FACADE,
     MOVE_IRON_TAIL,
@@ -31614,6 +31620,7 @@ static const u16 sSkwovetTeachableLearnset[] = {
 static const u16 sGreedentTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BULLET_SEED,
+    MOVE_CUT,
     MOVE_DIG,
     MOVE_EARTHQUAKE,
     MOVE_FACADE,
@@ -33760,6 +33767,7 @@ static const u16 sLokixTeachableLearnset[] = {
 
 #if P_FAMILY_PAWMI
 static const u16 sPawmiTeachableLearnset[] = {
+    MOVE_CUT,
     MOVE_DIG,
     MOVE_FACADE,
     MOVE_PROTECT,
@@ -33777,6 +33785,7 @@ static const u16 sPawmiTeachableLearnset[] = {
 };
 
 static const u16 sPawmoTeachableLearnset[] = {
+    MOVE_CUT,
     MOVE_DIG,
     MOVE_FACADE,
     MOVE_FOCUS_PUNCH,
@@ -33798,6 +33807,7 @@ static const u16 sPawmoTeachableLearnset[] = {
 static const u16 sPawmotTeachableLearnset[] = {
     MOVE_BRICK_BREAK,
     MOVE_BULK_UP,
+    MOVE_CUT,
     MOVE_DIG,
     MOVE_FACADE,
     MOVE_FOCUS_PUNCH,
