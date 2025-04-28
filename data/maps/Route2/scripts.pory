@@ -13,6 +13,20 @@ script Route2_EventScript_Trainer_Marcel{
     end
 }
 
+script Route2_EventScript_Trainer_Sawyer{
+    trainerbattle_double(TRAINER_SAWYER_1, Route2_SawyerIntro, Route2_SawyerOutro, Route2_NotEnoughPokemon)
+    msgbox(format("I need to study to become strong like you."),MSGBOX_NPC)
+    release
+    end
+}
+
+script Route2_EventScript_Trainer_Gabrielle{
+    trainerbattle_double(TRAINER_GABRIELLE_1, Route2_GabrielleIntro, Route2_GabrielleOutro, Route2_NotEnoughPokemon)
+    msgbox(format("Go away, meanie!"),MSGBOX_NPC)
+    release
+    end
+}
+
 text Route2_MarcelIntro{
     format("Yo, kid! Let's have a quick battle!")
 }
@@ -21,19 +35,20 @@ text Route2_MarcelOutro{
     format("What, I lost?")
 }
 
-script Route2_EventScript_Trainer_Twins{
-    trainerbattle_double(TRAINER_ANNA_AND_MEG_1, Route2_TwinsIntro, Route2_TwinsOutro, Route2_NotEnoughPokemon)
-    msgbox(format("We'll practise some more and maybe we can beat you one day!"),MSGBOX_NPC)
-    release
-    end
+text Route2_SawyerIntro{
+	format("I'm a student at the school! We're learning about Pokémon!")
 }
 
-text Route2_TwinsIntro{
-	format("We're twins so we battle together!")
+text Route2_SawyerOutro{
+	format("Maybe I need to study more...")
 }
 
-text Route2_TwinsOutro{
-	format("Wow, you're strong.")
+text Route2_GabrielleIntro{
+	format("Girls can be Pokémon trainers too you know!")
+}
+
+text Route2_GabrielleOutro{
+	format("You should take it easy on a girl like me!")
 }
 
 text Route2_NotEnoughPokemon{

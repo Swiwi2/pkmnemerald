@@ -83,15 +83,19 @@ Double Battle: No
 
 === TRAINER_SAWYER_1 ===
 Name: SAWYER
-Class: Hiker
-Pic: Hiker
+Class: School Kid
+Pic: School Kid M
 Gender: Male
-Music: Hiker
-Double Battle: No
+Music: Male
+Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Geodude
-Level: 21
+Lillipup
+Level: 5
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Pawmi
+Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_AQUA_HIDEOUT_1 ===
@@ -191,36 +195,21 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GABRIELLE_1 ===
 Name: GABRIELLE
-Class: Pkmn Breeder
-Pic: Pokemon Breeder F
+Class: Lass
+Pic: Lass
 Gender: Female
 Music: Female
-Double Battle: No
+Double Battle: Yes
 AI: Check Bad Move
 
-Skitty
-Level: 26
+Eevee
+Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Poochyena
-Level: 26
+Ralts
+Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Zigzagoon
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Lotad
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Seedot
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Taillow
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_PETALBURG_WOODS ===
 Name: GRUNT
@@ -244,7 +233,7 @@ Music: Cool
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Fidough
+Mareep
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -254,37 +243,58 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ALBERTO ===
 Name: ALBERTO
-Class: Bird Keeper
-Pic: Bird Keeper
+Class: Bug Catcher
+Pic: Bug Catcher
 Gender: Male
-Music: Cool
-Double Battle: No
-AI: Check Bad Move
+Music: Male
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Pelipper
-Level: 30
+Blipbug
+Level: 4
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Xatu
-Level: 30
+Grubbin
+Level: 3
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Spinarak
+Level: 3
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ED ===
 Name: ED
-Class: Collector
-Pic: Collector
+Class: Fisherman
+Pic: Fisherman
 Gender: Male
-Music: Suspicious
-Double Battle: No
-AI: Check Bad Move
+Music: Male
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Zangoose
-Level: 30
+Magikarp
+Level: 3
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Seviper
-Level: 30
+Magikarp
+Level: 3
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Magikarp
+Level: 3
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Magikarp
+Level: 4
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Magikarp
+Level: 4
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Magikarp
+Level: 4
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 
 === TRAINER_GRUNT_SEAFLOOR_CAVERN_4 ===
 Name: GRUNT
@@ -301,15 +311,23 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DECLAN ===
 Name: DECLAN
-Class: Swimmer M
-Pic: Swimmer M
+Class: Rich Boy
+Pic: Rich Boy
 Gender: Male
-Music: Swimmer
-Double Battle: No
-AI: Check Bad Move
+Music: Rich
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Gyarados
-Level: 34
+Piplup
+Level: 8
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Litten
+Level: 8
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Grookey
+Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_RUSTURF_TUNNEL ===
@@ -507,20 +525,28 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_FREDRICK ===
 Name: FREDRICK
-Class: Expert
-Pic: Expert M
+Class: Hiker
+Pic: Hiker
 Gender: Male
-Music: Intense
-Double Battle: No
+Music: Hiker
+Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Makuhita
-Level: 30
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Nacli
+Level: 8
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Machoke
-Level: 30
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Rockruff
+Level: 8
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Sandile
+Level: 8
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Cubone
+Level: 9
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MATT ===
 Name: MATT
@@ -4890,11 +4916,9 @@ Ponyta
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-
 Growlithe
 Level: 19
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
 
 Vulpix
 Level: 19
@@ -4903,8 +4927,6 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 Charmeleon
 Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-
 
 
 === TRAINER_NORMAN_1 ===
@@ -4920,7 +4942,6 @@ Drowzee
 Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-
 Kadabra
 Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
@@ -4932,7 +4953,6 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 Hypno
 Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
 
 
 === TRAINER_WINONA_1 ===
@@ -5388,14 +5408,14 @@ IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_VICTOR ===
 Name: VICTOR
-Class: Winstrate
+Class: Pokefan
 Pic: Pokefan M
 Gender: Male
-Music: Twins
+Music: Cool
 Double Battle: Yes
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Wooloo
+Whismur
 Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -5412,12 +5432,12 @@ Music: Twins
 Double Battle: Yes
 AI: Check Bad Move
 
-Yamper
-Level: 9
+Pawmi
+Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Pikipek
-Level: 8
+Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_COLTON ===
@@ -9705,7 +9725,7 @@ Music: Female
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Quaxly
+Piplup
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Pound

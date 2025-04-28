@@ -6,15 +6,38 @@ script Route3_OnTransition{
     
 }
 
+// Pokefan
 script Route3_EventScript_Trainer_Victor{
     trainerbattle_double(TRAINER_VICTOR, Route3_VictorIntro, Route3_VictorOutro, Route3_NotEnoughPokemon)
     msgbox(format("I just love Pokémon!"),MSGBOX_NPC)
     release
 }
 
+// Boy
 script Route3_EventScript_Trainer_Miguel{
     trainerbattle_double(TRAINER_MIGUEL_1, Route3_MiguelIntro, Route3_MiguelOutro, Route3_NotEnoughPokemon)
     msgbox(format("Bah, I'll win next time."), MSGBOX_NPC)
+    release
+}
+
+// Fisherman
+script Route3_EventScript_Trainer_Ed{
+    trainerbattle_double(TRAINER_ED, Route3_EdIntro, Route3_EdOutro, Route3_NotEnoughPokemon)
+    msgbox(format("Fishing is life!"), MSGBOX_NPC)
+    release
+}
+
+// Rich boy
+script Route3_EventScript_Trainer_Declan{
+    trainerbattle_double(TRAINER_DECLAN, Route3_DeclanIntro, Route3_DeclanOutro, Route3_NotEnoughPokemon)
+    msgbox(format("I'm calling daddy!"), MSGBOX_NPC)
+    release
+}
+
+// Hiker
+script Route3_EventScript_Trainer_Fredrick{
+    trainerbattle_double(TRAINER_FREDRICK, Route3_FredrickIntro, Route3_FredrickOutro, Route3_NotEnoughPokemon)
+    msgbox(format("Rock hard!"), MSGBOX_NPC)
     release
 }
 
@@ -36,4 +59,28 @@ text Route3_MiguelIntro{
 
 text Route3_MiguelOutro{
     format("Well, that was quick indeed. Darn it!")
+}
+
+text Route3_EdIntro{
+    format("Go, my fishies!")
+}
+
+text Route3_EdOutro{
+    format("Argh! I need more fish!")
+}
+
+text Route3_DeclanIntro{
+    format("My dad gave me these pokémon.")
+}
+
+text Route3_DeclanOutro{
+    format("My dad is going to sue you!")
+}
+
+text Route3_FredrickIntro{
+    format("Have you been to Mount Keb?")
+}
+
+text Route3_FredrickOutro{
+    format("I collect Rock Pokémon!")
 }

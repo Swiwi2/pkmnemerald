@@ -582,7 +582,7 @@ Woodholme_Lab_EventScript_PokeballLeft_1:
 
 Woodholme_Lab_EventScript_PokeballLeft_2:
 # 357 "data/maps/Woodholme_Lab/scripts.pory"
-	showmonpic SPECIES_QUAXLY, 10, 3
+	showmonpic SPECIES_PIPLUP, 10, 3
 # 358 "data/maps/Woodholme_Lab/scripts.pory"
 	msgbox Woodholme_Lab_EventScript_PokeballLeft_Text_0, MSGBOX_YESNO
 # 359 "data/maps/Woodholme_Lab/scripts.pory"
@@ -606,7 +606,7 @@ Woodholme_Lab_EventScript_PokeballLeft_6:
 
 Woodholme_Lab_EventScript_PokeballLeft_9:
 # 360 "data/maps/Woodholme_Lab/scripts.pory"
-	givemon SPECIES_QUAXLY, 5
+	givemon SPECIES_PIPLUP, 5
 # 361 "data/maps/Woodholme_Lab/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq Woodholme_Lab_EventScript_PokeballLeft_12
@@ -919,11 +919,11 @@ Woodholme_Lab_EventScript_GiveExpShare_Text_0:
 
 Woodholme_Lab_EventScript_PokeballLeft_Text_0:
 # 358 "data/maps/Woodholme_Lab/scripts.pory"
-	.string "Do you want to choose Quaxly?$"
+	.string "Do you want to choose Piplup?$"
 
 Woodholme_Lab_EventScript_PokeballLeft_Text_1:
 # 363 "data/maps/Woodholme_Lab/scripts.pory"
-	.string "{PLAYER} received the Quaxly!$"
+	.string "{PLAYER} received the Piplup!$"
 
 Woodholme_Lab_EventScript_PokeballLeft_Text_2:
 # 381 "data/maps/Woodholme_Lab/scripts.pory"

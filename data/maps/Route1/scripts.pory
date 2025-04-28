@@ -8,7 +8,7 @@ script Route1_EventScript_Transition{
 
 script Route1_EventScript_SignCottage{
     lock
-    msgbox("Hello!")
+    msgbox("TRAINERS WELCOME")
     release
 }
 
@@ -18,15 +18,16 @@ script Route1_EventScript_Trainer_Flint{
     release
 }
 
-text Route1_NotEnoughMons{
-    format("You don't have enough Pokémon for a battle...")
-}
-text Route1_FlintIntro{
-    format("Aha, you made eye contact! That means you owe me a Pokémon Battle!")
+script Route1_EventScript_Trainer_Ashley{
+    trainerbattle_double(TRAINER_ASHLEY, Route1_AshleyIntro, Route1_AshleyOutro, Route1_NotEnoughMons)
+    msgbox(format("Good luck with your adventure!"),MSGBOX_NPC)
+    release
 }
 
-text Route1_FlintOutro{
-    format("Wow, too strong!")
+script Route1_EventScript_Trainer_Alberto{
+    trainerbattle_double(TRAINER_ALBERTO, Route1_AlbertoIntro, Route1_AlbertoOutro, Route1_NotEnoughMons)
+    msgbox(format("My hard-earned money...."),MSGBOX_NPC)
+    release
 }
 
 script Route1_EventScript_NPCTeala{
@@ -35,10 +36,18 @@ script Route1_EventScript_NPCTeala{
     release
 }
 
-script Route1_EventScript_Trainer_Ashley{
-    trainerbattle_double(TRAINER_ASHLEY, Route1_AshleyIntro, Route1_AshleyOutro, Route1_NotEnoughMons)
-    msgbox(format("Good luck with your adventure!"),MSGBOX_NPC)
+script Route1_EventScript_Hikers{
+    lock
+    msgbox(format("Sorry kid, a mysterious Pokémon was sighted down past Route 21. Could be dangerous so road's closed until further notice."),MSGBOX_NPC)
     release
+}
+
+text Route1_FlintIntro{
+    format("Aha, you made eye contact! That means you owe me a Pokémon Battle!")
+}
+
+text Route1_FlintOutro{
+    format("Wow, too strong!")
 }
 
 text Route1_AshleyIntro{
@@ -49,8 +58,14 @@ text Route1_AshleyOutro{
     format("Oh, I lost? It seems I need to train my Pokémon some more. ")
 }
 
-script Route1_EventScript_Hikers{
-    lock
-    msgbox(format("Sorry kid, a mysterious Pokémon was sighted down past Route 21. Could be dangerous so road's closed until further notice."),MSGBOX_NPC)
-    release
+text Route1_AlbertoIntro{
+    format("A newbie trainer? Let's battle!")
+}
+
+text Route1_AlbertoOutro{
+    format("Yikes. I thought you were new to this?")
+}
+
+text Route1_NotEnoughMons{
+    format("You don't have enough Pokémon for a battle...")
 }

@@ -19,8 +19,8 @@
       "direction": "up"
     },
     {
-      "map": "MAP_ROUTE6",
-      "offset": 8,
+      "map": "MAP_ROUTE5",
+      "offset": 0,
       "direction": "down"
     }
   ],

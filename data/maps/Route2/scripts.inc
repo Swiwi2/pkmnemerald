@@ -18,22 +18,32 @@ Route2_EventScript_Trainer_Marcel::
 	end
 
 
-Route2_EventScript_Trainer_Twins::
+Route2_EventScript_Trainer_Sawyer::
+# 17 "data/maps/Route2/scripts.pory"
+	trainerbattle_double TRAINER_SAWYER_1, Route2_SawyerIntro, Route2_SawyerOutro, Route2_NotEnoughPokemon
+# 18 "data/maps/Route2/scripts.pory"
+	msgbox Route2_EventScript_Trainer_Sawyer_Text_0, MSGBOX_NPC
+# 19 "data/maps/Route2/scripts.pory"
+	release
+	end
+
+
+Route2_EventScript_Trainer_Gabrielle::
+# 24 "data/maps/Route2/scripts.pory"
+	trainerbattle_double TRAINER_GABRIELLE_1, Route2_GabrielleIntro, Route2_GabrielleOutro, Route2_NotEnoughPokemon
 # 25 "data/maps/Route2/scripts.pory"
-	trainerbattle_double TRAINER_ANNA_AND_MEG_1, Route2_TwinsIntro, Route2_TwinsOutro, Route2_NotEnoughPokemon
+	msgbox Route2_EventScript_Trainer_Gabrielle_Text_0, MSGBOX_NPC
 # 26 "data/maps/Route2/scripts.pory"
-	msgbox Route2_EventScript_Trainer_Twins_Text_0, MSGBOX_NPC
-# 27 "data/maps/Route2/scripts.pory"
 	release
 	end
 
 
 Route2_EventScript_Sign1::
-# 44 "data/maps/Route2/scripts.pory"
+# 59 "data/maps/Route2/scripts.pory"
 	lock
-# 45 "data/maps/Route2/scripts.pory"
+# 60 "data/maps/Route2/scripts.pory"
 	msgbox Route2_EventScript_Sign1_Text_0
-# 46 "data/maps/Route2/scripts.pory"
+# 61 "data/maps/Route2/scripts.pory"
 	release
 	return
 
@@ -42,33 +52,48 @@ Route2_EventScript_Trainer_Marcel_Text_0:
 # 11 "data/maps/Route2/scripts.pory"
 	.string "Hmm. Guess I need to train more...$"
 
-Route2_EventScript_Trainer_Twins_Text_0:
-# 26 "data/maps/Route2/scripts.pory"
-	.string "We'll practise some more and maybe we\n"
-	.string "can beat you one day!$"
+Route2_EventScript_Trainer_Sawyer_Text_0:
+# 18 "data/maps/Route2/scripts.pory"
+	.string "I need to study to become strong like\n"
+	.string "you.$"
+
+Route2_EventScript_Trainer_Gabrielle_Text_0:
+# 25 "data/maps/Route2/scripts.pory"
+	.string "Go away, meanie!$"
 
 Route2_EventScript_Sign1_Text_0:
-# 45 "data/maps/Route2/scripts.pory"
+# 60 "data/maps/Route2/scripts.pory"
 	.string "Routes 1 & 2, connecting Woodholme City\n"
 	.string "and Serenleaf City.$"
 
 Route2_MarcelIntro::
-# 16 "data/maps/Route2/scripts.pory"
+# 30 "data/maps/Route2/scripts.pory"
 	.string "Yo, kid! Let's have a quick battle!$"
 
 Route2_MarcelOutro::
-# 20 "data/maps/Route2/scripts.pory"
+# 34 "data/maps/Route2/scripts.pory"
 	.string "What, I lost?$"
 
-Route2_TwinsIntro::
-# 31 "data/maps/Route2/scripts.pory"
-	.string "We're twins so we battle together!$"
+Route2_SawyerIntro::
+# 38 "data/maps/Route2/scripts.pory"
+	.string "I'm a student at the school! We're\n"
+	.string "learning about Pokémon!$"
 
-Route2_TwinsOutro::
-# 35 "data/maps/Route2/scripts.pory"
-	.string "Wow, you're strong.$"
+Route2_SawyerOutro::
+# 42 "data/maps/Route2/scripts.pory"
+	.string "Maybe I need to study more...$"
+
+Route2_GabrielleIntro::
+# 46 "data/maps/Route2/scripts.pory"
+	.string "Girls can be Pokémon trainers too you\n"
+	.string "know!$"
+
+Route2_GabrielleOutro::
+# 50 "data/maps/Route2/scripts.pory"
+	.string "You should take it easy on a girl like\n"
+	.string "me!$"
 
 Route2_NotEnoughPokemon::
-# 39 "data/maps/Route2/scripts.pory"
+# 54 "data/maps/Route2/scripts.pory"
 	.string "You'll need to have at least TWO\n"
 	.string "Pokémon if you want to battle US!$"

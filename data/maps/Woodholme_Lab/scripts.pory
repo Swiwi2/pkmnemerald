@@ -354,13 +354,13 @@ script Woodholme_Lab_EventScript_PokeballLeft{
     lock
     // If we haven't claimed any Pokémon from the table:
     if(!(flag(FLAG_STARTER_SQUIRTLE) || flag(FLAG_STARTER_CHARMANDER) || flag(FLAG_STARTER_BULBASAUR))){
-    showmonpic(SPECIES_QUAXLY, 10,3)
-    msgbox("Do you want to choose Quaxly?", MSGBOX_YESNO)
+    showmonpic(SPECIES_PIPLUP, 10,3)
+    msgbox("Do you want to choose Piplup?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_QUAXLY, 5)
+        givemon(SPECIES_PIPLUP, 5)
         if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
             playfanfare(MUS_OBTAIN_ITEM)
-            msgbox(format("{PLAYER} received the Quaxly!"))
+            msgbox(format("{PLAYER} received the Piplup!"))
             removeobject(PokeballLeft)
             setflag(FLAG_STARTER_SQUIRTLE)
             setvar(VAR_WOODHOLME_LAB_STATE, 1)
@@ -369,7 +369,7 @@ script Woodholme_Lab_EventScript_PokeballLeft{
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
-            msgbox(format("{PLAYER} received the Quaxly!"))
+            msgbox(format("{PLAYER} received the Piplup!"))
             removeobject(PokeballLeft)
             setflag(FLAG_STARTER_SQUIRTLE)
             setvar(VAR_WOODHOLME_LAB_STATE, 1)
